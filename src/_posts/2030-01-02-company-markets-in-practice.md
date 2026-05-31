@@ -6,18 +6,18 @@ title: Company Markets in Practice
 permalink: /blog/company-markets-in-practice/
 
 categories: ["Leadership"]
-description: The theory only matters if it changes what happens after the same pain shows up twice.
+description: A worked example of turning operator pain into reusable company machinery.
 pull_quote: >
   The point is not to make every operator an engineer. The point is to make every operator's pain
   capable of becoming a path the next person can pull.
 ---
 
 <!-- DRAFT: Follow-up to /blog/company-markets/. This pass deliberately chooses GTM ops as the main
-carrier example because it has real artifacts, cadence, users, and repo evidence. The remaining
-comments are targeted data gaps for Jesse, not generic "make this better" markers. -->
+carrier example because it has real artifacts, cadence, users, and repo evidence. The goal is "how
+we actually did it," not the forever theory. The remaining comments are targeted data gaps for
+Jesse, not generic "make this better" markers. -->
 
-The company-market idea gets real only when the second occurrence of a problem costs less than the
-first.
+The company-market idea gets real when the second occurrence of a problem costs less than the first.
 
 A forecast ritual needs three people, two calls, a private spreadsheet, a Salesforce export, a few
 Slack corrections, and the one operator who remembers why last week's number was wrong. A customer
@@ -32,41 +32,93 @@ Someone links the doc that is almost right. The company responds, but the path d
 Nothing about that is lazy. It is worse than lazy. It is competent work trapped in a system that
 cannot remember.
 
-The operator version of [Company Markets](/blog/company-markets/) starts there.
+The operator version of [Company Markets](/blog/company-markets/) starts there: not with a platform,
+but with one recurring piece of work that should stop starting from scratch.
 
 The question is not whether an AI-native operating model sounds elegant. The question is what
 happens on Friday morning when the forecast needs to be real and the context is scattered:
 Salesforce, Fellow notes, override files, deal history, partner overlap data, account research.
 Everyone is about to pay the same stitching tax again.
 
-The old answer is: find the operator.
+The old answer is: find the operator who remembers.
 
 The new answer should be: pull the path.
+
+## A Forecast Example
+
+Here is the old workflow.
+
+Forecast changes. Someone pulls Salesforce. Someone checks Fellow notes. Someone remembers the
+account that looked healthy until a partner overlap changed the risk. Someone knows which override
+file matters, which late Slack correction should be trusted, and which deal moved because the buyer
+changed, not because the rep sandbagged. Sales leadership gets an answer, but the company has mostly
+paid for reconstruction.
+
+Next week, it does it again.
+
+That is the business problem. Not "AI for sales." Not "better dashboards." A weekly operating ritual
+depended on humans rehydrating the same context from systems that did not compose.
+
+Engineering would not tolerate that shape for long. If the same production bug came back every
+Friday, the team would not celebrate the person who remembered the workaround. They would reproduce
+it, encode the test, patch the system, open the PR, survive review, merge the fix, and leave history
+behind for the next person.
+
+The operator move is to copy that operating model:
+
+1. Reproduce the pain.
+2. Pull the source systems.
+3. Capture the assumptions.
+4. Name the human overrides.
+5. Show the prior movement.
+6. Make the output inspectable.
+7. Leave behind a path the next person can run.
+
+For forecasting, the first useful artifact is not a perfect product. It is `/forecast`: a workflow
+that gathers Salesforce context, Fellow notes, override files, deal history, partner overlap data,
+and account research into something sales leadership can challenge without rebuilding the whole
+picture from memory.
+
+The details matter because the details are the work.
+
+If a forecast number moved, the artifact should show what moved. If an override changed the answer,
+the override should be named. If the source data is stale, the gap should be visible. If account
+research changed the call, the research should travel with the call. If the next operator needs to
+run the ritual again, they should pull the path, not DM the person who happened to survive last
+Friday.
+
+<!-- DATA GAP[Jesse]: Choose how public/specific to make this GTM example. The repo has concrete
+anchors: /forecast, /top-deals, partner-overlaps, account dossiers, May forecast/top-deals artifacts,
+and the Grimoire "Accelerate GTM via AI" project. The final essay wants one named artifact, date, or
+specific before/after that is safe to publish. -->
+
+Once that pattern exists, it spreads sideways. Top-deals reviews can use the same habit. So can
+win-rate reports, account dossiers, campaign runbooks, partner-overlap checks, and housekeeping
+gates. The goal is not that every seller understands the repo. The goal is that repeated operating
+work leaves behind machinery the next person can run.
+
+This is the difference between a saved explanation and an operating surface.
+
+An AE can ask for the latest forecast, a dossier, a win-rate report, a partner-overlap risk, or the
+accounts that need enrichment. Sales leadership can inspect how the pipeline moved. Marketing ops
+can see the queue. Partner ops can refresh overlaps without relearning the whole system.
+
+The path has a home before the org chart blesses it.
+
+That is how demand shows up before it becomes a planning debate. One person's work gets pulled by
+another person. Then a team. Then the company has evidence worth pricing.
 
 ## The Bid
 
 A bid is not a complaint. It is not a strategy doc. It is the first version of useful work with
 evidence attached.
 
-For an operator, that is the whole shift.
+For an operator, that is the whole shift: from noticing, explaining, escalating, and waiting to
+making the first path, attaching evidence, naming the boundary, and putting the work where others
+can pull it.
 
-The old contract was often:
-
-1. Notice pain.
-2. Explain pain.
-3. Escalate pain.
-4. Wait.
-
-The new contract is sharper:
-
-1. Notice pain.
-2. Make the first path.
-3. Attach evidence.
-4. Name the boundary.
-5. Put it where others can pull it.
-
-That does not mean every operator becomes an engineer. It means every operator becomes more
-accountable for the shape of the problem.
+The point is not to make every operator an engineer. The point is to make every operator's pain
+capable of becoming a path the next person can pull.
 
 AI changes what is reasonable to expect. Drafts, queries, runbooks, scripts, and synthesis across
 Slack, meetings, tickets, docs, and code are all cheaper than they used to be.
@@ -87,52 +139,22 @@ is skill, tooling, policy, architecture, or permission.
 
 That is agency becoming auditable.
 
-## Why Gaia Exists
+## What Gaia Adds
 
-Most companies already understand this inside engineering.
-
-An engineer does not usually fix a bug by starting with a steering committee. They reproduce it,
-write the test, change the code, open the PR, survive review, and merge the path into the system.
-The artifact changes the argument. Reviewers are not reacting to vibes. They can inspect the diff.
-CI can run. Ownership is visible. History remains.
-
-Company markets ask a simple question:
-
-Why should only engineers get that operating model?
-
-Why should a forecast ritual, support escalation, customer handoff, people-review process, launch
-checklist, or data-cleanup path stay trapped in documents and meetings when it could become
-inspectable, runnable, and reviewable?
-
-That is the important thing about Gaia. Not that it is a monorepo. Not that it has tidy folders. The
-important thing is that the operator does not have to choose between "I mentioned it in Slack" and
-"I filed a ticket into someone else's queue."
+The important thing about Gaia is not the monorepo or the tidy folders. It is that the operator does
+not have to choose between "I mentioned it in Slack" and "I filed a ticket into someone else's
+queue."
 
 There is a place for the work itself: the checklist, query, script, prompt, runbook, skill, or small
 PR that makes the next attempt cheaper.
 
-GTM ops already has this shape in Gaia. Forecasting is not just a meeting ritual; `/forecast` pulls
-Salesforce context, Fellow notes, override files, deal history, partner overlap data, and account
-research into an artifact sales leadership can inspect instead of reconstructing from memory.
-Top-deals reviews, win-rate reports, account dossiers, campaign runbooks, and housekeeping gates
-follow the same pattern. The important part is not that every seller understands the repo. The
-important part is that the ritual leaves behind machinery the next person can run.
+The monorepo matters because related work can sit close together. The forecast path can live near
+the top-deals path, the account-dossier path, the enrichment queue, the partner-overlap check, and
+the housekeeping gate. People can inspect it, fork it, improve it, or decide it is not worth
+standardizing.
 
-<!-- DATA GAP[Jesse]: Choose how public/specific to make this GTM example. The repo has concrete
-anchors: /forecast, /top-deals, partner-overlaps, account dossiers, May forecast/top-deals artifacts,
-and the Grimoire "Accelerate GTM via AI" project. The final essay wants one named artifact or date
-that is safe to publish. -->
-
-This is the difference between a saved explanation and an operating surface.
-
-An AE can ask for the latest forecast, a dossier, a win-rate report, a partner-overlap risk, or the
-accounts that need enrichment. Sales leadership can inspect how the pipeline moved. Marketing ops
-can see the queue. Partner ops can refresh overlaps without relearning the whole system.
-
-The path has a home before the org chart blesses it.
-
-That is how demand shows up before it becomes a planning debate. One person's work gets pulled by
-another person. Then a team. Then the company has evidence worth pricing.
+That proximity is what lets the market form. A workflow is not a memo asking for permission. It is a
+piece of work already trying to earn adoption.
 
 ## Where Iris Fits
 
@@ -229,6 +251,12 @@ people for turning every bruise into a beautiful narrative instead of a usable p
 The center still chooses the game. In this model, that does not mean approving every move. It means
 deciding which local proof deserves air cover, which duplication is useful, which risk cannot stay
 local, and which artifact has earned the right to become standard.
+
+Sometimes the center has to move first. Code Red was that kind of move: leadership named the line,
+paused normal ambiguity, and made platform stability the work. A company market does not replace
+that. It gives the company a way to keep the learning from evaporating after the emergency ends: the
+runbooks, checks, owner calls, and recovery habits become paths others can pull instead of heroic
+memory everyone is afraid to disturb.
 
 But it should not be the only place reality becomes consequential.
 
