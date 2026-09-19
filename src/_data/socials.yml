@@ -2,8 +2,8 @@
 # Used by _social_links.erb and _footer.erb
 
 - name: X (Twitter)
-  handle: "@elsom25"
-  url: https://twitter.com/elsom25
+  handle: "@brayznly"
+  url: https://twitter.com/brayznly
   icon: x
 
 - name: LinkedIn
@@ -11,8 +11,8 @@
   icon: linkedin
 
 - name: GitHub
-  handle: elsom25
-  url: https://github.com/elsom25
+  handle: brayzn
+  url: https://github.com/brayzn
   icon: github
 
 - name: Email
