@@ -81,6 +81,7 @@ argument in the first week. Rewrite the next movement from that. Then build the 
 
 ## Source documents
 
+- `VOICE.md` — the editorial bones: the moves and diagnostics for the refresh.
 - `content-audit.md` — editorial audit dated 26 September 2026. Useful diagnoses; its queue ordering
   is superseded by this README where they differ.
 - `handoff.md` — context and intent from the earlier conversation. Read for direction, not as a
