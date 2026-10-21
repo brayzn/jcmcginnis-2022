@@ -11,7 +11,7 @@ changes to the published post yet.
 
 ## Opening — locked
 
-My second day at GrowthLoop, I sat in on *sprint planning*. I remember thinking: oh good, they do
+My second day at GrowthLoop, I sat in on _sprint planning_. I remember thinking: oh good, they do
 this, this is a good sign. Then I saw the format. Every engineer. One meeting. Thirty fucking
 minutes.
 
@@ -34,13 +34,13 @@ I had already killed the meeting. I just hadn't told anyone yet.
 That's not how you're supposed to do it. You're supposed to have a rollout plan, a comms doc, a tidy
 little sequence where the change looks inevitable. I had a Slack message and a Monday.
 
-Blake found out before I announced it. At 8:55 he asked in #eng what happened to all the meetings. At
-9:15 I told everyone: the rituals belong to the squads now. No more eng-wide planning. Squad leads,
-figure out what works for your team. This week, close support tickets before hackdays. A few raised
-hands. A couple of crying emojis. The channel was split before anyone said a word.
+Blake found out before I announced it. At 8:55 he asked in #eng what happened to all the meetings.
+At 9:15 I told everyone: the rituals belong to the squads now. No more eng-wide planning. Squad
+leads, figure out what works for your team. This week, close support tickets before hackdays. A few
+raised hands. A couple of crying emojis. The channel was split before anyone said a word.
 
-I thought the decision was the hard part. Then a week later Tameem told me the leads looked like deer
-in headlights. He was right. We had given them ownership and then watched them freeze.
+I thought the decision was the hard part. Then a week later Tameem told me the leads looked like
+deer in headlights. He was right. We had given them ownership and then watched them freeze.
 
 The weight landed on them.
 
@@ -71,13 +71,13 @@ The rule: memory is the story; the record is a check. Do not let the record choo
 
 ## Open questions
 
-- Who was in the room? How many? The user says more than forty; the essay says 25 + 2; the record says
-  35; the homepage says forty. Amp the scale, but settle the number in the fact pass.
+- Who was in the room? How many? The user says more than forty; the essay says 25 + 2; the record
+  says 35; the homepage says forty. Amp the scale, but settle the number in the fact pass.
 - What did the PM do after the meeting was killed? Did he change, leave, keep asking “Is that okay?”
 - What was one verbatim DM or line from the first week?
 - Which lead tried to rebuild the meeting? What did they say?
-- What did the champions and the six-week review look like in practice? One specific review where the
-  model bit.
+- What did the champions and the six-week review look like in practice? One specific review where
+  the model bit.
 - What did it cost? Who was upset? What did Jesse doubt?
 - Where do the cut pieces go? Exothermic people, language as infrastructure, QA removal, desired
   state.

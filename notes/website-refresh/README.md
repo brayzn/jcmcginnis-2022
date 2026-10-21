@@ -1,8 +1,8 @@
 # Website refresh — editorial frame
 
 Working notes for the writing side of the jcmcginnis.com refresh. The visual direction is being
-developed in the BB thread "Define Website Redesign Direction" (`thr_jbxtmvxw6e`). This folder is the
-editorial source of truth. Start with `OPERATING.md`; it is the manual for how to work here.
+developed in the BB thread "Define Website Redesign Direction" (`thr_jbxtmvxw6e`). This folder is
+the editorial source of truth. Start with `OPERATING.md`; it is the manual for how to work here.
 
 ## The direction
 
@@ -10,8 +10,8 @@ editorial source of truth. Start with `OPERATING.md`; it is the manual for how t
 - **Polished and raw, close together.** A carefully built sentence next to a blunt one. The clash is
   the texture, not a failure of tone.
 - **Rhythm does the work.** Long sentence, short sentence, fragment.
-- **Judgment comes from the scene, not from a goal.** "Successful" is a deck word; the thing you were
-  actually looking at is sharper.
+- **Judgment comes from the scene, not from a goal.** "Successful" is a deck word; the thing you
+  were actually looking at is sharper.
 - **Keep the villain human.** The helpfulness is often the problem.
 - **Do not invent scenes, dialogue, motives, or outcomes.** Ask for the missing memory.
 
@@ -44,8 +44,8 @@ This folder does not decide visual details. It supplies the prose the design has
 
 ### First encounter
 
-- **Homepage — write the letter.** 120–180 words: current context, selected writing, sign-off.
-  After the first voice specimen. Career timeline is a separate About/park decision.
+- **Homepage — write the letter.** 120–180 words: current context, selected writing, sign-off. After
+  the first voice specimen. Career timeline is a separate About/park decision.
 - **README — truth-check, not rewrite.** Keep today's structure and voice. Update claims, version,
   Sagan emphasis, social handles. The design thread already tested the existing text in Ash.
 - **Index + shared copy — one cleanup pass.** Fix the Ungame link, the `@elsom25` / `@brayznly`
@@ -70,8 +70,8 @@ This folder does not decide visual details. It supplies the prose the design has
 
 - Voice specimen 01 is locked.
 - The announcement-and-deer movement holds.
-- The next movement is the confusion: the first week, the practical questions, who carried it and who
-  did not.
+- The next movement is the confusion: the first week, the practical questions, who carried it and
+  who did not.
 - No essay draft has been committed. The published post is unchanged.
 
 ## Next action
@@ -82,8 +82,8 @@ announcement, who carried it, who tried to hand it back, and what you did. Then 
 
 ## Source documents
 
-- `OPERATING.md` — the operating manual: source hierarchy, guardrails, session protocol, status board,
-  movement map, revision protocol.
+- `OPERATING.md` — the operating manual: source hierarchy, guardrails, session protocol, status
+  board, movement map, revision protocol.
 - `VOICE.md` — the editorial bones: the moves and diagnostics for the refresh.
 - `content-audit.md` — editorial audit dated 26 September 2026. Useful diagnoses; its queue ordering
   is superseded by this README where they differ.

@@ -1,7 +1,7 @@
 # VOICE.md — the bones
 
-The editorial guide for the website refresh. This is a working standard, not a template. It describes
-the moves that make an essay sound like Jesse, and the failure modes to catch.
+The editorial guide for the website refresh. This is a working standard, not a template. It
+describes the moves that make an essay sound like Jesse, and the failure modes to catch.
 
 ## Before the bones
 
@@ -20,8 +20,8 @@ sentence.
    you name it.
 4. **Clash the registers.** Polished next to raw. A careful sentence, then a blunt one. Don't sand
    the clash.
-5. **Stage the turn.** Expectation → reality. Decision → cost. Don't explain the turn; let the
-   scene do it.
+5. **Stage the turn.** Expectation → reality. Decision → cost. Don't explain the turn; let the scene
+   do it.
 6. **Keep the other person human.** The PM was trying to be helpful. The leads weren't stupid. The
    system is the villain.
 7. **End on the image, not the lesson.** No compulsory bow. The reader can carry it.
@@ -51,8 +51,8 @@ Can I hear the person, see the thing, feel the turn, and end on an image?
 - Directed Chaos, the announcement and the deer — holds.
 
 Not yet tested on a quiet essay or a practical one. The next tests are Work-life Harmony (quiet) and
-Organizational Changelog (practical). If the bones hold there, they are the guide for the archive. If
-not, adjust.
+Organizational Changelog (practical). If the bones hold there, they are the guide for the archive.
+If not, adjust.
 
 ## Reference
 

@@ -56,7 +56,8 @@ Cut these on sight:
 ## Fact vs. memory
 
 - Memory is the story. The record is a check.
-- Use the record to verify names, dates, numbers, and sequence. Do not use it to choose the argument.
+- Use the record to verify names, dates, numbers, and sequence. Do not use it to choose the
+  argument.
 - If the record contradicts the memory, ask the user which version they want to tell. Do not resolve
   it unilaterally.
 - Keep “I remember” for memory. Do not turn the essay into a fact-check.
@@ -88,17 +89,17 @@ One substantive essay active at a time. Design and cleanup can run alongside.
 
 Update this after every session. “Stage” moves material → shape → draft → author review → ready.
 
-| Essay | Stage | Thesis | Locked | Open | Facts to check | Next |
-| --- | --- | --- | --- | --- | --- | --- |
-| Directed Chaos | Draft | The meeting was the easy part; delegating judgment took months. | Opening; announcement and deer | The first week; who carried it; the coaching | Attendance; deletion mechanics; names and titles | Write the confusion movement |
-| Work-life Harmony | Material | Harmony, not balance; work is part of life. | — | One real situation; where following energy becomes an excuse | — | Get the memory |
-| Homepage | Not started | A letter from a working writer. | — | Current context; career placement | — | Wait for the voice |
-| README | Not started | A working document. | — | Claims review; version; social handles | — | Truth-check |
-| Trust First | Decide | Unresolved | — | Rewrite or retire | — | Decide after launch |
-| Organizational Changelog | Specimen | The practice is useful. | — | Light edit after launch | — | Use as a design test |
-| Free Markets | Specimen | Local truth against central planning. | — | v1.1 tightening | — | Use as a dense-argument test |
-| Transitioning Well | Archive | Dated experience. | — | Broken link; afterword | Link | Cleanup |
-| Writing Regularly | Archive | Dated note. | — | Obsolete promises | — | Cleanup |
+| Essay                    | Stage       | Thesis                                                          | Locked                         | Open                                                         | Facts to check                                   | Next                         |
+| ------------------------ | ----------- | --------------------------------------------------------------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------ | ---------------------------- |
+| Directed Chaos           | Draft       | The meeting was the easy part; delegating judgment took months. | Opening; announcement and deer | The first week; who carried it; the coaching                 | Attendance; deletion mechanics; names and titles | Write the confusion movement |
+| Work-life Harmony        | Material    | Harmony, not balance; work is part of life.                     | —                              | One real situation; where following energy becomes an excuse | —                                                | Get the memory               |
+| Homepage                 | Not started | A letter from a working writer.                                 | —                              | Current context; career placement                            | —                                                | Wait for the voice           |
+| README                   | Not started | A working document.                                             | —                              | Claims review; version; social handles                       | —                                                | Truth-check                  |
+| Trust First              | Decide      | Unresolved                                                      | —                              | Rewrite or retire                                            | —                                                | Decide after launch          |
+| Organizational Changelog | Specimen    | The practice is useful.                                         | —                              | Light edit after launch                                      | —                                                | Use as a design test         |
+| Free Markets             | Specimen    | Local truth against central planning.                           | —                              | v1.1 tightening                                              | —                                                | Use as a dense-argument test |
+| Transitioning Well       | Archive     | Dated experience.                                               | —                              | Broken link; afterword                                       | Link                                             | Cleanup                      |
+| Writing Regularly        | Archive     | Dated note.                                                     | —                              | Obsolete promises                                            | —                                                | Cleanup                      |
 
 ## Directed Chaos movement map
 
