@@ -1626,6 +1626,24 @@ a.version-stamp {
   text-decoration-color: currentColor;
 }
 
+.index-link {
+  margin-top: 44px;
+  font-family: var(--label-font);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.index-link a {
+  color: var(--accent-text);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.index-link a:hover {
+  text-decoration-color: currentColor;
+}
+
 .category-essays {
   margin-top: 44px;
   border-top: 1px solid var(--rule);
@@ -1709,6 +1727,19 @@ a.version-stamp {
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
   color: var(--accent-text);
+}
+
+.talk-badge {
+  display: inline-block;
+  margin-left: 8px;
+  border: 1px solid var(--rule-strong);
+  padding: 1px 6px;
+  font-family: var(--label-font);
+  font-size: 9px;
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--muted);
+  vertical-align: 2px;
 }
 
 .talk-list .talk-body a {
@@ -1838,14 +1869,17 @@ a.version-stamp {
 
   .home-rail {
     position: static;
-    order: 2;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 28px;
-    margin-top: 56px;
+    gap: 18px 28px;
+    margin: 0 0 32px;
     border-right: 0;
-    border-top: var(--strong-rule) solid var(--rule);
-    padding: 20px 0 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 0 20px;
+  }
+
+  .home-rail .rail-block .label {
+    margin-bottom: 4px;
   }
 
   .rail-block {

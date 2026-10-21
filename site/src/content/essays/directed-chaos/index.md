@@ -12,6 +12,11 @@ seeAlso:
     note: Because both ask what a structure helps an organization remember.
   - essay: trust-first
     note: Because ownership without trust becomes blame.
+readAlongside:
+  - essay: org-changelog
+    note: On remembering what an organization learns.
+  - essay: trust-first
+    note: On the risk of extending trust before proof.
 versions:
   - id: rev-01
     date: 2026-01-01

@@ -7,6 +7,7 @@ import Essay from "../../../../components/Essay.astro";
 import {
   essayPath,
   readingTime,
+  readAlongsideLinks,
   seeAlsoLinks,
   versionLinks,
   type Essay as EssayEntry,
@@ -32,7 +33,12 @@ export async function getStaticPaths() {
     }
     return {
       params: { slug: folder, rev: versionId },
-      props: { essay, version, seeAlso: seeAlsoLinks(essay, essays) },
+      props: {
+        essay,
+        version,
+        seeAlso: seeAlsoLinks(essay, essays),
+        readAlongside: readAlongsideLinks(essay, essays),
+      },
     };
   });
 }
@@ -41,9 +47,10 @@ interface Props {
   essay: EssayEntry;
   version: EssayVersion;
   seeAlso: SeeAlsoLink[];
+  readAlongside: SeeAlsoLink[];
 }
 
-const { essay, version, seeAlso } = Astro.props;
+const { essay, version, seeAlso, readAlongside } = Astro.props;
 const { Content, headings } = await render(version);
 const versions = versionLinks(essay);
 const versionId = version.id.split("/")[1];
@@ -70,6 +77,7 @@ const title = metadata.title ?? essay.data.title;
       headings={headings}
       reading={readingTime(version.body ?? "")}
       seeAlso={seeAlso}
+      readAlongside={readAlongside}
     >
       <Content />
     </Essay>

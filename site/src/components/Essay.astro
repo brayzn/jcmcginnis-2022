@@ -15,6 +15,7 @@ interface Props {
   headings: { depth: number; slug: string; text: string }[];
   reading: string;
   seeAlso?: SeeAlsoLink[];
+  readAlongside?: SeeAlsoLink[];
 }
 
 const {
@@ -26,6 +27,7 @@ const {
   headings,
   reading,
   seeAlso = [],
+  readAlongside = [],
 } = Astro.props;
 
 const stillThinking = essay.data.stillThinking;
@@ -274,11 +276,11 @@ const meta = current
   </section>
 
   <footer class="essay-foot">
-    {seeAlso.length > 0 && (
+    {readAlongside.length > 0 && (
       <>
         <h2 class="label">Read alongside</h2>
         <div class="alongside">
-          {seeAlso.map((item) => (
+          {readAlongside.map((item) => (
             <a href={item.href}>
               {item.title}
               <span>{item.note}</span>
