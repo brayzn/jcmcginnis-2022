@@ -2,10 +2,8 @@
 
 Two tracks, one outcome. This is the shared entry point for a fresh agent.
 
-**Status:** design baseline complete and dialed in; editorial rewrite in progress. Nothing is live.
-The editorial frame is already on `main` (PR #36). This branch adds the design package and the
-shared entry point. Both folders are outside `src/`, so Bridgetown does not build them. Merging
-`main` deploys the live site.
+**Status:** design and editorial baselines are both on `main` (#36, #37); the editorial rewrite is
+in progress. Nothing is live. Both folders are outside `src/`, so Bridgetown does not build them.
 
 ## The two tracks
 
@@ -77,10 +75,8 @@ working draft.
 - Not an approved content rewrite. The prototype copy is provisional.
 - Not a finished design system. The craft pass is done; final refinements wait on copy.
 
-## Merge path
+## Where things live
 
-The editorial workstream is already on `main` (#36). This branch adds the design package, the shared
-index, and the editorial README's design-context link. After merge, both tracks live in the repo:
-`design/website-refresh/` and `notes/website-refresh/`. Keep them together; they are one refresh.
-Merging `main` deploys the site, so merge only when the baseline is ready to be the public first
-encounter.
+Both tracks are on `main`: editorial (#36), design + shared index (#37). Keep them together; they
+are one refresh. The baseline is not wired into the live site; implementation is a separate step.
+Pushing `main` deploys the current site, not the refresh.

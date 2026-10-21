@@ -1,10 +1,10 @@
 # Website refresh — status
 
-**Last updated:** 2026-10-20.
+**Last updated:** 2026-10-21.
 
 ## Design
 
-**Stage:** baseline complete; craft pass done.
+**Stage:** baseline merged to `main`; craft pass done.
 
 - The Ash direction, prototype, and version model are in `design/website-refresh/`.
 - The design-builder pass fixed label sizes, Rev. 01 change bars, broken anchors, nested `<main>`,
@@ -34,13 +34,13 @@
 
 ## Baseline
 
-- Branch: `design/website-refresh`.
-- Pull request: [#37](https://github.com/brayzn/jcmcginnis-2022/pull/37).
-- The editorial frame is already on `main` (PR #36). This PR adds the design package, the shared
-  index, and the editorial README's design-context link.
-- `design/` and `notes/` are outside `src/`; Bridgetown does not build them. Nothing is live.
-- Merging `main` deploys the site. Do not merge until the baseline is ready to be the public first
-  encounter.
+- Both workstreams are merged to `main`: editorial
+  [#36](https://github.com/brayzn/jcmcginnis-2022/pull/36), design + shared index
+  [#37](https://github.com/brayzn/jcmcginnis-2022/pull/37).
+- `design/website-refresh/` and `notes/website-refresh/` are outside `src/`; Bridgetown does not
+  build them. The baseline is not wired into the live site.
+- The `design/website-refresh` branch can be retired; continue from `main`.
+- Pushing `main` deploys the current site, not the refresh.
 
 ## Decisions this baseline carries
 
