@@ -2,7 +2,7 @@
 
 Working notes for the writing side of the jcmcginnis.com refresh. The visual direction is being
 developed in the BB thread "Define Website Redesign Direction" (`thr_jbxtmvxw6e`). This folder is the
-editorial source of truth.
+editorial source of truth. Start with `OPERATING.md`; it is the manual for how to work here.
 
 ## The direction
 
@@ -69,18 +69,21 @@ This folder does not decide visual details. It supplies the prose the design has
 ## Current state
 
 - Voice specimen 01 is locked.
-- The next movement (deletion + DMs) holds, but reads slightly sanitized. The cause is sourcing: it
-  was rebuilt from the published draft, not from fresh memory. The fix is one raw detail from the
-  week after the deletion.
+- The announcement-and-deer movement holds.
+- The next movement is the confusion: the first week, the practical questions, who carried it and who
+  did not.
 - No essay draft has been committed. The published post is unchanged.
 
 ## Next action
 
-Get one raw detail from the aftermath of deleting the meeting: a specific DM, a lead's reaction, an
-argument in the first week. Rewrite the next movement from that. Then build the full draft.
+Get the raw material for the confusion movement: what happened in the first week after the
+announcement, who carried it, who tried to hand it back, and what you did. Then write the movement.
+`OPERATING.md` tracks the stage.
 
 ## Source documents
 
+- `OPERATING.md` — the operating manual: source hierarchy, guardrails, session protocol, status board,
+  movement map, revision protocol.
 - `VOICE.md` — the editorial bones: the moves and diagnostics for the refresh.
 - `content-audit.md` — editorial audit dated 26 September 2026. Useful diagnoses; its queue ordering
   is superseded by this README where they differ.
