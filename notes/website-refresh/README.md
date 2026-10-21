@@ -72,6 +72,16 @@ design package uses provisional copy; this folder is the source of truth for the
 - **Transitioning Well / Writing Regularly — leave dated work dated.** Fix the broken link; add an
   afterword only if there is one. They are archive evidence, not launch copy.
 
+## Source paths
+
+- Published version: `site/src/content/essays/directed-chaos/index.md`.
+- Alpha: `site/src/content/drafts/directed-chaos-alpha.md`.
+- Cut material: `site/src/content/drafts/exothermic-people.md` and
+  `site/src/content/drafts/language-as-infrastructure.md`.
+- Older published bodies: `site/src/content/essays/<slug>/rev-NN.md` (body-only; history, never
+  edit).
+- Drafts live in `site/src/content/drafts/` and generate no routes.
+
 ## Current state
 
 - Voice specimen 01 is locked.

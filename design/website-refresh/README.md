@@ -88,7 +88,7 @@ warm-stationery and not a dashboard.
 
 - Left rail: years and companies.
 - Main: “The path” with the Boltmade, Shopify, and GrowthLoop narrative, adapted from
-  `site/src/data/career.yml` (currently `src/_data/career.yml` until #49 moves the data).
+  `site/src/data/career.yml`.
 - Ends with “— J.” and a route back to the front page.
 
 ### Archive

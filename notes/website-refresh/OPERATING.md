@@ -12,6 +12,16 @@ The operating manual for a fresh agent working on the jcmcginnis.com refresh. Re
 5. `directed-chaos-draft.md` — the current draft and open questions.
 6. `content-audit.md` and `handoff.md` — context, not commands.
 
+## Current paths
+
+- Published body: `site/src/content/essays/directed-chaos/index.md`.
+- Older published bodies: `site/src/content/essays/<slug>/rev-NN.md` (body-only; history, never
+  edit).
+- 2025-12-30 alpha: `site/src/content/drafts/directed-chaos-alpha.md`.
+- Cut material: `site/src/content/drafts/exothermic-people.md` and
+  `site/src/content/drafts/language-as-infrastructure.md`.
+- Drafts generate no routes. Only a published `rev-01` becomes an essay.
+
 ## Source of truth
 
 When documents conflict, this order wins:
@@ -124,13 +134,27 @@ Where the cut material goes:
 
 ## Revision protocol
 
-- Keep the original publication date.
-- Add a clear revised date.
-- Write a short revision note when the position changes.
+- Start with the revision command before the first edit of a rewrite:
+
+  ```bash
+  npm --prefix site run revision:start -- <slug> --summary "..." --then "..." --now "..." --note "..."
+  ```
+
+  It archives the current body from `HEAD` as the outgoing `rev-NN.md` and appends the new current
+  version. Commit or restore a dirty `index.md` first.
+
+- Keep the original publication date. Add a new version date, a short prose summary, and a Then/Now
+  pair for the revision.
+- Old bodies are history, not drafts. Do not edit `site/src/content/essays/<slug>/rev-NN.md`.
+- Do not fabricate revisions or create one for a small edit. The 2025-12-30 alpha is a draft, not
+  Rev. 01.
+- Mark only meaningful rewritten passages with `:::changed{since="rev-NN"}`. The directive must
+  start its own line and close with `:::` on its own line; keep `<!-- prettier-ignore -->` above it.
 - Keep the old version available; the changelog spine needs it.
 - Preserve the URL.
 - If an old claim is no longer defensible, correct it even when the essay is not featured.
 - Do not silently rewrite a historical account as if it were written today.
+- Validate with `mise run site:lint` and `mise run site:build` before calling the revision done.
 
 ## Definition of done
 

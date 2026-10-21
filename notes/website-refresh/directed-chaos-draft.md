@@ -3,10 +3,10 @@
 Status: opening locked; announcement-and-deer movement holds; next movement is the confusion. No
 changes to the published post yet.
 
-- Published version: `src/_posts/2026-01-01-directed-chaos.md`
-- Alpha: `src/_posts/2025-12-30-directed-chaos-og.md` (unpublished, 2,029 words)
-- Cut material: `src/_posts/2030-01-01-exothermic-people.md`,
-  `src/_posts/2030-01-01-language-as-infrastructure.md`
+- Published version: `site/src/content/essays/directed-chaos/index.md`
+- Alpha: `site/src/content/drafts/directed-chaos-alpha.md` (unpublished, 2,029 words)
+- Cut material: `site/src/content/drafts/exothermic-people.md`,
+  `site/src/content/drafts/language-as-infrastructure.md`
 - Research packet: thread storage only, not committed. It is unvetted and contains private DMs.
 
 ## Opening — locked

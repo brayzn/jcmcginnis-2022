@@ -2,9 +2,10 @@
 
 Two tracks, one outcome. This is the shared entry point for a fresh agent.
 
-**Status:** design and editorial baselines are both on `main` (#36, #37); the editorial rewrite is
-in progress. Nothing is live. Both folders are outside both app roots (`src/` Bridgetown, `site/`
-Astro), so neither build picks them up.
+**Status:** design and editorial baselines are both on `main` (#36, #37); the Astro app is merged
+and deploys to Cloudflare Pages. The editorial rewrite is in progress. Nothing is live on
+`jcmcginnis.com` yet. Both folders are outside both app roots (`src/` Bridgetown, `site/` Astro), so
+neither build picks them up.
 
 ## The two tracks
 
@@ -44,9 +45,9 @@ working draft.
 - **Facts are checked before publication.** Do not invent scenes, dialogue, motives, or outcomes.
   The open checks include 25 engineers + 2 PMs vs “forty people,” the Shopify dates, and the “eight
   years” line.
-- **Nobody edits `site/src/` or deploys** as part of either workstream. The current Bridgetown site
-  keeps publishing from `src/`; the new deploy is Cloudflare Pages (#52). Implementation starts only
-  when the decisions and copy are ready.
+- **Nobody deploys or changes DNS** as part of either workstream. `site/src/content/` is canonical
+  for the Astro app; the Bridgetown site keeps publishing from `src/` until the DNS cutover.
+  Cloudflare Pages deploys `site/` on `main` to <https://jcmcginnis.pages.dev/> (#52/#53).
 - **One substantive rewrite active at a time.** Design and shared cleanup can proceed alongside it.
 
 ## Fresh agent start
@@ -73,13 +74,15 @@ working draft.
 
 ## What this is not
 
-- Not a live site or a CMS migration. The stack is changing to Astro + Cloudflare Pages; that is
-  tracked in #38.
+- Not live at `jcmcginnis.com` and not a CMS migration. The stack has moved to Astro + Cloudflare
+  Pages previews; DNS stays on GitHub Pages until cutover. See #38 and
+  `docs/adr/0001-astro-cloudflare.md`.
 - Not an approved content rewrite. The prototype copy is provisional.
 - Not a finished design system. The craft pass is done; final refinements wait on copy.
 
 ## Where things live
 
 Both tracks are on `main`: editorial (#36), design + shared index (#37). Keep them together; they
-are one refresh. The baseline is not wired into the live site; implementation is a separate step.
-Pushing `main` deploys the current site, not the refresh.
+are one refresh. `site/` is the Astro app and deploys on Cloudflare Pages; `jcmcginnis.com` still
+serves the Bridgetown app from `main` until the DNS cutover. Pushing `main` updates both the GitHub
+Pages Bridgetown site and the Cloudflare Pages deployment.

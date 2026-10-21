@@ -24,7 +24,9 @@ or the user's time constraint makes separate actors impractical, and say so.
 
 ## Workflow
 
-1. Read the current draft, current diff, and nearby house-style essays before forming opinions.
+1. Read the current draft at `site/src/content/essays/<slug>/index.md` (or a draft under
+   `site/src/content/drafts/`), the current diff, and nearby house-style essays before forming
+   opinions.
 2. Keep the user's latest edits as the source of truth unless they create a real defect.
 3. Spawn read-only panels only when the user asks for the writing room, adversarial agents, readers,
    editors, or a serious final review.
@@ -39,8 +41,38 @@ or the user's time constraint makes separate actors impractical, and say so.
 9. Repeat only while changes are materially improving structure, argument, voice, or proof.
 10. Stop when remaining concerns are taste, publication risk, or quote-mining risk rather than
     defects.
-11. Run `mise run lint -a` after edits. Commit and push only when requested or when the current loop
-    has converged and the user asked for commits after loops.
+11. Run `mise run site:lint` after edits. Commit and push only when requested or when the current
+    loop has converged and the user asked for commits after loops.
+
+## Revision workflow
+
+Run the revision command before the first edit of a rewrite:
+
+```bash
+npm --prefix site run revision:start -- <slug> --summary "..." --then "..." --now "..." --note "..."
+```
+
+- It archives the current body from `HEAD` as the outgoing `rev-NN.md` and appends the new current
+  version dated today. Commit or restore a dirty `index.md` first; the script refuses it.
+- `site/src/content/essays/<slug>/rev-NN.md` files are published history, not drafts. Read them,
+  never edit them.
+- Preserve the original publication date. The rewrite gets a new version date, a prose summary, and
+  a Then/Now pair. The author writes the note; no fabricated revisions and no version for a small
+  edit.
+- A draft in `site/src/content/drafts/` is a draft, not Rev. 01. Do not promote an alpha into a
+  revision by renaming it.
+- Mark only meaningful rewritten passages in `index.md`:
+
+  ```md
+  <!-- prettier-ignore -->
+  :::changed{since="rev-01"}
+  The rewritten passage.
+  :::
+  ```
+
+  The directive must start its own line and close with `:::` on its own line.
+
+- Validate before calling the rewrite done: `mise run site:lint` plus the site build.
 
 ## House Taste
 
@@ -91,7 +123,17 @@ If forced to batch actors, batch adjacent editor functions before batching reade
 For changed posts, run:
 
 ```bash
-mise run lint -a
+mise run site:lint
+npm --prefix site run check
 ```
 
-If committing, keep commit messages short and specific, then push the active branch when requested.
+Or from `site/`:
+
+```bash
+npm run check
+npm run build
+```
+
+`mise run site:lint` runs the type check, version validation, and Prettier check. `mise run lint -a`
+remains the formatter for the legacy Bridgetown app only; it does not touch `site/`. If committing,
+keep commit messages short and specific, then push the active branch when requested.
