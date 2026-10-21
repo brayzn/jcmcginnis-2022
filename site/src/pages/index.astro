@@ -122,12 +122,12 @@ const elsewhere = [
         </ol>
       </section>
 
-      <section class="recent-changes">
-        <div class="section-head">
-          <h2>Recently revised</h2>
-          <a href="/archive/">Full index →</a>
-        </div>
-        {revisions.length > 0 ? (
+      {revisions.length > 0 && (
+        <section class="recent-changes">
+          <div class="section-head">
+            <h2>Recently revised</h2>
+            <a href="/archive/">Full index →</a>
+          </div>
           <ul class="change-list">
             {revisions.map((revision) => (
               <li class="change">
@@ -139,13 +139,8 @@ const elsewhere = [
               </li>
             ))}
           </ul>
-        ) : (
-          <p class="change-empty">
-            No revisions yet. Every essay is still on its first published
-            version.
-          </p>
-        )}
-      </section>
+        </section>
+      )}
     </main>
   </div>
   <Footer />
