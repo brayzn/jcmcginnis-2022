@@ -10,143 +10,155 @@ const site = {
     revised: "October 2026",
     reading: "7 min",
     blocks: [
-      { type: "p", html: "World-class teams metabolize chaos. Calm teams break." },
       {
         type: "p",
-        html: "Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame."
-      },
-      { type: "p", html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it." },
-      {
-        type: "p",
-        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome."
+        html: "World-class teams metabolize chaos. Calm teams break.",
       },
       {
         type: "p",
-        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality."
+        html: "Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame.",
       },
       {
         type: "p",
-        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them."
+        html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it.",
+      },
+      {
+        type: "p",
+        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome.",
+      },
+      {
+        type: "p",
+        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality.",
+      },
+      {
+        type: "p",
+        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them.",
       },
       { type: "h2", text: "The meeting that couldn't die" },
       {
         type: "p",
         rev: "01",
-        html: "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment."
+        html: "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment.",
       },
-      { type: "p", html: "Everyone left nodding. Work still slipped. Tidy, performative calm." },
       {
         type: "p",
-        html: "Underneath, work was ticket soup: ad hoc initiatives owned by \u201cteams\u201d who shared blame but not conviction. The meeting was the cast that absorbed responsibility so nobody had to own the outcome."
+        html: "Everyone left nodding. Work still slipped. Tidy, performative calm.",
+      },
+      {
+        type: "p",
+        html: "Underneath, work was ticket soup: ad hoc initiatives owned by \u201cteams\u201d who shared blame but not conviction. The meeting was the cast that absorbed responsibility so nobody had to own the outcome.",
       },
       {
         type: "p",
         rev: "02",
-        html: "Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion."
+        html: "Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion.",
       },
       { type: "p", html: "So I didn't refactor it. I deleted it." },
       {
         type: "p",
-        html: "We didn't stop coordinating. We stopped pretending coordination was a meeting. Planning didn't go away. The fiction that one meeting could plan for everyone did."
+        html: "We didn't stop coordinating. We stopped pretending coordination was a meeting. Planning didn't go away. The fiction that one meeting could plan for everyone did.",
       },
       {
         type: "p",
-        html: "The deletion produced the most valuable artifact in the company: empty space. Within hours my Slack filled with DMs asking for a replacement ceremony, a new playbook, a definitive timebox. I said no—not because structure is bad, but because this structure had become a cast."
+        html: "The deletion produced the most valuable artifact in the company: empty space. Within hours my Slack filled with DMs asking for a replacement ceremony, a new playbook, a definitive timebox. I said no—not because structure is bad, but because this structure had become a cast.",
       },
       {
         type: "p",
-        html: "The first week was loud in the right way. Teams argued about planning. Leads looked around and realized there was no parent to escalate to. Two leads tried to resurrect the central meeting and learned why it existed: to export responsibility upward. Without a center, there was nowhere to export it. The weight landed on them."
+        html: "The first week was loud in the right way. Teams argued about planning. Leads looked around and realized there was no parent to escalate to. Two leads tried to resurrect the central meeting and learned why it existed: to export responsibility upward. Without a center, there was nowhere to export it. The weight landed on them.",
       },
       {
         type: "emph",
-        html: "Freedom without structure is chaos. Structure without freedom is bureaucracy. The magic is in the tension."
+        html: "Freedom without structure is chaos. Structure without freedom is bureaucracy. The magic is in the tension.",
       },
       { type: "p", html: "So we added structure that doesn't steer for you." },
       {
         type: "p",
-        html: "Projects became the atomic unit of work: a bounded bet with a finish line. Each project had a load-bearing owner—not a committee. We named the role <strong>champion</strong>, and that word did real work."
+        html: "Projects became the atomic unit of work: a bounded bet with a finish line. Each project had a load-bearing owner—not a committee. We named the role <strong>champion</strong>, and that word did real work.",
       },
       {
         type: "p",
-        html: "A champion isn't a PM with a new hat. It's the person who carries the project when it gets heavy. They cut scope, pull in the right people, and tell the truth. Their name stays attached when the project is ugly. If there's no champion, it's not a project. It's a wish."
+        html: "A champion isn't a PM with a new hat. It's the person who carries the project when it gets heavy. They cut scope, pull in the right people, and tell the truth. Their name stays attached when the project is ugly. If there's no champion, it's not a project. It's a wish.",
       },
       {
         type: "p",
-        html: "Every six weeks champions sit with the exec team and walk through the guts in plain language. No slide theater. No green/yellow/red. Just: what's true, what changed, what's at risk, and what you're doing about it."
+        html: "Every six weeks champions sit with the exec team and walk through the guts in plain language. No slide theater. No green/yellow/red. Just: what's true, what changed, what's at risk, and what you're doing about it.",
       },
       {
         type: "p",
-        html: "That review isn't approval. It's forced contact with reality—an engineered place to surface uncertainty on purpose and treat it as a signal, not a sin."
+        html: "That review isn't approval. It's forced contact with reality—an engineered place to surface uncertainty on purpose and treat it as a signal, not a sin.",
       },
-      { type: "p", html: "That was the pattern: stop absorbing the weight, let it land where it belongs." },
+      {
+        type: "p",
+        html: "That was the pattern: stop absorbing the weight, let it land where it belongs.",
+      },
       { type: "h2", text: "The payoff" },
       { type: "p", html: "There's a quiet moment when it starts to stick." },
       {
         type: "p",
-        html: "People start solving problems before you know the problems exist. PMs stop apologizing for slowing features—they ask what they can do to help. Engineers defend customers with test suites they wrote without being asked."
+        html: "People start solving problems before you know the problems exist. PMs stop apologizing for slowing features—they ask what they can do to help. Engineers defend customers with test suites they wrote without being asked.",
       },
       {
         type: "emph",
-        html: "Ownership isn't a belief you argue someone into. It's a weight you let them feel."
+        html: "Ownership isn't a belief you argue someone into. It's a weight you let them feel.",
       },
       {
         type: "p",
-        html: "The people who thrive here don't just tolerate turbulence—they generate it. I call them <strong>exothermic</strong>: they produce more energy than they consume. They bring drafts instead of questions. They kill ambiguity for everyone around them."
+        html: "The people who thrive here don't just tolerate turbulence—they generate it. I call them <strong>exothermic</strong>: they produce more energy than they consume. They bring drafts instead of questions. They kill ambiguity for everyone around them.",
       },
-      { type: "p", html: "Directed chaos doesn't just distribute ownership—it builds exothermic people." }
+      {
+        type: "p",
+        html: "Directed chaos doesn't just distribute ownership—it builds exothermic people.",
+      },
     ],
     openingV2: [
       { type: "h2", text: "The meeting that couldn't die" },
       {
         type: "p",
         rev: "02",
-        html: "My second day at GrowthLoop, I sat in on sprint planning. I remember thinking: oh good, they do this, this is a good sign. Then I saw the format. Every engineer. One meeting. Thirty fucking minutes."
+        html: "My second day at GrowthLoop, I sat in on sprint planning. I remember thinking: oh good, they do this, this is a good sign. Then I saw the format. Every engineer. One meeting. Thirty fucking minutes.",
       },
       {
         type: "p",
         rev: "02",
-        html: "The PM read through tickets. Not a discussion—a read-through. He explained decisions that had already been made somewhere else, in a meeting I wasn't in, and maybe you weren't either. After each one: “Is that okay?” In front of everyone. What were you going to say—no? With him “running the ship”?"
+        html: "The PM read through tickets. Not a discussion—a read-through. He explained decisions that had already been made somewhere else, in a meeting I wasn't in, and maybe you weren't either. After each one: “Is that okay?” In front of everyone. What were you going to say—no? With him “running the ship”?",
       },
       {
         type: "p",
         rev: "02",
-        html: "My blood was boiling by the end. I decided pretty fast the meeting had to go. Is engineering just a fucking factory? That's a death bell for a company that wants to make decisions."
+        html: "My blood was boiling by the end. I decided pretty fast the meeting had to go. Is engineering just a fucking factory? That's a death bell for a company that wants to make decisions.",
       },
       {
         type: "p",
         rev: "02",
-        html: "The worst part: he was trying to be helpful. He was doing what he thought a good PM does—keep everyone aligned, keep the tickets moving, make sure everyone was okay with it. And every time he asked “Is that okay?” he was teaching the room to say yes."
+        html: "The worst part: he was trying to be helpful. He was doing what he thought a good PM does—keep everyone aligned, keep the tickets moving, make sure everyone was okay with it. And every time he asked “Is that okay?” he was teaching the room to say yes.",
       },
       {
         type: "p",
         rev: "02",
-        html: "That was the meeting: a cast. It absorbed responsibility so nobody had to own the outcome. Everyone left nodding. Work still slipped. Tidy, performative calm."
+        html: "That was the meeting: a cast. It absorbed responsibility so nobody had to own the outcome. Everyone left nodding. Work still slipped. Tidy, performative calm.",
       },
       {
         type: "p",
-        html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it."
+        html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it.",
       },
       {
         type: "p",
-        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome."
+        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome.",
       },
       {
         type: "p",
-        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality."
+        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality.",
       },
       {
         type: "p",
-        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them."
-      }
+        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them.",
+      },
     ],
     thenNow: {
-      then:
-        "World-class teams metabolize chaos. Calm teams break. Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame.",
-      now:
-        "My second day at GrowthLoop, I sat in on sprint planning. I remember thinking: oh good, they do this, this is a good sign. Then I saw the format. Every engineer. One meeting. Thirty fucking minutes.",
-      note:
-        "Detail before thesis. The scene carries the judgment; the org chart becomes evidence, not the opening claim."
-    }
+      then: "World-class teams metabolize chaos. Calm teams break. Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame.",
+      now: "My second day at GrowthLoop, I sat in on sprint planning. I remember thinking: oh good, they do this, this is a good sign. Then I saw the format. Every engineer. One meeting. Thirty fucking minutes.",
+      note: "Detail before thesis. The scene carries the judgment; the org chart becomes evidence, not the opening claim.",
+    },
   },
   revision: {
     entries: [
@@ -158,7 +170,7 @@ const site = {
           "When I joined GrowthLoop, there was a Scrum meeting that everyone attended. I decided to remove it to improve ownership.",
         after:
           "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment.",
-        what: "The essay now starts with the room, not the argument. The reader feels the meeting before they're asked to judge it."
+        what: "The essay now starts with the room, not the argument. The reader feels the meeting before they're asked to judge it.",
       },
       {
         label: "Revision 02",
@@ -168,35 +180,33 @@ const site = {
           "A cast is a structure that does the thinking for you. The meeting had become a religion. We deleted it.",
         after:
           "A cast is any structure that does the thinking for you—a process, a role, a meeting that has become a substitute for judgment. Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion.",
-        what: "One metaphor now carries the idea. The other is a line, not a section."
-      }
-    ]
+        what: "One metaphor now carries the idea. The other is a line, not a section.",
+      },
+    ],
   },
   readme: {
     title: "README.md",
     kicker: "Personal operating manual",
     version: "2025.01",
     reviewed: "October 2026",
-    deck:
-      "What I expect. How I show up. What inspires me. For myself first—then for anyone I work with.",
-    meta:
-      "author: Jesse McGinnis · version: 2025.01 · tags: Type 8 “Challenger” · ENFJ-A “Protagonist”",
+    deck: "What I expect. How I show up. What inspires me. For myself first—then for anyone I work with.",
+    meta: "author: Jesse McGinnis · version: 2025.01 · tags: Type 8 “Challenger” · ENFJ-A “Protagonist”",
     tldr: [
       {
         label: "What I Expect",
         headline: "Smart people. Hard problems. No bullshit.",
-        anchor: "#what-i-expect"
+        anchor: "#what-i-expect",
       },
       {
         label: "How I Show Up",
         headline: "Trust first. Expect everything. Best ideas win.",
-        anchor: "#how-i-show-up"
+        anchor: "#how-i-show-up",
       },
       {
         label: "What Inspires Me",
         headline: "Words that shaped me.",
-        anchor: "#inspiration"
-      }
+        anchor: "#inspiration",
+      },
     ],
     expectations: [
       {
@@ -206,24 +216,24 @@ const site = {
           {
             label: "Scary smart",
             detail:
-              "People who push themselves past “what's necessary” simply because they wanted to see the other side. People I'm inspired by. People I'll learn from. Scary is the important word: it should be uneasy to keep up with them."
+              "People who push themselves past “what's necessary” simply because they wanted to see the other side. People I'm inspired by. People I'll learn from. Scary is the important word: it should be uneasy to keep up with them.",
           },
           {
             label: "Genuine",
             detail:
-              "People who care not just about what they do, but *how they do it*. People who want to know the humans they work with, and want to *be known* in return. Honesty, kindness, authenticity—not as values on a wall, but as how they live."
+              "People who care not just about what they do, but *how they do it*. People who want to know the humans they work with, and want to *be known* in return. Honesty, kindness, authenticity—not as values on a wall, but as how they live.",
           },
           {
             label: "Optimistic",
             detail:
-              "Never toxic positivity—a deeply held belief *in a better tomorrow*. Honest about barriers, willing to do the work. I'm optimistic by nature, and I want to be somewhere the *optimists outnumber the pessimists*."
+              "Never toxic positivity—a deeply held belief *in a better tomorrow*. Honest about barriers, willing to do the work. I'm optimistic by nature, and I want to be somewhere the *optimists outnumber the pessimists*.",
           },
           {
             label: "Expect more",
             detail:
-              "Push me. Challenge me. Hold me accountable. A culture of excellence, where we're all here to do *our best work*. People excited by the idea that today is the worst we'll ever be at what we do."
-          }
-        ]
+              "Push me. Challenge me. Hold me accountable. A culture of excellence, where we're all here to do *our best work*. People excited by the idea that today is the worst we'll ever be at what we do.",
+          },
+        ],
       },
       {
         number: "02",
@@ -232,24 +242,24 @@ const site = {
           {
             label: "Chart my own path",
             detail:
-              "*Choose my own adventure*, with guideposts not hard walls. A place that treats people like adults who can make the right decisions. Defaults, not rules. Capabilities, not titles."
+              "*Choose my own adventure*, with guideposts not hard walls. A place that treats people like adults who can make the right decisions. Defaults, not rules. Capabilities, not titles.",
           },
           {
             label: "See my impact",
             detail:
-              "I put in my all. I expect to see the impact—and be recognized when I achieve something extraordinary."
+              "I put in my all. I expect to see the impact—and be recognized when I achieve something extraordinary.",
           },
           {
             label: "Lift others",
             detail:
-              "I want to help others grow—*mentor*, *coach*, *teach*. Design programs or work 1:1. A place where we're all here to learn, and I get to help make that happen."
+              "I want to help others grow—*mentor*, *coach*, *teach*. Design programs or work 1:1. A place where we're all here to learn, and I get to help make that happen.",
           },
           {
             label: "Room to grow",
             detail:
-              "Keep learning. There will be phases of mastery, but there must be phases of stretch too. Stagnation is not an option."
-          }
-        ]
+              "Keep learning. There will be phases of mastery, but there must be phases of stretch too. Stagnation is not an option.",
+          },
+        ],
       },
       {
         number: "03",
@@ -258,117 +268,116 @@ const site = {
           {
             label: "Winning in failure",
             detail:
-              "A place that *knows failure is a lesson*, not something to avoid. Where I can *fail fast* and *fail forward*. Antifragile, not fragile."
+              "A place that *knows failure is a lesson*, not something to avoid. Where I can *fail fast* and *fail forward*. Antifragile, not fragile.",
           },
           {
             label: "Winning in loss",
             detail:
-              "Even if the bet loses—the project, the job, the company—I've gained something real. Growth, learning, relationships, skills. A place where everyone *wins*, even in loss."
+              "Even if the bet loses—the project, the job, the company—I've gained something real. Growth, learning, relationships, skills. A place where everyone *wins*, even in loss.",
           },
           {
             label: "Worth the hard days",
             detail:
-              "A place I *believe in*. Where what we're building is worth sticking through the storms for."
-          }
-        ]
-      }
+              "A place I *believe in*. Where what we're building is worth sticking through the storms for.",
+          },
+        ],
+      },
     ],
     principles: [
       {
         title: "Trust first",
         detail:
-          "I share openly. I *trust* you can and will do what you say. But fair warning: burn my trust and it's a long road back."
+          "I share openly. I *trust* you can and will do what you say. But fair warning: burn my trust and it's a long road back.",
       },
       {
         title: "Expect your best",
         detail:
-          "I want people to see everything they're capable of. My expectations are high—I hold what I know you can do, and I'll actively help you get there."
+          "I want people to see everything they're capable of. My expectations are high—I hold what I know you can do, and I'll actively help you get there.",
       },
       {
         title: "Best ideas win",
         detail:
-          "Idea labs are fun—and where the best results come from. So expect me to argue, push, prod, and question. I expect the same from you. This is how we get to the best answers."
+          "Idea labs are fun—and where the best results come from. So expect me to argue, push, prod, and question. I expect the same from you. This is how we get to the best answers.",
       },
       {
         title: "Honest, not brutal",
         detail:
-          "I won't lie, but I might say nothing. I will tell you what I think, clearly and kindly. I expect the same from you."
+          "I won't lie, but I might say nothing. I will tell you what I think, clearly and kindly. I expect the same from you.",
       },
       {
         title: "Don't box me in",
         detail:
-          "Defaults are powerful; rules are suffocating. Put a hard line in front of me and expect me to interrogate it. The best path forward often means breaking the rules."
+          "Defaults are powerful; rules are suffocating. Put a hard line in front of me and expect me to interrogate it. The best path forward often means breaking the rules.",
       },
       {
         title: "Optimistic by nature",
         detail:
-          "I believe in a better tomorrow and I'll work to make it happen. Always looking for the silver lining—but never ignoring the storm clouds."
+          "I believe in a better tomorrow and I'll work to make it happen. Always looking for the silver lining—but never ignoring the storm clouds.",
       },
       {
         title: "Pragmatic by practice",
         detail:
-          "The world is grey and complex. I will find a path forward, even if it's not the one I wanted. Never let perfect be the enemy of good enough."
+          "The world is grey and complex. I will find a path forward, even if it's not the one I wanted. Never let perfect be the enemy of good enough.",
       },
       {
         title: "Clear is kind",
-        detail: "Direct, concise, precise. But not cold—pith and context matter."
-      }
+        detail:
+          "Direct, concise, precise. But not cold—pith and context matter.",
+      },
     ],
     quotes: {
       seek: [
-        { text: "Work on something uncomfortably exciting.", author: "Larry Page" },
+        {
+          text: "Work on something uncomfortably exciting.",
+          author: "Larry Page",
+        },
         {
           text: "Choose things that will make you smarter in 10 or 20 years.",
-          author: "Warren Buffett"
+          author: "Warren Buffett",
         },
-        { text: "Look for smart people and hard problems.", author: "Paul Graham" },
         {
-          text:
-            "Not everything that is faced can be changed. But nothing can be changed until it is faced.",
-          author: "James Arthur Baldwin"
-        }
+          text: "Look for smart people and hard problems.",
+          author: "Paul Graham",
+        },
+        {
+          text: "Not everything that is faced can be changed. But nothing can be changed until it is faced.",
+          author: "James Arthur Baldwin",
+        },
       ],
       be: [
         {
-          text:
-            "We are what we repeatedly do. Excellence, therefore, is not an act, but a habit.",
-          author: "Aristotle"
+          text: "We are what we repeatedly do. Excellence, therefore, is not an act, but a habit.",
+          author: "Aristotle",
         },
         {
-          text:
-            "We judge others by their behavior. We judge ourselves by our intentions.",
-          author: "Ian Percy"
+          text: "We judge others by their behavior. We judge ourselves by our intentions.",
+          author: "Ian Percy",
         },
         {
-          text:
-            "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
-          author: "Aristotle"
+          text: "It is the mark of an educated mind to be able to entertain a thought without accepting it.",
+          author: "Aristotle",
         },
         {
-          text:
-            "You must never be satisfied with losing. You must get angry, terribly angry, about losing. But the mark of the good loser is that he takes his anger out on himself and not his victorious opponents or on his teammates.",
-          author: "Richard M. Nixon"
+          text: "You must never be satisfied with losing. You must get angry, terribly angry, about losing. But the mark of the good loser is that he takes his anger out on himself and not his victorious opponents or on his teammates.",
+          author: "Richard M. Nixon",
         },
         {
-          text:
-            "Be soft. Do not let the world make you hard. Do not let pain make you hate. Do not let the bitterness steal your sweetness.",
-          author: "Kurt Vonnegut"
-        }
+          text: "Be soft. Do not let the world make you hard. Do not let pain make you hate. Do not let the bitterness steal your sweetness.",
+          author: "Kurt Vonnegut",
+        },
       ],
       remember: [
         {
-          text:
-            "All that is necessary for the triumph of evil is that good men do nothing.",
-          author: "Edmund Burke"
+          text: "All that is necessary for the triumph of evil is that good men do nothing.",
+          author: "Edmund Burke",
         },
         {
-          text:
-            "It is not power that corrupts but fear. Fear of losing power corrupts those who wield it and fear of the scourge of power corrupts those who are subject to it.",
-          author: "Aung San Suu Kyi"
-        }
-      ]
+          text: "It is not power that corrupts but fear. Fear of losing power corrupts those who wield it and fear of the scourge of power corrupts those who are subject to it.",
+          author: "Aung San Suu Kyi",
+        },
+      ],
     },
-    sagan: `Look again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every "superstar," every "supreme leader," every saint and sinner in the history of our species lived there—on a mote of dust suspended in a sunbeam.`
+    sagan: `Look again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every "superstar," every "supreme leader," every saint and sinner in the history of our species lived there—on a mote of dust suspended in a sunbeam.`,
   },
   archive: [
     {
@@ -377,7 +386,7 @@ const site = {
       year: "2026",
       revised: null,
       themes: ["Ownership", "Change"],
-      note: "What makes an internal market a market."
+      note: "What makes an internal market a market.",
     },
     {
       title: "Directed Chaos",
@@ -385,7 +394,7 @@ const site = {
       year: "2026",
       revised: "October 2026",
       themes: ["Ownership", "Change"],
-      note: "Structure, ownership, and the meeting that couldn't die."
+      note: "Structure, ownership, and the meeting that couldn't die.",
     },
     {
       title: "Organizational Changelog",
@@ -393,7 +402,7 @@ const site = {
       year: "2024",
       revised: null,
       themes: ["Change", "Memory"],
-      note: "How organizations remember what they learn."
+      note: "How organizations remember what they learn.",
     },
     {
       title: "Trust First",
@@ -401,7 +410,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Trust"],
-      note: "Trust, disclosure, and the risk of extending it first."
+      note: "Trust, disclosure, and the risk of extending it first.",
     },
     {
       title: "Work-life Harmony",
@@ -409,7 +418,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Work"],
-      note: "Life deserves more than simple balance."
+      note: "Life deserves more than simple balance.",
     },
     {
       title: "Writing Regularly",
@@ -417,7 +426,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Writing"],
-      note: "Permission for smaller observations."
+      note: "Permission for smaller observations.",
     },
     {
       title: "Transitioning Well",
@@ -425,9 +434,9 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Change", "Work"],
-      note: "Uncertainty, fear, and joining a new organization."
-    }
-  ]
+      note: "Uncertainty, fear, and joining a new organization.",
+    },
+  ],
 };
 
 const essayRest = site.essay.blocks.slice(11);
@@ -440,7 +449,7 @@ const essayVersions = [
     reading: "8 min",
     summary:
       "Detail before thesis. Restored the scene. Cut the org chart. Let the judgment come from the room.",
-    blocks: site.essay.openingV2.concat(essayRest)
+    blocks: site.essay.openingV2.concat(essayRest),
   },
   {
     id: "rev-01",
@@ -450,8 +459,8 @@ const essayVersions = [
     reading: "7 min",
     summary:
       "First published. Thesis first. The meeting arrived as a headcount, not a room.",
-    blocks: site.essay.blocks
-  }
+    blocks: site.essay.blocks,
+  },
 ];
 
 site.home = {
@@ -460,35 +469,36 @@ site.home = {
       text: "Ownership isn't a belief you argue someone into. It's a weight you let them feel.",
       source: "Directed Chaos",
       note: "Revised October 2026",
-      target: "history"
+      target: "history",
     },
     {
       text: "Trust is the multiplier.",
       source: "Trust First",
       note: "Essay",
-      target: "essay"
+      target: "essay",
     },
     {
       text: "By remembering your past, you'll understand your present and shape your future.",
       source: "Organizational Changelog",
       note: "Essay",
-      target: "essay"
-    }
+      target: "essay",
+    },
   ],
   revisions: [
     {
       title: "Directed Chaos",
       label: "Rev. 02 · October 2026",
       summary: essayVersions[0].summary,
-      target: "history"
+      target: "history",
     },
     {
       title: "Trust First",
       label: "September 2026",
-      summary: "Separated the promise of trust from the practice of connection.",
-      target: null
-    }
-  ]
+      summary:
+        "Separated the promise of trust from the practice of connection.",
+      target: null,
+    },
+  ],
 };
 
 site.about = {
@@ -503,8 +513,8 @@ site.about = {
       title: "The forge",
       paragraphs: [
         "I landed at Boltmade as the first non-founder—technically an intern. Five of us; four years later, nearly thirty. We built first prototypes for funded startups with no team, dropped into mid-sized companies stuck in politics, and ran skunkworks for Fortune 500 execs.",
-        "One client ran a heavily regulated helicopter operation and was drowning in paper tomes. We spent days whiteboarding the real pain and rapid prototyping. He got it approved and could finally spend more time flying than filing. Another client needed perfect audio sync across phones at a party; the tech was incredible, but the founder ran the team like a blood sport. I protected the builders, got people sharing instead of competing, and kept the product moving. I still use that instinct."
-      ]
+        "One client ran a heavily regulated helicopter operation and was drowning in paper tomes. We spent days whiteboarding the real pain and rapid prototyping. He got it approved and could finally spend more time flying than filing. Another client needed perfect audio sync across phones at a party; the tech was incredible, but the founder ran the team like a blood sport. I protected the builders, got people sharing instead of competing, and kept the product moving. I still use that instinct.",
+      ],
     },
     {
       years: "2016–2025",
@@ -514,8 +524,8 @@ site.about = {
         "By year four at Boltmade, we had to stop being a family and grow up or sell. Google circled. Shopify fit. We joined in 2016, when Shopify had around a thousand people and Plus felt like a rebellion inside the giant.",
         "My first year was special projects: twelve problems in a row. I broke Shopify early—account invites overloaded databases and slipped past rate limits. Nobody yelled; they told me to fix it and learn. I started living on planes to Ottawa and Montreal. Relationships move hard problems faster than heroics.",
         "I raised my hand for what everyone called open-heart surgery: multi-currency. People said two years. We prototyped in a couple weeks; Montreal killed it on payments risk. We built prototype after prototype, argued through arbitrage edge cases, and landed on MoneyBags. Launched in under a year.",
-        "Then came the long middle: a Plus dashboard that got axed, big swings at CMS, inventory, and CRM that failed. Same lesson every time—if you don't fix the core, big bets turn into theater. That pushed us to the app shell, and eventually to the reset: two messy teams, Metafields and Media, and a mandate to finally ship a CMS. Metaobjects emerged; taxonomy arrived; I made director. Near the end I helped shape The Catalogue. After eight years of bumping against shop-level walls, it felt like a real ending."
-      ]
+        "Then came the long middle: a Plus dashboard that got axed, big swings at CMS, inventory, and CRM that failed. Same lesson every time—if you don't fix the core, big bets turn into theater. That pushed us to the app shell, and eventually to the reset: two messy teams, Metafields and Media, and a mandate to finally ship a CMS. Metaobjects emerged; taxonomy arrived; I made director. Near the end I helped shape The Catalogue. After eight years of bumping against shop-level walls, it felt like a real ending.",
+      ],
     },
     {
       years: "2025–now",
@@ -524,10 +534,10 @@ site.about = {
       paragraphs: [
         "Early 2025 I was still riding high from Shopify, but GrowthLoop pulled on something deeper. I left to learn whether I could lead outside Shopify's machine.",
         "The contrast was immediate: cash-constrained, too much to balance, and all running through one central meeting that had become its spine. Forty people, thin updates, everyone pretending things were fine while work slipped. Responsibility kept moving upward instead of landing anywhere real.",
-        "I killed that meeting and replaced it with projects and champions so ownership had somewhere real to land. Then came the slower work: building an internal operating system with AI, rewriting values, raising the talent bar, and pushing harder on debate, truth-seeking, and owning the hard calls. That's the story I'm in now."
-      ]
-    }
-  ]
+        "I killed that meeting and replaced it with projects and champions so ownership had somewhere real to land. Then came the slower work: building an internal operating system with AI, rewriting values, raising the talent bar, and pushing harder on debate, truth-seeking, and owning the hard calls. That's the story I'm in now.",
+      ],
+    },
+  ],
 };
 
 const THEMES = ["Ownership", "Trust", "Change", "Work", "Writing", "Memory"];
@@ -571,23 +581,25 @@ const byYear = () => {
   const years = [...new Set(site.archive.map((entry) => entry.year))];
   return years.map((year) => ({
     year,
-    entries: site.archive.filter((entry) => entry.year === year)
+    entries: site.archive.filter((entry) => entry.year === year),
   }));
 };
 
-const entriesByTheme = (theme) => site.archive.filter((entry) => entry.themes.includes(theme));
-const selectedEntries = () => site.archive.filter((entry) => SELECTED.includes(entry.title));
+const entriesByTheme = (theme) =>
+  site.archive.filter((entry) => entry.themes.includes(theme));
+const selectedEntries = () =>
+  site.archive.filter((entry) => SELECTED.includes(entry.title));
 
 const nav = (active) => {
   const items = [
     { label: "Writing", view: "archive" },
     { label: "README", view: "readme" },
-    { label: "About", view: "about" }
+    { label: "About", view: "about" },
   ];
   return items
     .map(
       (item) =>
-        `<a class="${item.label === active ? "active" : ""}" href="#" data-goto="${item.view}"${item.label === active ? ' aria-current="page"' : ""}>${item.label}</a>`
+        `<a class="${item.label === active ? "active" : ""}" href="#" data-goto="${item.view}"${item.label === active ? ' aria-current="page"' : ""}>${item.label}</a>`,
     )
     .join("");
 };
@@ -608,7 +620,7 @@ const selectedList = () =>
   selectedEntries()
     .map(
       (entry) =>
-        `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span></li>`
+        `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span></li>`,
     )
     .join("");
 
@@ -669,7 +681,7 @@ function home() {
                   <p class="belief-text">${belief.text}</p>
                   <p class="belief-meta">${beliefLink(belief)}<span>${belief.note}</span></p>
                 </div>
-              </li>`
+              </li>`,
               )
               .join("")}
           </ol>
@@ -684,7 +696,7 @@ function home() {
               <li class="change">
                 <div class="change-head">${revisionLink(rev)}<span>${rev.label}</span></div>
                 <p>${rev.summary}</p>
-              </li>`
+              </li>`,
               )
               .join("")}
           </ul>
@@ -707,7 +719,7 @@ function about() {
             <a class="about-era" href="#era-${slug(era.company)}">
               <span class="label">${era.years}</span>
               <span class="about-company">${era.company}</span>
-            </a>`
+            </a>`,
             )
             .join("")}
         </nav>
@@ -727,7 +739,7 @@ function about() {
                 <h2>${era.title}</h2>
               </div>
               ${era.paragraphs.map((p) => `<p>${p}</p>`).join("")}
-            </section>`
+            </section>`,
             )
             .join("")}
 
@@ -739,7 +751,9 @@ function about() {
 }
 
 const essaySections = () =>
-  site.essay.blocks.filter((block) => block.type === "h2").map((block) => block.text);
+  site.essay.blocks
+    .filter((block) => block.type === "h2")
+    .map((block) => block.text);
 
 const tocBlock = () => `
   <div class="margin-block">
@@ -768,7 +782,8 @@ const versionList = (version) => `
   </ul>`;
 
 function essay() {
-  const version = essayVersions.find((item) => item.id === state.version) || essayVersions[0];
+  const version =
+    essayVersions.find((item) => item.id === state.version) || essayVersions[0];
   const current = version.current;
   // Change bars belong to the current version only. Rev. 01 is a plain, readable old version.
   const history = state.mode === "history" && current;
@@ -781,16 +796,22 @@ function essay() {
         <h1>${site.essay.title}</h1>
         <p class="deck">${site.essay.deck}</p>
         <p class="meta">${current ? `First published ${site.essay.published} · Revised ${site.essay.revised} · ${version.reading}` : `First published ${version.date} · ${version.reading}`}</p>
-        ${!current ? `<div class="version-banner" role="note">
+        ${
+          !current
+            ? `<div class="version-banner" role="note">
           <p class="version-banner-title"><strong>You're reading ${version.label}.</strong> First published ${version.date}.</p>
           <p class="version-banner-links"><a href="#" data-version="rev-02" data-mode="reading">Read the current version →</a><a href="#" data-version="rev-02" data-mode="history">See what changed →</a></p>
-        </div>` : ""}
+        </div>`
+            : ""
+        }
       </header>
 
       <div class="essay-grid">
         <div class="body">${essayBody(version)}</div>
         <aside class="essay-margin">
-          ${current && !history ? `
+          ${
+            current && !history
+              ? `
             <div class="revision-rail">
               <p class="label">History</p>
               <p class="rail-stamp">Rev. 02 · ${site.essay.revised}</p>
@@ -809,8 +830,12 @@ function essay() {
               <p class="label">Still thinking</p>
               <p class="margin-prose">Does removing a central meeting work the same way in a remote-first org? I don't have a clean answer yet.</p>
             </div>
-          ` : ""}
-          ${history ? `
+          `
+              : ""
+          }
+          ${
+            history
+              ? `
             <div class="history-panel">
               <p class="label">Versions</p>
               ${versionList(version)}
@@ -818,19 +843,27 @@ function essay() {
               <p class="history-summary">${version.summary}</p>
               <a class="rail-link" href="#" data-mode="reading">Back to reading ←</a>
             </div>
-          ` : ""}
-          ${!current ? `
+          `
+              : ""
+          }
+          ${
+            !current
+              ? `
             <div class="history-panel">
               <p class="label">Versions</p>
               ${versionList(version)}
               <a class="rail-link" href="#" data-version="rev-02" data-mode="history">See what changed →</a>
             </div>
             ${tocBlock()}
-          ` : ""}
+          `
+              : ""
+          }
         </aside>
       </div>
 
-      ${history ? `
+      ${
+        history
+          ? `
         <section class="then-now" aria-labelledby="then-now-title">
           <h2 class="label" id="then-now-title">Then / Now</h2>
           <div class="then-now-grid">
@@ -845,7 +878,9 @@ function essay() {
           </div>
           <p class="then-now-note">${site.essay.thenNow.note}</p>
         </section>
-      ` : ""}
+      `
+          : ""
+      }
 
       <section class="revision-log" aria-labelledby="version-log-title">
         <h2 class="label" id="version-log-title">History</h2>
@@ -856,11 +891,14 @@ function essay() {
           <li class="${item.id === version.id ? "is-here" : ""}">
             <div class="version-log-head"><a href="#" data-version="${item.id}" data-mode="${item.current ? state.mode : "reading"}"${item.id === version.id ? ' aria-current="true"' : ""}>${item.label} · ${item.date}</a><span class="${item.current ? "is-current" : ""}">${item.current ? "Current" : "First published"}</span></div>
             <p>${item.summary}</p>
-          </li>`
+          </li>`,
             )
             .join("")}
         </ul>
-        ${history ? "" : `
+        ${
+          history
+            ? ""
+            : `
         <details class="revision-details">
           <summary>Then and now</summary>
           <div class="then-now-compact">
@@ -868,7 +906,8 @@ function essay() {
             <div class="now"><p class="label">Now</p><p>${site.essay.thenNow.now}</p></div>
           </div>
           <p class="then-now-note">${site.essay.thenNow.note}</p>
-        </details>`}
+        </details>`
+        }
       </section>
 
       <footer class="essay-foot">
@@ -897,7 +936,7 @@ function archive() {
           ${selectedEntries()
             .map(
               (entry) =>
-                `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span><p>${entry.note}</p></li>`
+                `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span><p>${entry.note}</p></li>`,
             )
             .join("")}
         </ul>
@@ -915,11 +954,13 @@ function archive() {
                 .map(
                   (entry) =>
                     `<li><span>${entry.year}</span>${articleLink(entry)}${
-                      entry.revised ? `<span class="revised">revised</span>` : `<span></span>`
-                    }</li>`
+                      entry.revised
+                        ? `<span class="revised">revised</span>`
+                        : `<span></span>`
+                    }</li>`,
                 )
                 .join("")}</ul>
-            </div>`
+            </div>`,
             )
             .join("")}
         </section>
@@ -934,11 +975,13 @@ function archive() {
                 .map(
                   (entry) =>
                     `<li><span>${entry.date}</span>${articleLink(entry)}${
-                      entry.revised ? `<span class="revised">revised</span>` : `<span></span>`
-                    }</li>`
+                      entry.revised
+                        ? `<span class="revised">revised</span>`
+                        : `<span></span>`
+                    }</li>`,
                 )
                 .join("")}</ul>
-            </div>`
+            </div>`,
             )
             .join("")}
         </section>
@@ -951,7 +994,7 @@ function readme() {
   const quoteGroups = [
     { key: "seek", title: "What to seek" },
     { key: "be", title: "How to be" },
-    { key: "remember", title: "To remember about the world" }
+    { key: "remember", title: "To remember about the world" },
   ];
   return `
     ${header("README")}
@@ -971,7 +1014,7 @@ function readme() {
             <span class="tldr-label">${item.label}</span>
             <strong>${item.headline}</strong>
             <span class="tldr-arrow">↓</span>
-          </a>`
+          </a>`,
           )
           .join("")}
       </section>
@@ -997,11 +1040,11 @@ function readme() {
                 <div class="keyword">
                   <h4>${keyword.label}</h4>
                   <p>${inline(keyword.detail)}</p>
-                </div>`
+                </div>`,
                 )
                 .join("")}
             </div>
-          </div>`
+          </div>`,
           )
           .join("")}
       </section>
@@ -1020,7 +1063,7 @@ function readme() {
               <span class="principle-num">${String(index + 1).padStart(2, "0")}</span>
               <h3>${principle.title}</h3>
               <p>${inline(principle.detail)}</p>
-            </div>`
+            </div>`,
             )
             .join("")}
         </div>
@@ -1044,11 +1087,11 @@ function readme() {
                 <blockquote>
                   <p>${quote.text}</p>
                   <cite>${quote.author}</cite>
-                </blockquote>`
+                </blockquote>`,
                 )
                 .join("")}
             </div>
-          </div>`
+          </div>`,
           )
           .join("")}
       </section>
@@ -1068,19 +1111,16 @@ const MODES = {
     number: "01",
     label: "Reading",
     thesis: "Read the current essay; the history is a quiet rail.",
-    what:
-      "A clean reading column. The margin shows the current version, a “See history” link, and the first publication date. The version log sits at the end.",
-    risk: "The soft hint may still be too quiet; the reader may never open the history."
+    what: "A clean reading column. The margin shows the current version, a “See history” link, and the first publication date. The version log sits at the end.",
+    risk: "The soft hint may still be too quiet; the reader may never open the history.",
   },
   history: {
     number: "02",
     label: "History",
     thesis: "See the essay's versions without leaving the essay.",
-    what:
-      "The current version with change bars on the rewritten passages, a version panel, and a curated Then / Now. Rev. 01 is readable in full.",
-    risk:
-      "Can become process theater. Mark only meaningful changes; big rewrites should be versions, not a diff of every sentence."
-  }
+    what: "The current version with change bars on the rewritten passages, a version panel, and a curated Then / Now. Rev. 01 is readable in full.",
+    risk: "Can become process theater. Mark only meaningful changes; big rewrites should be versions, not a diff of every sentence.",
+  },
 };
 
 const VIEWS = {
@@ -1088,7 +1128,7 @@ const VIEWS = {
   essay: { label: "Essay", render: essay },
   about: { label: "About", render: about },
   archive: { label: "Archive", render: archive },
-  readme: { label: "README", render: readme }
+  readme: { label: "README", render: readme },
 };
 
 const state = {
@@ -1096,7 +1136,7 @@ const state = {
   mode: "reading",
   version: "rev-02",
   mobile: false,
-  notes: false
+  notes: false,
 };
 
 const stage = document.getElementById("stage");
@@ -1155,14 +1195,14 @@ function renderTabs() {
   modeTabs.innerHTML = Object.entries(MODES)
     .map(
       ([key, mode]) =>
-        `<button class="lab-tab ${key === state.mode ? "is-active" : ""}" data-mode="${key}" type="button"><span>${mode.number}</span>${mode.label}</button>`
+        `<button class="lab-tab ${key === state.mode ? "is-active" : ""}" data-mode="${key}" type="button"><span>${mode.number}</span>${mode.label}</button>`,
     )
     .join("");
 
   viewTabs.innerHTML = Object.entries(VIEWS)
     .map(
       ([key, view]) =>
-        `<button class="lab-tab lab-tab-view ${key === state.view ? "is-active" : ""}" data-view="${key}" type="button">${view.label}</button>`
+        `<button class="lab-tab lab-tab-view ${key === state.view ? "is-active" : ""}" data-view="${key}" type="button">${view.label}</button>`,
     )
     .join("");
 }
@@ -1179,8 +1219,15 @@ function render() {
   document.body.classList.toggle("notes-open", state.notes);
   renderTabs();
   try {
-    const versionPart = state.view === "essay" && state.version !== "rev-02" ? `/${state.version}` : "";
-    history.replaceState(null, "", `#${state.view}/${state.mode}${versionPart}`);
+    const versionPart =
+      state.view === "essay" && state.version !== "rev-02"
+        ? `/${state.version}`
+        : "";
+    history.replaceState(
+      null,
+      "",
+      `#${state.view}/${state.mode}${versionPart}`,
+    );
   } catch {
     // file:// origins can refuse history updates; the lab still works without them.
   }
@@ -1239,12 +1286,19 @@ stage.addEventListener("click", (event) => {
   // without touching the lab's #view/mode hash.
   const anchor = event.target.closest('a[href^="#"]:not([href="#"])');
   if (anchor) {
-    const target = document.getElementById(anchor.getAttribute("href").slice(1));
+    const target = document.getElementById(
+      anchor.getAttribute("href").slice(1),
+    );
     if (!target) return;
     event.preventDefault();
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     target.setAttribute("tabindex", "-1");
-    target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    target.scrollIntoView({
+      behavior: reduce ? "auto" : "smooth",
+      block: "start",
+    });
     target.focus({ preventScroll: true });
     return;
   }
@@ -1269,11 +1323,15 @@ notesClose.addEventListener("click", () => {
 });
 
 function readHash() {
-  const [view, mode, version] = window.location.hash.replace("#", "").split("/");
+  const [view, mode, version] = window.location.hash
+    .replace("#", "")
+    .split("/");
   if (!VIEWS[view]) return false;
   state.view = view;
   if (MODES[mode]) state.mode = mode;
-  state.version = essayVersions.some((item) => item.id === version) ? version : "rev-02";
+  state.version = essayVersions.some((item) => item.id === version)
+    ? version
+    : "rev-02";
   return true;
 }
 

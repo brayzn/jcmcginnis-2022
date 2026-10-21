@@ -8,8 +8,8 @@ Personal website and blog for Jesse McGinnis, built with
 ## Design direction
 
 The current refresh direction and interactive prototype live in
-[`design/website-refresh/`](design/website-refresh/). That folder is a design
-handoff, not part of the Bridgetown build.
+[`design/website-refresh/`](design/website-refresh/). That folder is a design handoff, not part of
+the Bridgetown build.
 
 ## Tech Stack
 

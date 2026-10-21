@@ -10,86 +10,104 @@ const site = {
     revised: "October 2026",
     reading: "7 min",
     blocks: [
-      { type: "p", html: "World-class teams metabolize chaos. Calm teams break." },
       {
         type: "p",
-        html: "Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame."
-      },
-      { type: "p", html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it." },
-      {
-        type: "p",
-        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome."
+        html: "World-class teams metabolize chaos. Calm teams break.",
       },
       {
         type: "p",
-        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality."
+        html: "Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame.",
       },
       {
         type: "p",
-        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them."
+        html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it.",
+      },
+      {
+        type: "p",
+        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome.",
+      },
+      {
+        type: "p",
+        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality.",
+      },
+      {
+        type: "p",
+        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them.",
       },
       { type: "h2", text: "The meeting that couldn't die" },
       {
         type: "p",
-        html: "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment."
+        html: "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment.",
       },
-      { type: "p", html: "Everyone left nodding. Work still slipped. Tidy, performative calm." },
       {
         type: "p",
-        html: "Underneath, work was ticket soup: ad hoc initiatives owned by \u201cteams\u201d who shared blame but not conviction. The meeting was the cast that absorbed responsibility so nobody had to own the outcome."
+        html: "Everyone left nodding. Work still slipped. Tidy, performative calm.",
       },
-      { type: "p", html: "Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion." },
+      {
+        type: "p",
+        html: "Underneath, work was ticket soup: ad hoc initiatives owned by \u201cteams\u201d who shared blame but not conviction. The meeting was the cast that absorbed responsibility so nobody had to own the outcome.",
+      },
+      {
+        type: "p",
+        html: "Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion.",
+      },
       { type: "p", html: "So I didn't refactor it. I deleted it." },
       {
         type: "p",
-        html: "We didn't stop coordinating. We stopped pretending coordination was a meeting. Planning didn't go away. The fiction that one meeting could plan for everyone did."
+        html: "We didn't stop coordinating. We stopped pretending coordination was a meeting. Planning didn't go away. The fiction that one meeting could plan for everyone did.",
       },
       {
         type: "p",
-        html: "The deletion produced the most valuable artifact in the company: empty space. Within hours my Slack filled with DMs asking for a replacement ceremony, a new playbook, a definitive timebox. I said no—not because structure is bad, but because this structure had become a cast."
+        html: "The deletion produced the most valuable artifact in the company: empty space. Within hours my Slack filled with DMs asking for a replacement ceremony, a new playbook, a definitive timebox. I said no—not because structure is bad, but because this structure had become a cast.",
       },
       {
         type: "p",
-        html: "The first week was loud in the right way. Teams argued about planning. Leads looked around and realized there was no parent to escalate to. Two leads tried to resurrect the central meeting and learned why it existed: to export responsibility upward. Without a center, there was nowhere to export it. The weight landed on them."
+        html: "The first week was loud in the right way. Teams argued about planning. Leads looked around and realized there was no parent to escalate to. Two leads tried to resurrect the central meeting and learned why it existed: to export responsibility upward. Without a center, there was nowhere to export it. The weight landed on them.",
       },
       {
         type: "emph",
-        html: "Freedom without structure is chaos. Structure without freedom is bureaucracy. The magic is in the tension."
+        html: "Freedom without structure is chaos. Structure without freedom is bureaucracy. The magic is in the tension.",
       },
       { type: "p", html: "So we added structure that doesn't steer for you." },
       {
         type: "p",
-        html: "Projects became the atomic unit of work: a bounded bet with a finish line. Each project had a load-bearing owner—not a committee. We named the role <strong>champion</strong>, and that word did real work."
+        html: "Projects became the atomic unit of work: a bounded bet with a finish line. Each project had a load-bearing owner—not a committee. We named the role <strong>champion</strong>, and that word did real work.",
       },
       {
         type: "p",
-        html: "A champion isn't a PM with a new hat. It's the person who carries the project when it gets heavy. They cut scope, pull in the right people, and tell the truth. Their name stays attached when the project is ugly. If there's no champion, it's not a project. It's a wish."
+        html: "A champion isn't a PM with a new hat. It's the person who carries the project when it gets heavy. They cut scope, pull in the right people, and tell the truth. Their name stays attached when the project is ugly. If there's no champion, it's not a project. It's a wish.",
       },
       {
         type: "p",
-        html: "Every six weeks champions sit with the exec team and walk through the guts in plain language. No slide theater. No green/yellow/red. Just: what's true, what changed, what's at risk, and what you're doing about it."
+        html: "Every six weeks champions sit with the exec team and walk through the guts in plain language. No slide theater. No green/yellow/red. Just: what's true, what changed, what's at risk, and what you're doing about it.",
       },
       {
         type: "p",
-        html: "That review isn't approval. It's forced contact with reality—an engineered place to surface uncertainty on purpose and treat it as a signal, not a sin."
+        html: "That review isn't approval. It's forced contact with reality—an engineered place to surface uncertainty on purpose and treat it as a signal, not a sin.",
       },
-      { type: "p", html: "That was the pattern: stop absorbing the weight, let it land where it belongs." },
+      {
+        type: "p",
+        html: "That was the pattern: stop absorbing the weight, let it land where it belongs.",
+      },
       { type: "h2", text: "The payoff" },
       { type: "p", html: "There's a quiet moment when it starts to stick." },
       {
         type: "p",
-        html: "People start solving problems before you know the problems exist. PMs stop apologizing for slowing features—they ask what they can do to help. Engineers defend customers with test suites they wrote without being asked."
+        html: "People start solving problems before you know the problems exist. PMs stop apologizing for slowing features—they ask what they can do to help. Engineers defend customers with test suites they wrote without being asked.",
       },
       {
         type: "emph",
-        html: "Ownership isn't a belief you argue someone into. It's a weight you let them feel."
+        html: "Ownership isn't a belief you argue someone into. It's a weight you let them feel.",
       },
       {
         type: "p",
-        html: "The people who thrive here don't just tolerate turbulence—they generate it. I call them <strong>exothermic</strong>: they produce more energy than they consume. They bring drafts instead of questions. They kill ambiguity for everyone around them."
+        html: "The people who thrive here don't just tolerate turbulence—they generate it. I call them <strong>exothermic</strong>: they produce more energy than they consume. They bring drafts instead of questions. They kill ambiguity for everyone around them.",
       },
-      { type: "p", html: "Directed chaos doesn't just distribute ownership—it builds exothermic people." }
-    ]
+      {
+        type: "p",
+        html: "Directed chaos doesn't just distribute ownership—it builds exothermic people.",
+      },
+    ],
   },
   revision: {
     entries: [
@@ -101,7 +119,7 @@ const site = {
           "When I joined GrowthLoop, there was a Scrum meeting that everyone attended. I decided to remove it to improve ownership.",
         after:
           "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment.",
-        what: "The essay now starts with the room, not the argument. The reader feels the meeting before they're asked to judge it."
+        what: "The essay now starts with the room, not the argument. The reader feels the meeting before they're asked to judge it.",
       },
       {
         label: "Revision 02",
@@ -111,9 +129,9 @@ const site = {
           "A cast is a structure that does the thinking for you. The meeting had become a religion. We deleted it.",
         after:
           "A cast is any structure that does the thinking for you—a process, a role, a meeting that has become a substitute for judgment. Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion.",
-        what: "One metaphor now carries the idea. The other is a line, not a section."
-      }
-    ]
+        what: "One metaphor now carries the idea. The other is a line, not a section.",
+      },
+    ],
   },
   readme: {
     title: "Working with me",
@@ -126,30 +144,30 @@ const site = {
         body: [
           "People who push me, challenge me, and make me uncomfortable in the best way. Not for sport—because the work gets better when someone is willing to say the thing.",
           "Autonomy to build something meaningful, with guideposts instead of hard walls. Defaults, not rules. Capabilities, not titles.",
-          "Room to fail and learn. A place that knows failure is a lesson, not something to avoid."
-        ]
+          "Room to fail and learn. A place that knows failure is a lesson, not something to avoid.",
+        ],
       },
       {
         title: "What you can expect from me",
         body: [
           "I start with trust. I'll share what I know, explain what I'm trying to do, and expect you to make decisions. I need you to tell me when I'm missing something.",
           "High expectations, held with context and feedback. I'll tell you what I think, clearly and kindly. I expect the same from you.",
-          "The best idea wins. I'll argue, push, and question. I expect you to push on mine. I'd rather be wrong early than polite forever."
-        ]
+          "The best idea wins. I'll argue, push, and question. I expect you to push on mine. I'd rather be wrong early than polite forever.",
+        ],
       },
       {
         title: "How we disagree",
         body: [
           "Disagreement is part of the work, not a failure of the relationship. I want the argument that makes the idea better. If I push on something, I'm trying to understand it—not to win.",
-          "What I ask: be direct, bring the reasoning, and stay in the room. What I owe you: the same, plus the context to know why it matters."
-        ]
+          "What I ask: be direct, bring the reasoning, and stay in the room. What I owe you: the same, plus the context to know why it matters.",
+        ],
       },
       {
         title: "Where I need help",
         placeholder:
-          "This is the section I still need to write: where I lose the thread, what feedback I want, and how you can challenge me. I'd rather leave it honest than fill it with a slogan."
-      }
-    ]
+          "This is the section I still need to write: where I lose the thread, what feedback I want, and how you can challenge me. I'd rather leave it honest than fill it with a slogan.",
+      },
+    ],
   },
   archive: [
     {
@@ -158,7 +176,7 @@ const site = {
       year: "2026",
       revised: null,
       themes: ["Ownership", "Change"],
-      note: "What makes an internal market a market."
+      note: "What makes an internal market a market.",
     },
     {
       title: "Directed Chaos",
@@ -166,7 +184,7 @@ const site = {
       year: "2026",
       revised: "October 2026",
       themes: ["Ownership", "Change"],
-      note: "Structure, ownership, and the meeting that couldn't die."
+      note: "Structure, ownership, and the meeting that couldn't die.",
     },
     {
       title: "Organizational Changelog",
@@ -174,7 +192,7 @@ const site = {
       year: "2024",
       revised: null,
       themes: ["Change", "Memory"],
-      note: "How organizations remember what they learn."
+      note: "How organizations remember what they learn.",
     },
     {
       title: "Trust First",
@@ -182,7 +200,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Trust"],
-      note: "Trust, disclosure, and the risk of extending it first."
+      note: "Trust, disclosure, and the risk of extending it first.",
     },
     {
       title: "Work-life Harmony",
@@ -190,7 +208,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Work"],
-      note: "Life deserves more than simple balance."
+      note: "Life deserves more than simple balance.",
     },
     {
       title: "Writing Regularly",
@@ -198,7 +216,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Writing"],
-      note: "Permission for smaller observations."
+      note: "Permission for smaller observations.",
     },
     {
       title: "Transitioning Well",
@@ -206,9 +224,9 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Change", "Work"],
-      note: "Uncertainty, fear, and joining a new organization."
-    }
-  ]
+      note: "Uncertainty, fear, and joining a new organization.",
+    },
+  ],
 };
 
 const THEMES = ["Ownership", "Trust", "Change", "Work", "Writing", "Memory"];
@@ -248,26 +266,28 @@ const byYear = () => {
   const years = [...new Set(site.archive.map((entry) => entry.year))];
   return years.map((year) => ({
     year,
-    entries: site.archive.filter((entry) => entry.year === year)
+    entries: site.archive.filter((entry) => entry.year === year),
   }));
 };
 
-const entriesByTheme = (theme) => site.archive.filter((entry) => entry.themes.includes(theme));
-const selectedEntries = () => site.archive.filter((entry) => SELECTED.includes(entry.title));
+const entriesByTheme = (theme) =>
+  site.archive.filter((entry) => entry.themes.includes(theme));
+const selectedEntries = () =>
+  site.archive.filter((entry) => SELECTED.includes(entry.title));
 
 const nav = (active) => {
   const items = [
     { label: "Writing", view: "home" },
     { label: "Changelog", view: "archive" },
     { label: "README", view: "readme" },
-    { label: "About", view: null }
+    { label: "About", view: null },
   ];
   return items
     .map(
       (item) =>
         `<a class="${item.label === active ? "active" : ""}" ${
           item.view ? `href="#" data-goto="${item.view}"` : `href="#"`
-        }>${item.label}</a>`
+        }>${item.label}</a>`,
     )
     .join("");
 };
@@ -288,7 +308,7 @@ const selectedList = () =>
   selectedEntries()
     .map(
       (entry) =>
-        `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span></li>`
+        `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span></li>`,
     )
     .join("");
 
@@ -430,7 +450,7 @@ function revision() {
             <div class="after"><p class="label">After</p><blockquote>${entry.after}</blockquote></div>
           </div>
           <p class="revision-what"><strong>What it changes.</strong> ${entry.what}</p>
-        </section>`
+        </section>`,
         )
         .join("")}
 
@@ -452,7 +472,7 @@ function archive() {
           ${selectedEntries()
             .map(
               (entry) =>
-                `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span><p>${entry.note}</p></li>`
+                `<li><a href="#" data-goto="essay">${entry.title}</a><span>${entry.year}</span><p>${entry.note}</p></li>`,
             )
             .join("")}
         </ul>
@@ -470,11 +490,13 @@ function archive() {
                 .map(
                   (entry) =>
                     `<li><span>${entry.year}</span>${articleLink(entry)}${
-                      entry.revised ? `<span class="revised">revised</span>` : `<span></span>`
-                    }</li>`
+                      entry.revised
+                        ? `<span class="revised">revised</span>`
+                        : `<span></span>`
+                    }</li>`,
                 )
                 .join("")}</ul>
-            </div>`
+            </div>`,
             )
             .join("")}
         </section>
@@ -489,11 +511,13 @@ function archive() {
                 .map(
                   (entry) =>
                     `<li><span>${entry.date}</span>${articleLink(entry)}${
-                      entry.revised ? `<span class="revised">revised</span>` : `<span></span>`
-                    }</li>`
+                      entry.revised
+                        ? `<span class="revised">revised</span>`
+                        : `<span></span>`
+                    }</li>`,
                 )
                 .join("")}</ul>
-            </div>`
+            </div>`,
             )
             .join("")}
         </section>
@@ -503,7 +527,9 @@ function archive() {
 
 function readme() {
   const [expect, fromMe, disagree] = site.readme.sections;
-  const help = site.readme.sections.find((section) => section.title === "Where I need help");
+  const help = site.readme.sections.find(
+    (section) => section.title === "Where I need help",
+  );
   const section = (item) =>
     `<section><h2>${item.title}</h2>${item.body.map((p) => `<p>${p}</p>`).join("")}</section>`;
   return `
@@ -527,35 +553,38 @@ const SKINS = {
     thesis: "Chalk paper, cobalt ink, Newsreader. Lucid, electric, exact.",
     says: "You want the site to feel awake and precise, not cozy.",
     risk: "Can read as “design studio” if the writing doesn't carry it. Cobalt is a strong signature.",
-    strip: "A working document with one electric mark."
+    strip: "A working document with one electric mark.",
   },
   vermilion: {
     number: "02",
     name: "Vermilion",
     swatch: "#d63a1e",
-    thesis: "Newsprint gray, vermilion ink, Source Serif 4. Public, urgent, made.",
+    thesis:
+      "Newsprint gray, vermilion ink, Source Serif 4. Public, urgent, made.",
     says: "You want the site to feel like a public record, not a private brand.",
     risk: "Can drift into newspaper pastiche. The red has to be used sparingly.",
-    strip: "A public notice with a living archive."
+    strip: "A public notice with a living archive.",
   },
   oxide: {
     number: "03",
     name: "Oxide",
     swatch: "#b84a28",
-    thesis: "Bone paper, oxide ink, Literata. Tactile, studio, warm without nostalgia.",
+    thesis:
+      "Bone paper, oxide ink, Literata. Tactile, studio, warm without nostalgia.",
     says: "You want the site to feel made by hand, but not precious about it.",
     risk: "Closest to the current warm palette. Could still read as “terracotta editorial.”",
-    strip: "A material sample with a revision history."
+    strip: "A material sample with a revision history.",
   },
   ultramarine: {
     number: "04",
     name: "Ultramarine",
     swatch: "#1d3a8f",
-    thesis: "Cool white, ultramarine ink, Newsreader. Airy, archival, cool but human.",
+    thesis:
+      "Cool white, ultramarine ink, Newsreader. Airy, archival, cool but human.",
     says: "You want the site to feel like a record, held at arm's length but worth reading.",
     risk: "Can read as institutional or cold. The writing has to warm it.",
-    strip: "An archive with a pulse."
-  }
+    strip: "An archive with a pulse.",
+  },
 };
 
 const VIEWS = {
@@ -563,14 +592,14 @@ const VIEWS = {
   essay: { label: "Essay", render: essay },
   revision: { label: "Revision", render: revision },
   archive: { label: "Archive", render: archive },
-  readme: { label: "README", render: readme }
+  readme: { label: "README", render: readme },
 };
 
 const state = {
   skin: "cobalt",
   view: "home",
   mobile: false,
-  notes: false
+  notes: false,
 };
 
 const stage = document.getElementById("stage");
@@ -623,14 +652,14 @@ function renderTabs() {
   skinTabs.innerHTML = Object.entries(SKINS)
     .map(
       ([key, skin]) =>
-        `<button class="lab-tab ${key === state.skin ? "is-active" : ""}" data-skin="${key}" type="button"><span class="swatch" style="background:${skin.swatch}"></span>${skin.name}</button>`
+        `<button class="lab-tab ${key === state.skin ? "is-active" : ""}" data-skin="${key}" type="button"><span class="swatch" style="background:${skin.swatch}"></span>${skin.name}</button>`,
     )
     .join("");
 
   viewTabs.innerHTML = Object.entries(VIEWS)
     .map(
       ([key, view]) =>
-        `<button class="lab-tab lab-tab-view ${key === state.view ? "is-active" : ""}" data-view="${key}" type="button">${view.label}</button>`
+        `<button class="lab-tab lab-tab-view ${key === state.view ? "is-active" : ""}" data-view="${key}" type="button">${view.label}</button>`,
     )
     .join("");
 }

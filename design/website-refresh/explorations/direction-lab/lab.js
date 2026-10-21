@@ -11,86 +11,104 @@ const site = {
     revised: "October 2026",
     reading: "7 min",
     blocks: [
-      { type: "p", html: "World-class teams metabolize chaos. Calm teams break." },
       {
         type: "p",
-        html: "Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame."
-      },
-      { type: "p", html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it." },
-      {
-        type: "p",
-        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome."
+        html: "World-class teams metabolize chaos. Calm teams break.",
       },
       {
         type: "p",
-        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality."
+        html: "Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt surprises like a hospital infection team. Calm passes for competence because it looks like control. It keeps leaders out of blame.",
       },
       {
         type: "p",
-        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them."
+        html: "Structure decides where ownership lands. Casts centralize it. Good structure distributes it.",
+      },
+      {
+        type: "p",
+        html: "So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder uncertainty into status updates. The failure mode has a name: <strong>exporting responsibility upward.</strong> Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome.",
+      },
+      {
+        type: "p",
+        html: "It feels like good management—absorbing chaos so others can focus. But taking responsibility <em>for</em> people isn't the same as developing people who can take responsibility. The former creates calm. The latter creates capability. Only one survives contact with reality.",
+      },
+      {
+        type: "p",
+        html: "There's another way: <strong>directed chaos</strong>—direct the storms instead of absorbing them. You're not manufacturing problems. You're removing the structures that hide them.",
       },
       { type: "h2", text: "The meeting that couldn't die" },
       {
         type: "p",
-        html: "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment."
+        html: "When I arrived at GrowthLoop, one Scrum meeting was the company's spine: 30 minutes for 25 engineers and 2 PMs across five \u201cteams.\u201d A round-robin of thin updates, a parade of \u201cblocked,\u201d and a dopamine hit of alignment.",
       },
-      { type: "p", html: "Everyone left nodding. Work still slipped. Tidy, performative calm." },
       {
         type: "p",
-        html: "Underneath, work was ticket soup: ad hoc initiatives owned by \u201cteams\u201d who shared blame but not conviction. The meeting was the cast that absorbed responsibility so nobody had to own the outcome."
+        html: "Everyone left nodding. Work still slipped. Tidy, performative calm.",
       },
-      { type: "p", html: "Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion." },
+      {
+        type: "p",
+        html: "Underneath, work was ticket soup: ad hoc initiatives owned by \u201cteams\u201d who shared blame but not conviction. The meeting was the cast that absorbed responsibility so nobody had to own the outcome.",
+      },
+      {
+        type: "p",
+        html: "Everyone \u201cloved\u201d the meeting, but if a meeting can't die, it's not a tool—it's a religion.",
+      },
       { type: "p", html: "So I didn't refactor it. I deleted it." },
       {
         type: "p",
-        html: "We didn't stop coordinating. We stopped pretending coordination was a meeting. Planning didn't go away. The fiction that one meeting could plan for everyone did."
+        html: "We didn't stop coordinating. We stopped pretending coordination was a meeting. Planning didn't go away. The fiction that one meeting could plan for everyone did.",
       },
       {
         type: "p",
-        html: "The deletion produced the most valuable artifact in the company: empty space. Within hours my Slack filled with DMs asking for a replacement ceremony, a new playbook, a definitive timebox. I said no—not because structure is bad, but because this structure had become a cast."
+        html: "The deletion produced the most valuable artifact in the company: empty space. Within hours my Slack filled with DMs asking for a replacement ceremony, a new playbook, a definitive timebox. I said no—not because structure is bad, but because this structure had become a cast.",
       },
       {
         type: "p",
-        html: "The first week was loud in the right way. Teams argued about planning. Leads looked around and realized there was no parent to escalate to. Two leads tried to resurrect the central meeting and learned why it existed: to export responsibility upward. Without a center, there was nowhere to export it. The weight landed on them."
+        html: "The first week was loud in the right way. Teams argued about planning. Leads looked around and realized there was no parent to escalate to. Two leads tried to resurrect the central meeting and learned why it existed: to export responsibility upward. Without a center, there was nowhere to export it. The weight landed on them.",
       },
       {
         type: "emph",
-        html: "Freedom without structure is chaos. Structure without freedom is bureaucracy. The magic is in the tension."
+        html: "Freedom without structure is chaos. Structure without freedom is bureaucracy. The magic is in the tension.",
       },
       { type: "p", html: "So we added structure that doesn't steer for you." },
       {
         type: "p",
-        html: "Projects became the atomic unit of work: a bounded bet with a finish line. Each project had a load-bearing owner—not a committee. We named the role <strong>champion</strong>, and that word did real work."
+        html: "Projects became the atomic unit of work: a bounded bet with a finish line. Each project had a load-bearing owner—not a committee. We named the role <strong>champion</strong>, and that word did real work.",
       },
       {
         type: "p",
-        html: "A champion isn't a PM with a new hat. It's the person who carries the project when it gets heavy. They cut scope, pull in the right people, and tell the truth. Their name stays attached when the project is ugly. If there's no champion, it's not a project. It's a wish."
+        html: "A champion isn't a PM with a new hat. It's the person who carries the project when it gets heavy. They cut scope, pull in the right people, and tell the truth. Their name stays attached when the project is ugly. If there's no champion, it's not a project. It's a wish.",
       },
       {
         type: "p",
-        html: "Every six weeks champions sit with the exec team and walk through the guts in plain language. No slide theater. No green/yellow/red. Just: what's true, what changed, what's at risk, and what you're doing about it."
+        html: "Every six weeks champions sit with the exec team and walk through the guts in plain language. No slide theater. No green/yellow/red. Just: what's true, what changed, what's at risk, and what you're doing about it.",
       },
       {
         type: "p",
-        html: "That review isn't approval. It's forced contact with reality—an engineered place to surface uncertainty on purpose and treat it as a signal, not a sin."
+        html: "That review isn't approval. It's forced contact with reality—an engineered place to surface uncertainty on purpose and treat it as a signal, not a sin.",
       },
-      { type: "p", html: "That was the pattern: stop absorbing the weight, let it land where it belongs." },
+      {
+        type: "p",
+        html: "That was the pattern: stop absorbing the weight, let it land where it belongs.",
+      },
       { type: "h2", text: "The payoff" },
       { type: "p", html: "There's a quiet moment when it starts to stick." },
       {
         type: "p",
-        html: "People start solving problems before you know the problems exist. PMs stop apologizing for slowing features—they ask what they can do to help. Engineers defend customers with test suites they wrote without being asked."
+        html: "People start solving problems before you know the problems exist. PMs stop apologizing for slowing features—they ask what they can do to help. Engineers defend customers with test suites they wrote without being asked.",
       },
       {
         type: "emph",
-        html: "Ownership isn't a belief you argue someone into. It's a weight you let them feel."
+        html: "Ownership isn't a belief you argue someone into. It's a weight you let them feel.",
       },
       {
         type: "p",
-        html: "The people who thrive here don't just tolerate turbulence—they generate it. I call them <strong>exothermic</strong>: they produce more energy than they consume. They bring drafts instead of questions. They kill ambiguity for everyone around them."
+        html: "The people who thrive here don't just tolerate turbulence—they generate it. I call them <strong>exothermic</strong>: they produce more energy than they consume. They bring drafts instead of questions. They kill ambiguity for everyone around them.",
       },
-      { type: "p", html: "Directed chaos doesn't just distribute ownership—it builds exothermic people." }
-    ]
+      {
+        type: "p",
+        html: "Directed chaos doesn't just distribute ownership—it builds exothermic people.",
+      },
+    ],
   },
   practical: {
     title: "Organizational Changelog",
@@ -100,37 +118,47 @@ const site = {
     blocks: [
       {
         type: "p",
-        html: "Leaders must build teams and organizations that thrive on change, not just survive it. Yet change is hard. It's uncomfortable. It's often surprising. It's hard to understand, hard to manage, and surprisingly hard to track. But it doesn't have to be."
+        html: "Leaders must build teams and organizations that thrive on change, not just survive it. Yet change is hard. It's uncomfortable. It's often surprising. It's hard to understand, hard to manage, and surprisingly hard to track. But it doesn't have to be.",
       },
       {
         type: "p",
-        html: "An <strong>organizational changelog</strong> can help: the simple practice of explicitly tracking change in your organization. By remembering your past, you'll come to understand your present and shape your future."
+        html: "An <strong>organizational changelog</strong> can help: the simple practice of explicitly tracking change in your organization. By remembering your past, you'll come to understand your present and shape your future.",
       },
       { type: "h2", text: "What goes into a great changelog?" },
       {
         type: "p",
-        html: "I see the changelog as the story of an organization, told through its change and evolution. Practically, you want to track key changes with the context and perspective that help you remember <em>why they happened</em>."
+        html: "I see the changelog as the story of an organization, told through its change and evolution. Practically, you want to track key changes with the context and perspective that help you remember <em>why they happened</em>.",
       },
       {
         type: "p",
-        html: "<strong>Keep it simple</strong>: a bullet-point list in a shared document. You'll be surprised how quickly this comes together by simply tracking change across three buckets:"
+        html: "<strong>Keep it simple</strong>: a bullet-point list in a shared document. You'll be surprised how quickly this comes together by simply tracking change across three buckets:",
       },
-      { type: "ol", items: ["Aims and strategy", "Structure and teams", "Defaults and programs"] },
+      {
+        type: "ol",
+        items: [
+          "Aims and strategy",
+          "Structure and teams",
+          "Defaults and programs",
+        ],
+      },
       { type: "h3", text: "1. Aims and strategy" },
-      { type: "p", html: "<strong>The why and what.</strong> The reason this organization exists:" },
+      {
+        type: "p",
+        html: "<strong>The why and what.</strong> The reason this organization exists:",
+      },
       {
         type: "ul",
         items: [
           "<strong>Your clear and succinct vision</strong> captures why you exist. 1–2 sentences at most. Stable, but that makes all changes meaningful.",
           "<strong>Your motivating metrics</strong> bring cold reality to your vision. Think star guides over Google Maps.",
-          "<strong>Your short-term roadmap</strong> highlights the real work ahead."
-        ]
+          "<strong>Your short-term roadmap</strong> highlights the real work ahead.",
+        ],
       },
       {
         type: "code",
-        html: '<span class="c"># CodeCraft Changelog</span>\n\n<span class="c">_Living document capturing key organizational changes._</span>\n\n<span class="b">## v3.0.0 - 2023-10-17</span>\n\nPivoting our aim to AI-driven education...\n\n<span class="b">1. Aims & strategy</span>\n- <span class="a">[MAJOR]</span> Mandate got extended: AI-driven education.\n- <span class="a">[MAJOR]</span> v3.0 Roadmap: dropped our VR projects.\n\n<span class="b">2. Structure and teams</span>\n- Flattened the org; kept the operating defaults.'
-      }
-    ]
+        html: '<span class="c"># CodeCraft Changelog</span>\n\n<span class="c">_Living document capturing key organizational changes._</span>\n\n<span class="b">## v3.0.0 - 2023-10-17</span>\n\nPivoting our aim to AI-driven education...\n\n<span class="b">1. Aims & strategy</span>\n- <span class="a">[MAJOR]</span> Mandate got extended: AI-driven education.\n- <span class="a">[MAJOR]</span> v3.0 Roadmap: dropped our VR projects.\n\n<span class="b">2. Structure and teams</span>\n- Flattened the org; kept the operating defaults.',
+      },
+    ],
   },
   readme: {
     title: "Working with me",
@@ -143,30 +171,30 @@ const site = {
         body: [
           "People who push me, challenge me, and make me uncomfortable in the best way. Not for sport—because the work gets better when someone is willing to say the thing.",
           "Autonomy to build something meaningful, with guideposts instead of hard walls. Defaults, not rules. Capabilities, not titles.",
-          "Room to fail and learn. A place that knows failure is a lesson, not something to avoid."
-        ]
+          "Room to fail and learn. A place that knows failure is a lesson, not something to avoid.",
+        ],
       },
       {
         title: "What you can expect from me",
         body: [
           "I start with trust. I'll share what I know, explain what I'm trying to do, and expect you to make decisions. I need you to tell me when I'm missing something.",
           "High expectations, held with context and feedback. I'll tell you what I think, clearly and kindly. I expect the same from you.",
-          "The best idea wins. I'll argue, push, and question. I expect you to push on mine. I'd rather be wrong early than polite forever."
-        ]
+          "The best idea wins. I'll argue, push, and question. I expect you to push on mine. I'd rather be wrong early than polite forever.",
+        ],
       },
       {
         title: "How we disagree",
         body: [
           "Disagreement is part of the work, not a failure of the relationship. I want the argument that makes the idea better. If I push on something, I'm trying to understand it—not to win.",
-          "What I ask: be direct, bring the reasoning, and stay in the room. What I owe you: the same, plus the context to know why it matters."
-        ]
+          "What I ask: be direct, bring the reasoning, and stay in the room. What I owe you: the same, plus the context to know why it matters.",
+        ],
       },
       {
         title: "Where I need help",
         placeholder:
-          "This is the section I still need to write: where I lose the thread, what feedback I want, and how you can challenge me. I'd rather leave it honest than fill it with a slogan."
-      }
-    ]
+          "This is the section I still need to write: where I lose the thread, what feedback I want, and how you can challenge me. I'd rather leave it honest than fill it with a slogan.",
+      },
+    ],
   },
   archive: [
     {
@@ -175,7 +203,7 @@ const site = {
       year: "2026",
       revised: null,
       themes: ["Ownership", "Change"],
-      note: "What makes an internal market a market."
+      note: "What makes an internal market a market.",
     },
     {
       title: "Directed Chaos",
@@ -183,7 +211,7 @@ const site = {
       year: "2026",
       revised: "October 2026",
       themes: ["Ownership", "Change"],
-      note: "Structure, ownership, and the meeting that couldn't die."
+      note: "Structure, ownership, and the meeting that couldn't die.",
     },
     {
       title: "Organizational Changelog",
@@ -191,7 +219,7 @@ const site = {
       year: "2024",
       revised: null,
       themes: ["Change", "Memory"],
-      note: "How organizations remember what they learn."
+      note: "How organizations remember what they learn.",
     },
     {
       title: "Trust First",
@@ -199,7 +227,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Trust"],
-      note: "Trust, disclosure, and the risk of extending it first."
+      note: "Trust, disclosure, and the risk of extending it first.",
     },
     {
       title: "Work-life Harmony",
@@ -207,7 +235,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Work"],
-      note: "Life deserves more than simple balance."
+      note: "Life deserves more than simple balance.",
     },
     {
       title: "Writing Regularly",
@@ -215,7 +243,7 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Writing"],
-      note: "Permission for smaller observations."
+      note: "Permission for smaller observations.",
     },
     {
       title: "Transitioning Well",
@@ -223,9 +251,9 @@ const site = {
       year: "2022",
       revised: null,
       themes: ["Change", "Work"],
-      note: "Uncertainty, fear, and joining a new organization."
-    }
-  ]
+      note: "Uncertainty, fear, and joining a new organization.",
+    },
+  ],
 };
 
 const THEMES = ["Ownership", "Trust", "Change", "Work", "Writing", "Memory"];
@@ -265,18 +293,23 @@ const byYear = () => {
   const years = [...new Set(site.archive.map((entry) => entry.year))];
   return years.map((year) => ({
     year,
-    entries: site.archive.filter((entry) => entry.year === year)
+    entries: site.archive.filter((entry) => entry.year === year),
   }));
 };
 
-const entriesByTheme = (theme) => site.archive.filter((entry) => entry.themes.includes(theme));
+const entriesByTheme = (theme) =>
+  site.archive.filter((entry) => entry.themes.includes(theme));
 
 const nav = (items) =>
   items
-    .map((item) => `<a class="${item.active ? "active" : ""}" href="#">${item.label}</a>`)
+    .map(
+      (item) =>
+        `<a class="${item.active ? "active" : ""}" href="#">${item.label}</a>`,
+    )
     .join("");
 
-const selectedEntries = () => site.archive.filter((entry) => SELECTED.includes(entry.title));
+const selectedEntries = () =>
+  site.archive.filter((entry) => SELECTED.includes(entry.title));
 
 function changelogHeader() {
   return `
@@ -286,7 +319,7 @@ function changelogHeader() {
         { label: "Writing", active: true },
         { label: "Changelog" },
         { label: "README" },
-        { label: "About" }
+        { label: "About" },
       ])}</nav>
     </header>`;
 }
@@ -322,7 +355,10 @@ function changelogHome() {
             <div class="cl-block-head"><h2>Selected writing</h2><a href="#">All writing →</a></div>
             <ul class="cl-selected">
               ${selectedEntries()
-                .map((entry) => `<li><a href="#">${entry.title}</a><span>${entry.year}</span></li>`)
+                .map(
+                  (entry) =>
+                    `<li><a href="#">${entry.title}</a><span>${entry.year}</span></li>`,
+                )
                 .join("")}
             </ul>
           </section>
@@ -413,7 +449,10 @@ function changelogArchive() {
           <div class="cl-block-head"><h2>Selected</h2><span>Three pieces to start</span></div>
           <ul class="cl-selected cl-selected-large">
             ${selectedEntries()
-              .map((entry) => `<li><a href="#">${entry.title}</a><span>${entry.year}</span><p>${entry.note}</p></li>`)
+              .map(
+                (entry) =>
+                  `<li><a href="#">${entry.title}</a><span>${entry.year}</span><p>${entry.note}</p></li>`,
+              )
               .join("")}
           </ul>
         </section>
@@ -427,10 +466,10 @@ function changelogArchive() {
               <ul>${entries
                 .map(
                   (entry) =>
-                    `<li><a href="#">${entry.title}</a><span>${entry.date}${entry.revised ? ` · revised ${entry.revised}` : ""}</span></li>`
+                    `<li><a href="#">${entry.title}</a><span>${entry.date}${entry.revised ? ` · revised ${entry.revised}` : ""}</span></li>`,
                 )
                 .join("")}</ul>
-            </div>`
+            </div>`,
             )
             .join("")}
         </section>
@@ -441,7 +480,9 @@ function changelogArchive() {
 
 function changelogReadme() {
   const [expect, fromMe, disagree] = site.readme.sections;
-  const help = site.readme.sections.find((section) => section.title === "Where I need help");
+  const help = site.readme.sections.find(
+    (section) => section.title === "Where I need help",
+  );
   const section = (item) =>
     `<section><h2>${item.title}</h2>${item.body.map((p) => `<p>${p}</p>`).join("")}</section>`;
   return `
@@ -468,7 +509,7 @@ function indexHeader() {
         { label: "Index", active: true },
         { label: "Writing" },
         { label: "README" },
-        { label: "About" }
+        { label: "About" },
       ])}</nav>
     </header>`;
 }
@@ -495,7 +536,7 @@ function indexHome() {
                   <a href="#">${entry.title}</a>
                   <span class="ix-year">${entry.year}</span>
                   <p>${entry.note}</p>
-                </li>`
+                </li>`,
               )
               .join("")}
           </ol>
@@ -504,7 +545,10 @@ function indexHome() {
         <section class="ix-themes">
           <h2>By theme</h2>
           <ul>${THEMES.filter((theme) => entriesByTheme(theme).length)
-            .map((theme) => `<li><a href="#">${theme}</a><span>${entriesByTheme(theme).length}</span></li>`)
+            .map(
+              (theme) =>
+                `<li><a href="#">${theme}</a><span>${entriesByTheme(theme).length}</span></li>`,
+            )
             .join("")}</ul>
         </section>
       </main>
@@ -558,9 +602,15 @@ function indexArchive() {
             <h2>By theme</h2>
             ${THEMES.filter((theme) => entriesByTheme(theme).length)
               .map(
-                (theme) => `<div class="ix-theme"><h3>${theme}</h3><ul>${entriesByTheme(theme)
-                  .map((entry) => `<li><span>${entry.year}</span><a href="#">${entry.title}</a></li>`)
-                  .join("")}</ul></div>`
+                (theme) =>
+                  `<div class="ix-theme"><h3>${theme}</h3><ul>${entriesByTheme(
+                    theme,
+                  )
+                    .map(
+                      (entry) =>
+                        `<li><span>${entry.year}</span><a href="#">${entry.title}</a></li>`,
+                    )
+                    .join("")}</ul></div>`,
               )
               .join("")}
           </section>
@@ -568,9 +618,13 @@ function indexArchive() {
             <h2>By year</h2>
             ${byYear()
               .map(
-                ({ year, entries }) => `<div class="ix-year"><h3>${year}</h3><ul>${entries
-                  .map((entry) => `<li><span>${entry.date}</span><a href="#">${entry.title}</a></li>`)
-                  .join("")}</ul></div>`
+                ({ year, entries }) =>
+                  `<div class="ix-year"><h3>${year}</h3><ul>${entries
+                    .map(
+                      (entry) =>
+                        `<li><span>${entry.date}</span><a href="#">${entry.title}</a></li>`,
+                    )
+                    .join("")}</ul></div>`,
               )
               .join("")}
           </section>
@@ -593,7 +647,7 @@ function indexReadme() {
           ${site.readme.sections
             .map(
               (section) =>
-                `<section><h2>${section.title}</h2>${section.body ? section.body.map((p) => `<p>${p}</p>`).join("") : `<p>${section.placeholder}</p>`}</section>`
+                `<section><h2>${section.title}</h2>${section.body ? section.body.map((p) => `<p>${p}</p>`).join("") : `<p>${section.placeholder}</p>`}</section>`,
             )
             .join("")}
         </div>
@@ -613,7 +667,7 @@ function letterheadHeader() {
       <nav class="lh-nav">${nav([
         { label: "Writing", active: true },
         { label: "README" },
-        { label: "About" }
+        { label: "About" },
       ])}</nav>
     </header>`;
 }
@@ -625,7 +679,7 @@ function letterheadInteriorHeader() {
       <nav class="lh-nav">${nav([
         { label: "Writing", active: true },
         { label: "README" },
-        { label: "About" }
+        { label: "About" },
       ])}</nav>
     </header>`;
 }
@@ -646,7 +700,10 @@ function letterheadHome() {
         <section class="lh-selected">
           <h2>Selected writing</h2>
           <ul>${selectedEntries()
-            .map((entry) => `<li><a href="#">${entry.title}</a><span>${entry.year}</span></li>`)
+            .map(
+              (entry) =>
+                `<li><a href="#">${entry.title}</a><span>${entry.year}</span></li>`,
+            )
             .join("")}</ul>
         </section>
       </main>
@@ -689,16 +746,23 @@ function letterheadArchive() {
         <section class="lh-selected-large">
           <p class="lh-label">Selected</p>
           <ul>${selectedEntries()
-            .map((entry) => `<li><a href="#">${entry.title}</a><p>${entry.note}</p></li>`)
+            .map(
+              (entry) =>
+                `<li><a href="#">${entry.title}</a><p>${entry.note}</p></li>`,
+            )
             .join("")}</ul>
         </section>
 
         <section class="lh-years">
           ${byYear()
             .map(
-              ({ year, entries }) => `<div class="lh-year"><h2>${year}</h2><ul>${entries
-                .map((entry) => `<li><a href="#">${entry.title}</a><span>${entry.date}</span></li>`)
-                .join("")}</ul></div>`
+              ({ year, entries }) =>
+                `<div class="lh-year"><h2>${year}</h2><ul>${entries
+                  .map(
+                    (entry) =>
+                      `<li><a href="#">${entry.title}</a><span>${entry.date}</span></li>`,
+                  )
+                  .join("")}</ul></div>`,
             )
             .join("")}
         </section>
@@ -720,7 +784,7 @@ function letterheadReadme() {
           ${site.readme.sections
             .map(
               (section) =>
-                `<section><h2>${section.title}</h2>${section.body ? section.body.map((p) => `<p>${p}</p>`).join("") : `<p>${section.placeholder}</p>`}</section>`
+                `<section><h2>${section.title}</h2>${section.body ? section.body.map((p) => `<p>${p}</p>`).join("") : `<p>${section.placeholder}</p>`}</section>`,
             )
             .join("")}
         </div>
@@ -739,7 +803,7 @@ function deskHeader() {
         { label: "Now", active: true },
         { label: "Writing" },
         { label: "README" },
-        { label: "About" }
+        { label: "About" },
       ])}</nav>
     </header>`;
 }
@@ -814,7 +878,7 @@ function deskArchive() {
           ${site.archive
             .map(
               (entry) =>
-                `<li><span class="dk-status ${entry.revised ? "dk-status-draft" : "dk-status-pub"}">${entry.revised ? "Revised" : "Published"}</span><a href="#">${entry.title}</a><span>${entry.date}</span></li>`
+                `<li><span class="dk-status ${entry.revised ? "dk-status-draft" : "dk-status-pub"}">${entry.revised ? "Revised" : "Published"}</span><a href="#">${entry.title}</a><span>${entry.date}</span></li>`,
             )
             .join("")}
         </ul>
@@ -836,7 +900,7 @@ function deskReadme() {
           ${site.readme.sections
             .map(
               (section) =>
-                `<section><h2>${section.title}</h2>${section.body ? section.body.map((p) => `<p>${p}</p>`).join("") : `<p>${section.placeholder}</p>`}</section>`
+                `<section><h2>${section.title}</h2>${section.body ? section.body.map((p) => `<p>${p}</p>`).join("") : `<p>${section.placeholder}</p>`}</section>`,
             )
             .join("")}
         </div>
@@ -854,48 +918,78 @@ const DIRECTIONS = {
       "Revision notes, first-published/revised dates, and an archive that records change—not just posts.",
     says: "You take ideas seriously enough to revise them in public.",
     risk: "Can become process theater. Revision notes must be prose, rare, and meaningful—not a badge on every post.",
-    strip: "A visible record of change: what you believed, what you revised, and why.",
-    views: { home: changelogHome, essay: changelogEssay, archive: changelogArchive, readme: changelogReadme }
+    strip:
+      "A visible record of change: what you believed, what you revised, and why.",
+    views: {
+      home: changelogHome,
+      essay: changelogEssay,
+      archive: changelogArchive,
+      readme: changelogReadme,
+    },
   },
   index: {
     number: "02",
     name: "Index",
     thesis: "A site is an index of connected ideas, not a feed.",
-    mechanism: "Cross-references, entry numbers, and an archive you can browse by theme or by year.",
+    mechanism:
+      "Cross-references, entry numbers, and an archive you can browse by theme or by year.",
     says: "You think in connections, and you want the work to be findable.",
     risk: "Can become a metadata project. Too much structure and the site feels like a database.",
     strip: "A curated index: entries, themes, and editorial cross-references.",
-    views: { home: indexHome, essay: indexEssay, archive: indexArchive, readme: indexReadme }
+    views: {
+      home: indexHome,
+      essay: indexEssay,
+      archive: indexArchive,
+      readme: indexReadme,
+    },
   },
   letterhead: {
     number: "03",
     name: "Letterhead",
     thesis: "The site is a letter from a working writer.",
-    mechanism: "A dateline, a sign-off, a P.S., and a contents-page archive. The letter is structural, not decorative.",
+    mechanism:
+      "A dateline, a sign-off, a P.S., and a contents-page archive. The letter is structural, not decorative.",
     says: "You're writing to a person, not performing for an audience.",
     risk: "Can become costume. The letter is a container, not an argument; it needs the writing to carry it.",
-    strip: "An address: a dateline, a sign-off, and a pace that belongs to a letter.",
-    views: { home: letterheadHome, essay: letterheadEssay, archive: letterheadArchive, readme: letterheadReadme }
+    strip:
+      "An address: a dateline, a sign-off, and a pace that belongs to a letter.",
+    views: {
+      home: letterheadHome,
+      essay: letterheadEssay,
+      archive: letterheadArchive,
+      readme: letterheadReadme,
+    },
   },
   desk: {
     number: "04",
     name: "Desk",
     thesis: "The site is a live workspace, not a finished portfolio.",
-    mechanism: "A current question, status labels, and open threads. The site shows work in motion.",
+    mechanism:
+      "A current question, status labels, and open threads. The site shows work in motion.",
     says: "You're in motion, not presenting a finished self.",
     risk: "Highest maintenance. Can become navel-gazing, and unfinished work can undermine authority.",
     strip: "A current question and a set of open threads.",
-    views: { home: deskHome, essay: deskEssay, archive: deskArchive, readme: deskReadme }
-  }
+    views: {
+      home: deskHome,
+      essay: deskEssay,
+      archive: deskArchive,
+      readme: deskReadme,
+    },
+  },
 };
 
-const VIEW_LABELS = { home: "Home", essay: "Essay", archive: "Archive", readme: "README" };
+const VIEW_LABELS = {
+  home: "Home",
+  essay: "Essay",
+  archive: "Archive",
+  readme: "README",
+};
 
 const state = {
   direction: "changelog",
   view: "home",
   mobile: false,
-  notes: false
+  notes: false,
 };
 
 const stage = document.getElementById("stage");
@@ -934,14 +1028,14 @@ function renderTabs() {
   directionTabs.innerHTML = Object.entries(DIRECTIONS)
     .map(
       ([key, direction]) =>
-        `<button class="lab-tab ${key === state.direction ? "is-active" : ""}" data-direction="${key}" type="button"><span>${direction.number}</span>${direction.name}</button>`
+        `<button class="lab-tab ${key === state.direction ? "is-active" : ""}" data-direction="${key}" type="button"><span>${direction.number}</span>${direction.name}</button>`,
     )
     .join("");
 
   viewTabs.innerHTML = Object.keys(VIEW_LABELS)
     .map(
       (view) =>
-        `<button class="lab-tab lab-tab-view ${view === state.view ? "is-active" : ""}" data-view="${view}" type="button">${VIEW_LABELS[view]}</button>`
+        `<button class="lab-tab lab-tab-view ${view === state.view ? "is-active" : ""}" data-view="${view}" type="button">${VIEW_LABELS[view]}</button>`,
     )
     .join("");
 }
