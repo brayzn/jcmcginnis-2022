@@ -21,6 +21,13 @@ Then open <http://127.0.0.1:4179>. The lab bar at the top switches pages, essay 
 and notes. The prototype is plain HTML/CSS/JS; it has no build step and no dependency on the
 Bridgetown site.
 
+## Related workstream
+
+The editorial/copy workstream lives in `notes/website-refresh/`. Start with its `README.md` and
+`OPERATING.md`. It owns the prose, voice, facts, and rewrite queue; this package owns layout, type,
+and the version model. Do not rewrite copy here; do not edit this prototype there. The shared entry
+point is `website-refresh/README.md`.
+
 ## The direction in one paragraph
 
 The site is a **working record**, not a portfolio. Jesse writes about ownership, trust, and the

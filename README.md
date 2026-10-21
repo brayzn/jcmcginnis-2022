@@ -5,11 +5,11 @@ Personal website and blog for Jesse McGinnis, built with
 
 **Live site:** https://jcmcginnis.com
 
-## Design direction
+## Website refresh
 
-The current refresh direction and interactive prototype live in
-[`design/website-refresh/`](design/website-refresh/). That folder is a design handoff, not part of
-the Bridgetown build.
+The refresh has two workstreams: design and editorial. Start at
+[`website-refresh/`](website-refresh/) for the shared brief, status, and links. Both are outside the
+Bridgetown build.
 
 ## Tech Stack
 

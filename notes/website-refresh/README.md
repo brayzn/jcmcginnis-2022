@@ -1,8 +1,8 @@
 # Website refresh — editorial frame
 
-Working notes for the writing side of the jcmcginnis.com refresh. The visual direction is being
-developed in the BB thread "Define Website Redesign Direction" (`thr_jbxtmvxw6e`). This folder is
-the editorial source of truth. Start with `OPERATING.md`; it is the manual for how to work here.
+Working notes for the writing side of the jcmcginnis.com refresh. This folder is the editorial
+source of truth. The design direction is in `design/website-refresh/`; the shared entry point is
+`website-refresh/README.md`. Start with `OPERATING.md`; it is the manual for how to work here.
 
 ## The direction
 
@@ -19,16 +19,22 @@ The locked benchmark is `voice-specimen-01.md`.
 
 ## Design context
 
-The design thread is converging on:
+The design direction is locked in
+[`design/website-refresh/`](../../design/website-refresh/README.md). Read that package for the
+visual and interaction details. The current shape:
 
-- **Ash** — Source Serif 4 body, Plex Mono labels, oxide ink on a neutral ground.
-- **A changelog spine** — revision is the site's signature, not an apologetic badge.
-- **Letterhead essay** — one reading column, details at the edge.
-- **Index archive** — selected writing plus a full dated list, not a feed.
-- **Inline revision** — margin or endnote, not a separate page. Still being tuned.
-- **README as a working document** — not a terminal performance.
+- **Ash** — Newsreader display, Source Serif 4 body, Plex Mono labels, oxide ink on a neutral
+  ground.
+- **A changelog spine** — essays have versions, dates, and summaries; revision is the site's
+  signature.
+- **Essay** — one reading column; Reading and History modes; change bars; a version panel; a curated
+  Then / Now; old versions readable in full.
+- **Home** — a position: letter, current beliefs, recently revised; the career path moves to About.
+- **Archive** — selected writing plus a theme/year index, with revision marks.
+- **README** — today's working document re-set in Ash, not a terminal performance.
 
-This folder does not decide visual details. It supplies the prose the design has to survive.
+This folder does not decide visual details. It supplies the prose the design has to survive. The
+design package uses provisional copy; this folder is the source of truth for the words.
 
 ## The queue as decisions
 
