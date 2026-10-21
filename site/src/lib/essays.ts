@@ -93,17 +93,24 @@ export type RecentRevision = {
   summary: string;
   href: string;
   date: Date;
+  count: number;
 };
 
 export const recentRevisions = (essays: Essay[]): RecentRevision[] =>
   essays
-    .flatMap((essay) =>
-      essay.data.versions.slice(1).map((version) => ({
-        title: essay.data.title,
-        label: `${versionLabel(version.id)} · ${formatMonthYear(version.date)}`,
-        summary: version.summary,
-        href: historyPath(essay.id),
-        date: version.date,
-      })),
-    )
+    .flatMap((essay) => {
+      const revisions = essay.data.versions.slice(1);
+      const latest = revisions.at(-1);
+      if (!latest) return [];
+      return [
+        {
+          title: essay.data.title,
+          label: `${versionLabel(latest.id)} · ${formatMonthYear(latest.date)}`,
+          summary: latest.summary,
+          href: historyPath(essay.id),
+          date: latest.date,
+          count: revisions.length,
+        },
+      ];
+    })
     .sort((a, b) => b.date.getTime() - a.date.getTime());

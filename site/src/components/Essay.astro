@@ -44,6 +44,13 @@ const toc = headings.filter((heading) => heading.depth === 2);
 
 const title = version.title ?? data.title;
 const description = version.description ?? data.description;
+const kickerCategories = data.categories
+  .filter((category) => category.toLowerCase() !== "writing")
+  .slice(0, 2);
+const kicker = kickerCategories.length
+  ? `Writing / ${kickerCategories.join(", ")}`
+  : "Writing";
+const hasHistory = versions.length > 1;
 const status = (item: VersionLink) =>
   item.current
     ? "Current"
@@ -63,7 +70,7 @@ const meta = current
   class={`essay ${history ? "history" : "reading"} ${current ? "current" : "archived"}`}
 >
   <header class="essay-head">
-    <p class="kicker">Writing / {data.categories.join(", ")}</p>
+    <p class="kicker">{kicker}</p>
     <h1>{title}</h1>
     <p class="deck">{description}</p>
     <p class="meta">{meta}</p>
@@ -88,22 +95,22 @@ const meta = current
     <aside class="essay-margin">
       {current && !history && (
         <>
-          <div class="revision-rail">
-            <p class="label">History</p>
-            <p class="rail-stamp">
-              {currentVersion.label} · {formatMonthYear(currentVersion.date)}
-            </p>
-            {versions.length > 1 && (
+          {hasHistory && (
+            <div class="revision-rail">
+              <p class="label">History</p>
+              <p class="rail-stamp">
+                {currentVersion.label} · {formatMonthYear(currentVersion.date)}
+              </p>
               <a class="rail-link" href={`/blog/${essay.id}/history/`}>
                 See history →
               </a>
-            )}
-            <p class="rail-first">
-              First published {formatMonthYear(versions[0].date)}.
-            </p>
-          </div>
+              <p class="rail-first">
+                First published {formatMonthYear(versions[0].date)}.
+              </p>
+            </div>
+          )}
           {toc.length > 0 && (
-            <div class="margin-block">
+            <div class="margin-block toc-block">
               <p class="label">In this piece</p>
               <nav class="toc" aria-label="In this piece">
                 {toc.map((heading) => (
@@ -198,7 +205,7 @@ const meta = current
             </a>
           </div>
           {toc.length > 0 && (
-            <div class="margin-block">
+            <div class="margin-block toc-block">
               <p class="label">In this piece</p>
               <nav class="toc" aria-label="In this piece">
                 {toc.map((heading) => (
@@ -235,45 +242,47 @@ const meta = current
     </section>
   )}
 
-  <section class="revision-log" aria-labelledby="version-log-title">
-    <h2 class="label" id="version-log-title">
-      History
-    </h2>
-    <ul class="version-log">
-      {versions.map((item) => {
-        const here = item.id === versionId;
-        return (
-          <li class={here ? "is-here" : ""}>
-            <div class="version-log-head">
-              <a href={item.href} aria-current={here ? "true" : undefined}>
-                {item.label} · {formatMonthYear(item.date)}
-              </a>
-              <span class={item.current ? "is-current" : ""}>
-                {status(item)}
-              </span>
+  {hasHistory && (
+    <section class="revision-log" aria-labelledby="version-log-title">
+      <h2 class="label" id="version-log-title">
+        History
+      </h2>
+      <ul class="version-log">
+        {versions.map((item) => {
+          const here = item.id === versionId;
+          return (
+            <li class={here ? "is-here" : ""}>
+              <div class="version-log-head">
+                <a href={item.href} aria-current={here ? "true" : undefined}>
+                  {item.label} · {formatMonthYear(item.date)}
+                </a>
+                <span class={item.current ? "is-current" : ""}>
+                  {status(item)}
+                </span>
+              </div>
+              <p>{item.summary}</p>
+            </li>
+          );
+        })}
+      </ul>
+      {!history && thenNow && previousVersion && (
+        <details class="revision-details">
+          <summary>Then and now</summary>
+          <div class="then-now-compact">
+            <div class="then">
+              <p class="label">Then</p>
+              <p>{thenNow.then}</p>
             </div>
-            <p>{item.summary}</p>
-          </li>
-        );
-      })}
-    </ul>
-    {!history && thenNow && previousVersion && (
-      <details class="revision-details">
-        <summary>Then and now</summary>
-        <div class="then-now-compact">
-          <div class="then">
-            <p class="label">Then</p>
-            <p>{thenNow.then}</p>
+            <div class="now">
+              <p class="label">Now</p>
+              <p>{thenNow.now}</p>
+            </div>
           </div>
-          <div class="now">
-            <p class="label">Now</p>
-            <p>{thenNow.now}</p>
-          </div>
-        </div>
-        <p class="then-now-note">{thenNow.note}</p>
-      </details>
-    )}
-  </section>
+          <p class="then-now-note">{thenNow.note}</p>
+        </details>
+      )}
+    </section>
+  )}
 
   <footer class="essay-foot">
     {readAlongside.length > 0 && (

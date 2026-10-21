@@ -41,6 +41,9 @@ site/src/content/essays/
 - A version is a **published** body. `rev-01` is the first publication; later revisions get new ids.
 - `versions` is ascending by date, with exactly one `current: true` entry last. Every version has a
   non-empty summary; revisions also need a Then/Now pair (`then`, `now`, `note`).
+- A version may set `title` and `description`. When a revision changes either one, set them on the
+  version so `/blog/<slug>/history/<rev>/` keeps showing the old artifact; a version without them
+  falls back to the essay's current title and description.
 - `date` (original publication) is `versions[0].date`; `revised` is the current version's date.
   Never author those at the essay level.
 - Change bars use `:::changed{since="rev-01"}` in `index.md`. `since` must name an earlier version.

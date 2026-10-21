@@ -63,12 +63,10 @@ const lastYear = years[0];
                 <li>
                   <span>{entry.year}</span>
                   <a href={entry.href}>{entry.title}</a>
-                  {entry.historyHref ? (
+                  {entry.historyHref && (
                     <a class="revised" href={entry.historyHref}>
                       revised
                     </a>
-                  ) : (
-                    <span></span>
                   )}
                 </li>
               ))}
@@ -86,12 +84,10 @@ const lastYear = years[0];
                 <li>
                   <span>{entry.dateLabel}</span>
                   <a href={entry.href}>{entry.title}</a>
-                  {entry.historyHref ? (
+                  {entry.historyHref && (
                     <a class="revised" href={entry.historyHref}>
                       revised
                     </a>
-                  ) : (
-                    <span></span>
                   )}
                 </li>
               ))}

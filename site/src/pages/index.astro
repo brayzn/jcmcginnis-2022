@@ -18,7 +18,7 @@ const requireEssay = (id: string) => {
   return essay;
 };
 
-const beliefEntries = beliefs.map((belief) => {
+const beliefEntries = beliefs.slice(0, 3).map((belief) => {
   const essay = requireEssay(belief.essay);
   const current = essay.data.versions.at(-1)!;
   return {
@@ -69,12 +69,9 @@ const elsewhere = [
       </div>
       <div class="rail-block">
         <p class="label">Elsewhere</p>
-        <p class="rail-meta">
-          {elsewhere.map((link, index) => (
-            <>
-              {index > 0 && " · "}
-              <a href={link.href}>{link.label}</a>
-            </>
+        <p class="rail-meta rail-links">
+          {elsewhere.map((link) => (
+            <a href={link.href}>{link.label}</a>
           ))}
         </p>
       </div>
@@ -133,7 +130,10 @@ const elsewhere = [
               <li class="change">
                 <div class="change-head">
                   <a href={revision.href}>{revision.title}</a>
-                  <span>{revision.label}</span>
+                  <span>
+                    {revision.label}
+                    {revision.count > 1 && ` · ${revision.count} revisions`}
+                  </span>
                 </div>
                 <p>{revision.summary}</p>
               </li>
