@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Round 3 · Convergence lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="lab.css" />
+  </head>
+  <body>
+    <header class="lab">
+      <div class="lab-row lab-row-top">
+        <div class="lab-brand">
+          <span class="lab-kicker">Round 3 · Convergence</span>
+          <span class="lab-site"
+            >Vermilion body. Oxide palette. Mono labels.</span
+          >
+        </div>
+        <nav id="skin-tabs" class="lab-tabs" aria-label="Temperatures"></nav>
+        <div class="lab-actions">
+          <button id="mobile-toggle" class="lab-button" type="button">
+            Mobile · 390
+          </button>
+          <button id="notes-toggle" class="lab-button" type="button">
+            Notes
+          </button>
+        </div>
+      </div>
+      <div class="lab-row lab-row-bottom">
+        <nav id="view-tabs" class="lab-tabs lab-views" aria-label="Views"></nav>
+        <p class="lab-note">Ignore layout. Tune the paper.</p>
+      </div>
+    </header>
+
+    <main id="stage" class="stage"></main>
+
+    <aside id="notes-panel" class="notes-panel" hidden>
+      <div class="notes-head">
+        <span class="notes-kicker">Round 3 notes</span>
+        <button
+          id="notes-close"
+          class="notes-close"
+          type="button"
+          aria-label="Close notes"
+        >
+          ×
+        </button>
+      </div>
+      <div id="notes-body"></div>
+    </aside>
+
+    <script src="lab.js"></script>
+  </body>
+</html>

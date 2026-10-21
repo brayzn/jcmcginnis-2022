@@ -5,6 +5,12 @@ Personal website and blog for Jesse McGinnis, built with
 
 **Live site:** https://jcmcginnis.com
 
+## Website refresh
+
+The refresh has two workstreams: design and editorial. Start at
+[`website-refresh/`](website-refresh/) for the shared brief, status, and links. Both are outside the
+Bridgetown build.
+
 ## Tech Stack
 
 - **Static Site Generator:** [Bridgetown 2.0](https://www.bridgetownrb.com/)
