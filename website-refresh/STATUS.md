@@ -36,7 +36,8 @@
 
 - Branch: `design/website-refresh`.
 - Pull request: [#37](https://github.com/brayzn/jcmcginnis-2022/pull/37).
-- The editorial branch was merged into the baseline so both workstreams live in one review.
+- The editorial frame is already on `main` (PR #36). This PR adds the design package, the shared
+  index, and the editorial README's design-context link.
 - `design/` and `notes/` are outside `src/`; Bridgetown does not build them. Nothing is live.
 - Merging `main` deploys the site. Do not merge until the baseline is ready to be the public first
   encounter.
