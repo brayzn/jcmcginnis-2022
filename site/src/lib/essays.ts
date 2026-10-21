@@ -60,12 +60,16 @@ export type SeeAlsoLink = {
   note: string;
 };
 
-export const seeAlsoLinks = (essay: Essay, essays: Essay[]): SeeAlsoLink[] =>
-  (essay.data.seeAlso ?? []).map((item) => {
+const resolveLinks = (
+  essay: Essay,
+  essays: Essay[],
+  field: "seeAlso" | "readAlongside",
+): SeeAlsoLink[] =>
+  (essay.data[field] ?? []).map((item) => {
     const target = essays.find((entry) => entry.id === item.essay);
     if (!target) {
       throw new Error(
-        `${essay.id}: seeAlso references an essay that does not exist: "${item.essay}".`,
+        `${essay.id}: ${field} references an essay that does not exist: "${item.essay}".`,
       );
     }
     return {
@@ -74,6 +78,14 @@ export const seeAlsoLinks = (essay: Essay, essays: Essay[]): SeeAlsoLink[] =>
       note: item.note,
     };
   });
+
+export const seeAlsoLinks = (essay: Essay, essays: Essay[]): SeeAlsoLink[] =>
+  resolveLinks(essay, essays, "seeAlso");
+
+export const readAlongsideLinks = (
+  essay: Essay,
+  essays: Essay[],
+): SeeAlsoLink[] => resolveLinks(essay, essays, "readAlongside");
 
 export type RecentRevision = {
   title: string;

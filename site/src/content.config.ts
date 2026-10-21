@@ -43,6 +43,16 @@ const essays = defineCollection({
             .strict(),
         )
         .optional(),
+      readAlongside: z
+        .array(
+          z
+            .object({
+              essay: z.string().min(1),
+              note: z.string().min(1),
+            })
+            .strict(),
+        )
+        .optional(),
       versions: z.array(version).min(1),
     })
     .strict()
