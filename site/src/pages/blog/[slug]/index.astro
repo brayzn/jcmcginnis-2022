@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import Essay from "../../../components/Essay.astro";
+import {
+  essayPath,
+  readingTime,
+  seeAlsoLinks,
+  versionLinks,
+  type Essay as EssayEntry,
+  type SeeAlsoLink,
+} from "../../../lib/essays";
+
+export async function getStaticPaths() {
+  const essays = await getCollection("essays");
+  return essays.map((essay) => ({
+    params: { slug: essay.id },
+    props: { essay, seeAlso: seeAlsoLinks(essay, essays) },
+  }));
+}
+
+interface Props {
+  essay: EssayEntry;
+  seeAlso: SeeAlsoLink[];
+}
+
+const { essay, seeAlso } = Astro.props;
+const { Content, headings } = await render(essay);
+const versions = versionLinks(essay);
+const currentVersion = versions.at(-1)!;
+---
+
+<Base
+  title={`${essay.data.title} — Jesse McGinnis`}
+  description={essay.data.description}
+  canonicalPath={essayPath(essay.id)}
+  image={essay.data.image}
+  type="article"
+>
+  <Header active="Writing" />
+  <main id="main">
+    <Essay
+      essay={essay}
+      versions={versions}
+      versionId={currentVersion.id}
+      current={true}
+      mode="reading"
+      headings={headings}
+      reading={readingTime(essay.body ?? "")}
+      seeAlso={seeAlso}
+    >
+      <Content />
+    </Essay>
+  </main>
+  <Footer />
+</Base>

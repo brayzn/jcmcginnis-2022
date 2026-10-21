@@ -1,8 +1,8 @@
 # Website refresh — the Ash direction
 
 **Status:** design direction locked; craft pass complete; copy provisional; prototype only.
-**Date:** October 2026. **Owner:** Jesse McGinnis. **Not live:** this folder is outside `src/` and
-is not part of the Bridgetown build or deploy.
+**Date:** October 2026. **Owner:** Jesse McGinnis. **Not live:** this folder is outside both app
+roots (`src/` Bridgetown, `site/` Astro) and is not part of either build or deploy.
 
 This package is the handoff for the next design or implementation jam. It contains the chosen
 direction, the prototype, the decisions behind it, and the parts that are still open. Do not treat
@@ -56,8 +56,8 @@ warm-stationery and not a dashboard.
   and a version log. Rev. 01 stays readable in full.
 - **No terminal chrome.** No gradients, cards, badges, theme toggle, scroll reveals, or decorative
   monograms.
-- **No stack change implied.** The current site is Bridgetown 2 + ERB + Tailwind 4. The refresh
-  should be new layouts, partials, and CSS, with existing routes preserved.
+- **Stack:** Astro in `site/`, with Cloudflare Pages as the target host; tracked in #38. The Ash
+  design is unchanged by the move. See `docs/adr/0001-astro-cloudflare.md`.
 
 ## Page architecture
 
@@ -88,7 +88,7 @@ warm-stationery and not a dashboard.
 
 - Left rail: years and companies.
 - Main: “The path” with the Boltmade, Shopify, and GrowthLoop narrative, adapted from
-  `src/_data/career.yml`.
+  `site/src/data/career.yml` (currently `src/_data/career.yml` until #49 moves the data).
 - Ends with “— J.” and a route back to the front page.
 
 ### Archive
@@ -196,5 +196,5 @@ competing directions.
 
 The craft pass is complete; `DIAL-IN-NOTES.md` records what changed, the verification, and the
 specific copy problems to resolve. Next: settle the copy questions listed there and in this README,
-then do the implementation pass — version data model, ERB layouts, CSS, and content. Commit the
+then do the implementation pass — version data model, Astro layouts, CSS, and content. Commit the
 design package; do not wire it live until the copy and revision model are ready.

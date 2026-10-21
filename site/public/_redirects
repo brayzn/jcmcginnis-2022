@@ -1,0 +1,22 @@
+# Legacy 301s from src/_data/redirects.yml.
+#
+# Cloudflare Pages matches redirect sources literally, so both the slash and
+# no-slash forms are listed. Static rules come first; keep them explicit.
+
+/blog/personal-readme /readme/ 301
+/blog/personal-readme/ /readme/ 301
+
+/blog/high-trust-remote-teams-qcon-2022 /talks/2022/qcon/ 301
+/blog/high-trust-remote-teams-qcon-2022/ /talks/2022/qcon/ 301
+
+/blog/high-trust-remote-teams-gartner-2023 /talks/2023/gartner/ 301
+/blog/high-trust-remote-teams-gartner-2023/ /talks/2023/gartner/ 301
+
+/blog/leading-high-trust-teams-uplimit /talks/2023/uplimit/ 301
+/blog/leading-high-trust-teams-uplimit/ /talks/2023/uplimit/ 301
+
+/category/talks /talks/ 301
+/category/talks/ /talks/ 301
+
+/category/talks-workshops /talks/ 301
+/category/talks-workshops/ /talks/ 301

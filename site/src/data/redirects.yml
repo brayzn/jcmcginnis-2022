@@ -1,0 +1,23 @@
+# Redirect mappings: from (old URL) → to (new URL)
+# The redirect generator creates HTML pages with meta-refresh at each "from" path
+
+# Blog post that moved to top-level page
+- from: /blog/personal-readme/
+  to: /readme/
+
+# Talks moved from posts to talks collection (now with year in URL)
+- from: /blog/high-trust-remote-teams-qcon-2022/
+  to: /talks/2022/qcon/
+
+- from: /blog/high-trust-remote-teams-gartner-2023/
+  to: /talks/2023/gartner/
+
+- from: /blog/leading-high-trust-teams-uplimit/
+  to: /talks/2023/uplimit/
+
+# Category pages - talks are now a collection, not a category
+- from: /category/talks/
+  to: /talks/
+
+- from: /category/talks-workshops/
+  to: /talks/

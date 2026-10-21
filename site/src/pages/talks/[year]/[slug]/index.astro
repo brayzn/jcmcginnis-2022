@@ -1,0 +1,67 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../../../layouts/Base.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
+import {
+  talkKind,
+  talkPath,
+  talkResources,
+  talkSlug,
+  type Talk,
+} from "../../../../lib/talks";
+
+export async function getStaticPaths() {
+  const talks = await getCollection("talks");
+  return talks.map((talk) => ({
+    params: { year: String(talk.data.year), slug: talkSlug(talk) },
+    props: { talk },
+  }));
+}
+
+interface Props {
+  talk: Talk;
+}
+
+const { talk } = Astro.props;
+const { Content } = await render(talk);
+const resources = talkResources(talk);
+---
+
+<Base
+  title={`${talk.data.title} — Jesse McGinnis`}
+  description={talk.data.description}
+  canonicalPath={talkPath(talk)}
+>
+  <Header />
+  <main class="talk-detail" id="main">
+    <p class="kicker">
+      Speaking / {talkKind(talk)} · {talk.data.year}
+    </p>
+    <h1 class="page-title">{talk.data.title}</h1>
+    <p class="deck">{talk.data.description}</p>
+    <p class="meta">
+      {talk.data.event} · {talk.data.year} · {talkKind(talk)}
+    </p>
+
+    {resources.length > 0 && (
+      <p class="talk-links">
+        {resources.map((link, index) => (
+          <>
+            {index > 0 && " · "}
+            <a href={link.href}>{link.label}</a>
+          </>
+        ))}
+      </p>
+    )}
+
+    <div class="body talk-content">
+      <Content />
+    </div>
+
+    <p class="colophon">
+      <a href="/talks/">Back to speaking →</a>
+    </p>
+  </main>
+  <Footer />
+</Base>

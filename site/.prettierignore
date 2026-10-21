@@ -1,0 +1,10 @@
+# Build output and dependencies
+dist/
+node_modules/
+.astro/
+
+# Lockfiles are generated
+package-lock.json
+
+# Editorial content: check-versions enforces the model; Prettier would reflow prose
+src/content/

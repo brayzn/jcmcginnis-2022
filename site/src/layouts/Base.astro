@@ -1,0 +1,120 @@
+---
+import "../styles/fonts.css";
+import "../styles/lab.css";
+import "../styles/app.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalPath?: string;
+  noindex?: boolean;
+  image?: string;
+  type?: "website" | "article";
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  noindex = false,
+  image,
+  type = "website",
+} = Astro.props;
+
+const site = Astro.site ?? new URL("https://jcmcginnis.com");
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, site);
+const feed = new URL("/feed.xml", site);
+const imageUrl = image ? new URL(image, site) : undefined;
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Jesse McGinnis",
+  url: site.href,
+  jobTitle: "VP Product Engineering",
+  sameAs: [
+    "https://www.linkedin.com/in/jcmcginnis",
+    "https://github.com/brayzn",
+    "https://twitter.com/brayznly",
+  ],
+};
+
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Jesse McGinnis",
+  url: site.href,
+  description:
+    "I lead product engineering at GrowthLoop. I write about the structures that help people take responsibility—and the ones that quietly take it away.",
+  author: { "@type": "Person", name: "Jesse McGinnis" },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="mask-icon" href="/favicon.svg" color="#b84a28" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#efefea" />
+
+    <link
+      rel="preload"
+      href="/fonts/newsreader-latin-standard-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/source-serif-4-latin-standard-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="Jesse McGinnis" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+
+    <meta
+      name="twitter:card"
+      content={imageUrl ? "summary_large_image" : "summary"}
+    />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Jesse McGinnis"
+      href={feed}
+    />
+
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    <script type="application/ld+json" set:html={JSON.stringify(website)} />
+  </head>
+  <body>
+    <div class="proto" data-skin="ash">
+      <div class="page">
+        <a class="skip-link" href="#main">
+          Skip to content
+        </a>
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

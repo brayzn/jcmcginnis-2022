@@ -18,6 +18,9 @@ tmp/
 # ERB templates (no good Prettier support)
 *.erb
 
+# Astro app has its own Prettier config and plugin
+site/
+
 # Git
 .git/
 

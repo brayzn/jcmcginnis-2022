@@ -1,0 +1,65 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { careerPath } from "../../lib/career";
+import { home } from "../../data/site";
+---
+
+<Base
+  title="About — Jesse McGinnis"
+  description="The longer story: the career path behind the writing."
+  canonicalPath="/about/"
+>
+  <Header active="About" />
+  <main class="about" id="main">
+    <div class="about-grid">
+      <nav class="about-rail" aria-label="The path">
+        {careerPath.map((era) => (
+          <a class="about-era" href={`#era-${era.id}`}>
+            <span class="label">{era.years}</span>
+            <span class="about-company">{era.company}</span>
+          </a>
+        ))}
+      </nav>
+
+      <div class="about-main">
+        <p class="kicker">About</p>
+        <h1>The path</h1>
+        <p class="deck">
+          The longer story. What I learned, where, and what I'm still learning.
+        </p>
+
+        {careerPath.map((era) => (
+          <section class="about-section" id={`era-${era.id}`}>
+            <div class="about-section-head">
+              <p class="label">
+                {era.years}
+                {era.title !== era.company && ` · ${era.company}`}
+              </p>
+              <h2>{era.title}</h2>
+            </div>
+            {era.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+            {era.chapters.map((chapter) => (
+              <section class="about-chapter">
+                <p class="label">{chapter.years}</p>
+                <h3>{chapter.name}</h3>
+                {chapter.paragraphs.map((paragraph) => (
+                  <p>{paragraph}</p>
+                ))}
+              </section>
+            ))}
+          </section>
+        ))}
+
+        <p class="signoff">— J.</p>
+        <p class="colophon">
+          {home.location}. <a href="/">Back to the front page →</a>
+        </p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
