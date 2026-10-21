@@ -1,0 +1,12 @@
+main:
+  - name: "Writing"
+    url: "/blog/"
+    collection: posts
+    weight: 1
+  - name: "Speaking"
+    url: "/talks/"
+    collection: talks
+    weight: 2
+  - name: "README"
+    url: "/readme/"
+    weight: 3

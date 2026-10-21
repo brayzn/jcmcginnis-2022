@@ -1,0 +1,36 @@
+---
+interface Props {
+  active?: string;
+}
+
+const { active } = Astro.props;
+---
+
+<header class="header">
+  <a class="name" href="/">
+    Jesse McGinnis
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a
+      class={active === "Writing" ? "active" : ""}
+      href="/archive/"
+      aria-current={active === "Writing" ? "page" : undefined}
+    >
+      Writing
+    </a>
+    <a
+      class={active === "README" ? "active" : ""}
+      href="/readme/"
+      aria-current={active === "README" ? "page" : undefined}
+    >
+      README
+    </a>
+    <a
+      class={active === "About" ? "active" : ""}
+      href="/about/"
+      aria-current={active === "About" ? "page" : undefined}
+    >
+      About
+    </a>
+  </nav>
+</header>

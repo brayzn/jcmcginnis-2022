@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Build the Astro site for production"
+
+npm --prefix site run build

@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { archiveEntries, archiveYears, entriesByYear } from "../../lib/archive";
+import { categories, categoryPath } from "../../lib/categories";
+import { essayPath } from "../../lib/essays";
+
+const essays = await getCollection("essays");
+const entries = archiveEntries(essays);
+const years = archiveYears(entries);
+const themes = categories(essays);
+const firstYear = years.at(-1);
+const lastYear = years[0];
+
+const featured =
+  [...essays]
+    .filter((essay) => essay.data.featured)
+    .sort(
+      (a, b) =>
+        b.data.versions[0].date.getTime() - a.data.versions[0].date.getTime(),
+    )[0] ?? essays[0];
+---
+
+<Base
+  title="Writing — Jesse McGinnis"
+  description="Essays on high-trust teams, engineering leadership, and a decade of lessons at scale."
+  canonicalPath="/blog/"
+>
+  <Header active="Writing" />
+  <main class="archive" id="main">
+    <p class="kicker">
+      Writing · {firstYear}–{lastYear}
+    </p>
+    <h1>Writing.</h1>
+    <p class="deck">
+      High-trust teams. Engineering leadership. A decade of lessons at scale.
+    </p>
+
+    <section class="selected-archive">
+      <div class="section-head">
+        <h2>Featured</h2>
+        <span>Start here</span>
+      </div>
+      <ul class="selected-large">
+        <li>
+          <a href={essayPath(featured.id)}>{featured.data.title}</a>
+          <span>{featured.data.versions[0].date.getUTCFullYear()}</span>
+          <p>{featured.data.description}</p>
+        </li>
+      </ul>
+    </section>
+
+    <nav class="category-links" aria-label="Categories">
+      {themes.map((theme) => (
+        <a href={categoryPath(theme.slug)}>{theme.name}</a>
+      ))}
+    </nav>
+
+    <section class="blog-years">
+      {years.map((year) => (
+        <div class="index-group">
+          <h2>{year}</h2>
+          <ul>
+            {entriesByYear(entries, year).map((entry) => (
+              <li>
+                <span>{entry.dateLabel}</span>
+                <a href={entry.href}>{entry.title}</a>
+                {entry.historyHref ? (
+                  <a class="revised" href={entry.historyHref}>
+                    revised
+                  </a>
+                ) : (
+                  <span></span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <p class="feed-cta">
+      New essays, delivered. RSS. Your reader. No algorithms.
+      <a href="/feed.xml">Subscribe via RSS →</a>
+    </p>
+  </main>
+  <Footer />
+</Base>

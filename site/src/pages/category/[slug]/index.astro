@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { archiveEntries } from "../../../lib/archive";
+import {
+  categories,
+  categoryPath,
+  type Category,
+} from "../../../lib/categories";
+
+export async function getStaticPaths() {
+  const essays = await getCollection("essays");
+  return categories(essays).map((category) => ({
+    params: { slug: category.slug },
+    props: { category },
+  }));
+}
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const entries = archiveEntries(category.essays);
+const count = entries.length;
+const essayWord = count === 1 ? "essay" : "essays";
+---
+
+<Base
+  title={`${category.name} — Writing — Jesse McGinnis`}
+  description={`${count} ${essayWord} on ${category.name.toLowerCase()}.`}
+  canonicalPath={categoryPath(category.slug)}
+>
+  <Header active="Writing" />
+  <main class="archive" id="main">
+    <p class="kicker">Writing · Category</p>
+    <h1>{category.name}</h1>
+    <p class="deck">{`${count} ${essayWord} on ${category.name.toLowerCase()}.`}</p>
+
+    <ul class="selected-large category-essays">
+      {entries.map((entry) => (
+        <li>
+          <a href={entry.href}>{entry.title}</a>
+          <span>{entry.dateLabel}</span>
+          <p>{entry.note}</p>
+        </li>
+      ))}
+    </ul>
+
+    <p class="colophon">
+      <a href="/blog/">All writing →</a>
+    </p>
+  </main>
+  <Footer />
+</Base>

@@ -1,0 +1,298 @@
+---
+import type {
+  Essay as EssayEntry,
+  SeeAlsoLink,
+  VersionLink,
+} from "../lib/essays";
+import { formatMonthYear } from "../lib/essays";
+
+interface Props {
+  essay: EssayEntry;
+  versions: VersionLink[];
+  versionId: string;
+  current: boolean;
+  mode: "reading" | "history";
+  headings: { depth: number; slug: string; text: string }[];
+  reading: string;
+  seeAlso?: SeeAlsoLink[];
+}
+
+const {
+  essay,
+  versions,
+  versionId,
+  current,
+  mode,
+  headings,
+  reading,
+  seeAlso = [],
+} = Astro.props;
+
+const stillThinking = essay.data.stillThinking;
+
+const data = essay.data;
+const version =
+  versions.find((item) => item.id === versionId) ?? versions.at(-1)!;
+const currentVersion = versions.at(-1)!;
+const previousVersion =
+  versions.length > 1 ? versions[versions.length - 2] : undefined;
+const thenNow = currentVersion.thenNow;
+const history = mode === "history" && current;
+const toc = headings.filter((heading) => heading.depth === 2);
+
+const title = version.title ?? data.title;
+const description = version.description ?? data.description;
+const status = (item: VersionLink) =>
+  item.current
+    ? "Current"
+    : item.id === versions[0].id
+      ? "First published"
+      : "Superseded";
+const meta = current
+  ? `First published ${formatMonthYear(versions[0].date)}${
+      versions.length > 1
+        ? ` · Revised ${formatMonthYear(currentVersion.date)}`
+        : ""
+    } · ${reading}`
+  : `Published ${formatMonthYear(version.date)} · ${reading}`;
+---
+
+<article
+  class={`essay ${history ? "history" : "reading"} ${current ? "current" : "archived"}`}
+>
+  <header class="essay-head">
+    <p class="kicker">Writing / {data.categories.join(", ")}</p>
+    <h1>{title}</h1>
+    <p class="deck">{description}</p>
+    <p class="meta">{meta}</p>
+    {!current && (
+      <div class="version-banner" role="note">
+        <p class="version-banner-title">
+          <strong>You're reading {version.label}.</strong> Published{" "}
+          {formatMonthYear(version.date)}.
+        </p>
+        <p class="version-banner-links">
+          <a href={`/blog/${essay.id}/`}>Read the current version →</a>
+          <a href={`/blog/${essay.id}/history/`}>See what changed →</a>
+        </p>
+      </div>
+    )}
+  </header>
+
+  <div class="essay-grid">
+    <div class="body">
+      <slot />
+    </div>
+    <aside class="essay-margin">
+      {current && !history && (
+        <>
+          <div class="revision-rail">
+            <p class="label">History</p>
+            <p class="rail-stamp">
+              {currentVersion.label} · {formatMonthYear(currentVersion.date)}
+            </p>
+            {versions.length > 1 && (
+              <a class="rail-link" href={`/blog/${essay.id}/history/`}>
+                See history →
+              </a>
+            )}
+            <p class="rail-first">
+              First published {formatMonthYear(versions[0].date)}.
+            </p>
+          </div>
+          {toc.length > 0 && (
+            <div class="margin-block">
+              <p class="label">In this piece</p>
+              <nav class="toc" aria-label="In this piece">
+                {toc.map((heading) => (
+                  <a href={`#${heading.slug}`}>{heading.text}</a>
+                ))}
+              </nav>
+            </div>
+          )}
+          {seeAlso.length > 0 && (
+            <div class="margin-block">
+              <p class="label">See also</p>
+              <ul class="see">
+                {seeAlso.map((item) => (
+                  <li>
+                    <a class="see-title" href={item.href}>
+                      {item.title}
+                    </a>
+                    <span>{item.note}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {stillThinking && (
+            <div class="margin-block">
+              <p class="label">Still thinking</p>
+              <p class="margin-prose">{stillThinking}</p>
+            </div>
+          )}
+        </>
+      )}
+      {history && (
+        <div class="history-panel">
+          <p class="label">Versions</p>
+          <ul class="version-list">
+            {versions.map((item) => {
+              const here = item.id === versionId;
+              const stamp = `${item.label} · ${formatMonthYear(item.date)}`;
+              return (
+                <li class={here ? "is-here" : ""}>
+                  {here ? (
+                    <span class="version-stamp" aria-current="true">
+                      {stamp}
+                    </span>
+                  ) : (
+                    <a class="version-stamp" href={item.href}>
+                      {stamp} →
+                    </a>
+                  )}
+                  <p>{status(item)}</p>
+                </li>
+              );
+            })}
+          </ul>
+          {previousVersion && (
+            <>
+              <p class="label">What changed</p>
+              <p class="history-summary">{currentVersion.summary}</p>
+            </>
+          )}
+          <a class="rail-link" href={`/blog/${essay.id}/`}>
+            Back to reading ←
+          </a>
+        </div>
+      )}
+      {!current && (
+        <>
+          <div class="history-panel">
+            <p class="label">Versions</p>
+            <ul class="version-list">
+              {versions.map((item) => {
+                const here = item.id === versionId;
+                const stamp = `${item.label} · ${formatMonthYear(item.date)}`;
+                return (
+                  <li class={here ? "is-here" : ""}>
+                    {here ? (
+                      <span class="version-stamp" aria-current="true">
+                        {stamp}
+                      </span>
+                    ) : (
+                      <a class="version-stamp" href={item.href}>
+                        {stamp} →
+                      </a>
+                    )}
+                    <p>{status(item)}</p>
+                  </li>
+                );
+              })}
+            </ul>
+            <a class="rail-link" href={`/blog/${essay.id}/history/`}>
+              See what changed →
+            </a>
+          </div>
+          {toc.length > 0 && (
+            <div class="margin-block">
+              <p class="label">In this piece</p>
+              <nav class="toc" aria-label="In this piece">
+                {toc.map((heading) => (
+                  <a href={`#${heading.slug}`}>{heading.text}</a>
+                ))}
+              </nav>
+            </div>
+          )}
+        </>
+      )}
+    </aside>
+  </div>
+
+  {history && thenNow && previousVersion && (
+    <section class="then-now" aria-labelledby="then-now-title">
+      <h2 class="label" id="then-now-title">
+        Then / Now
+      </h2>
+      <div class="then-now-grid">
+        <div class="then">
+          <p class="label">
+            {previousVersion.label} · {formatMonthYear(previousVersion.date)}
+          </p>
+          <p>{thenNow.then}</p>
+        </div>
+        <div class="now">
+          <p class="label">
+            {currentVersion.label} · {formatMonthYear(currentVersion.date)}
+          </p>
+          <p>{thenNow.now}</p>
+        </div>
+      </div>
+      <p class="then-now-note">{thenNow.note}</p>
+    </section>
+  )}
+
+  <section class="revision-log" aria-labelledby="version-log-title">
+    <h2 class="label" id="version-log-title">
+      History
+    </h2>
+    <ul class="version-log">
+      {versions.map((item) => {
+        const here = item.id === versionId;
+        return (
+          <li class={here ? "is-here" : ""}>
+            <div class="version-log-head">
+              <a href={item.href} aria-current={here ? "true" : undefined}>
+                {item.label} · {formatMonthYear(item.date)}
+              </a>
+              <span class={item.current ? "is-current" : ""}>
+                {status(item)}
+              </span>
+            </div>
+            <p>{item.summary}</p>
+          </li>
+        );
+      })}
+    </ul>
+    {!history && thenNow && previousVersion && (
+      <details class="revision-details">
+        <summary>Then and now</summary>
+        <div class="then-now-compact">
+          <div class="then">
+            <p class="label">Then</p>
+            <p>{thenNow.then}</p>
+          </div>
+          <div class="now">
+            <p class="label">Now</p>
+            <p>{thenNow.now}</p>
+          </div>
+        </div>
+        <p class="then-now-note">{thenNow.note}</p>
+      </details>
+    )}
+  </section>
+
+  <footer class="essay-foot">
+    {seeAlso.length > 0 && (
+      <>
+        <h2 class="label">Read alongside</h2>
+        <div class="alongside">
+          {seeAlso.map((item) => (
+            <a href={item.href}>
+              {item.title}
+              <span>{item.note}</span>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+    <p class="folio">
+      <span>Jesse McGinnis</span>
+      <span>{title}</span>
+      <span>
+        {version.label} · {formatMonthYear(version.date).split(" ").pop()}
+      </span>
+    </p>
+  </footer>
+</article>

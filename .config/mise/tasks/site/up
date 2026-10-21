@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Install Astro site dependencies"
+
+echo "==> Installing Astro site dependencies..."
+npm --prefix site ci
+
+echo "==> Site setup complete!"

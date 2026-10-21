@@ -3,7 +3,8 @@
 Two tracks, one outcome. This is the shared entry point for a fresh agent.
 
 **Status:** design and editorial baselines are both on `main` (#36, #37); the editorial rewrite is
-in progress. Nothing is live. Both folders are outside `src/`, so Bridgetown does not build them.
+in progress. Nothing is live. Both folders are outside both app roots (`src/` Bridgetown, `site/`
+Astro), so neither build picks them up.
 
 ## The two tracks
 
@@ -43,8 +44,9 @@ working draft.
 - **Facts are checked before publication.** Do not invent scenes, dialogue, motives, or outcomes.
   The open checks include 25 engineers + 2 PMs vs “forty people,” the Shopify dates, and the “eight
   years” line.
-- **Nobody edits `src/` or deploys** as part of either workstream. Implementation starts only when
-  the copy and version model are ready.
+- **Nobody edits `site/src/` or deploys** as part of either workstream. The current Bridgetown site
+  keeps publishing from `src/`; the new deploy is Cloudflare Pages (#52). Implementation starts only
+  when the decisions and copy are ready.
 - **One substantive rewrite active at a time.** Design and shared cleanup can proceed alongside it.
 
 ## Fresh agent start
@@ -71,7 +73,8 @@ working draft.
 
 ## What this is not
 
-- Not a live site, CMS migration, or stack change.
+- Not a live site or a CMS migration. The stack is changing to Astro + Cloudflare Pages; that is
+  tracked in #38.
 - Not an approved content rewrite. The prototype copy is provisional.
 - Not a finished design system. The craft pass is done; final refinements wait on copy.
 

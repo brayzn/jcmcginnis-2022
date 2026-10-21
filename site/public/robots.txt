@@ -1,0 +1,6 @@
+# Previews are kept out of indexes by Cloudflare Pages, which sends
+# X-Robots-Tag: noindex on every preview deployment.
+User-agent: *
+Allow: /
+
+Sitemap: https://jcmcginnis.com/sitemap-index.xml

@@ -1,0 +1,20 @@
+# Social media links for Jesse McGinnis
+# Used by _social_links.erb and _footer.erb
+
+- name: X (Twitter)
+  handle: "@brayznly"
+  url: https://twitter.com/brayznly
+  icon: x
+
+- name: LinkedIn
+  url: https://www.linkedin.com/in/jcmcginnis
+  icon: linkedin
+
+- name: GitHub
+  handle: brayzn
+  url: https://github.com/brayzn
+  icon: github
+
+- name: Email
+  url: mailto:jesse@jcmcginnis.com
+  icon: email

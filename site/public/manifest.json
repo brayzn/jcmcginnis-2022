@@ -1,0 +1,14 @@
+{
+  "name": "Jesse McGinnis",
+  "short_name": "Jesse",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#efefea",
+  "theme_color": "#b84a28",
+  "display": "standalone"
+}

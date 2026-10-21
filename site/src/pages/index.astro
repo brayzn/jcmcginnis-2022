@@ -1,0 +1,152 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { beliefs, home } from "../data/site";
+import { essayPath, formatMonthYear, recentRevisions } from "../lib/essays";
+import { socialUrl } from "../lib/socials";
+
+const essays = await getCollection("essays");
+const essaysById = new Map(essays.map((essay) => [essay.id, essay]));
+
+const requireEssay = (id: string) => {
+  const essay = essaysById.get(id);
+  if (!essay) {
+    throw new Error(`Home references an essay that does not exist: "${id}".`);
+  }
+  return essay;
+};
+
+const beliefEntries = beliefs.map((belief) => {
+  const essay = requireEssay(belief.essay);
+  const current = essay.data.versions.at(-1)!;
+  return {
+    text: belief.text,
+    title: essay.data.title,
+    href: essayPath(essay.id),
+    note:
+      essay.data.versions.length > 1
+        ? `Revised ${formatMonthYear(current.date)}`
+        : "Essay",
+  };
+});
+
+const revisions = recentRevisions(essays);
+
+const psParts = home.ps.map((part) =>
+  part.kind === "essay"
+    ? { ...part, href: essayPath(requireEssay(part.essay).id) }
+    : part,
+);
+
+const elsewhere = [
+  { label: "Email", href: socialUrl("Email") },
+  { label: "LinkedIn", href: socialUrl("LinkedIn") },
+  { label: "RSS", href: "/feed.xml" },
+];
+---
+
+<Base title="Jesse McGinnis" description={home.lede} canonicalPath="/">
+  <Header />
+  <div class="home-grid">
+    <aside class="home-rail">
+      <div class="rail-block">
+        <p class="label">Current position</p>
+        <p class="rail-date">{home.position}</p>
+      </div>
+      <div class="rail-block">
+        <p class="label">Now</p>
+        <p class="rail-text">{home.now}</p>
+        <p class="rail-meta">{home.location}</p>
+      </div>
+      <div class="rail-block">
+        <p class="label">Currently</p>
+        <p class="margin-question">
+          <span class="current-dot"></span>
+          {home.currently}
+        </p>
+      </div>
+      <div class="rail-block">
+        <p class="label">Elsewhere</p>
+        <p class="rail-meta">
+          {elsewhere.map((link, index) => (
+            <>
+              {index > 0 && " · "}
+              <a href={link.href}>{link.label}</a>
+            </>
+          ))}
+        </p>
+      </div>
+    </aside>
+
+    <main class="home-main" id="main">
+      <h1 class="lede">{home.lede}</h1>
+      <p>{home.shopify}</p>
+      {home.letter.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+      <p class="signoff">{home.signoff}</p>
+      <p class="ps">
+        {psParts.map((part) =>
+          part.kind === "essay" ? (
+            <a href={part.href}>{part.text}</a>
+          ) : part.kind === "link" ? (
+            <a href={part.href}>{part.text}</a>
+          ) : (
+            part.text
+          ),
+        )}
+      </p>
+
+      <section class="beliefs">
+        <div class="section-head">
+          <h2>What I believe now</h2>
+          <span>The essays are where I work them out</span>
+        </div>
+        <ol class="belief-list">
+          {beliefEntries.map((belief, index) => (
+            <li class="belief">
+              <span class="belief-num">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div class="belief-body">
+                <p class="belief-text">{belief.text}</p>
+                <p class="belief-meta">
+                  <a href={belief.href}>{belief.title} →</a>
+                  <span>{belief.note}</span>
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="recent-changes">
+        <div class="section-head">
+          <h2>Recently revised</h2>
+          <a href="/archive/">Full index →</a>
+        </div>
+        {revisions.length > 0 ? (
+          <ul class="change-list">
+            {revisions.map((revision) => (
+              <li class="change">
+                <div class="change-head">
+                  <a href={revision.href}>{revision.title}</a>
+                  <span>{revision.label}</span>
+                </div>
+                <p>{revision.summary}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="change-empty">
+            No revisions yet. Every essay is still on its first published
+            version.
+          </p>
+        )}
+      </section>
+    </main>
+  </div>
+  <Footer />
+</Base>

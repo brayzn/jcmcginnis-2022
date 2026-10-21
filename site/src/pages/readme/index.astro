@@ -1,0 +1,130 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import {
+  inlineEmphasis,
+  quoteGroups,
+  readme,
+  readmeMeta,
+  saganParagraphs,
+} from "../../lib/readme";
+import { home } from "../../data/site";
+---
+
+<Base
+  title="README — Jesse McGinnis"
+  description={readmeMeta.deck}
+  canonicalPath="/readme/"
+>
+  <Header active="README" />
+  <main class="readme" id="main">
+    <header class="readme-masthead">
+      <p class="kicker">
+        {readmeMeta.kicker} · Version {readmeMeta.version}
+      </p>
+      <h1>{readmeMeta.title}</h1>
+      <p class="deck">{readmeMeta.deck}</p>
+    </header>
+
+    <nav class="readme-tldr" aria-label="TL;DR">
+      {readme.tldr.map((item) => (
+        <a class="tldr-item" href={`#${item.anchor}`}>
+          <span class="tldr-label">{item.label}</span>
+          <strong>{item.headline}</strong>
+          <span class="tldr-arrow" aria-hidden="true">
+            ↓
+          </span>
+        </a>
+      ))}
+    </nav>
+
+    <section id="what-i-expect" class="readme-section">
+      <div class="readme-section-head">
+        <p class="label">01</p>
+        <h2>What I expect</h2>
+        <p>
+          The questions I use to evaluate fit. Guardrails to stay true to
+          myself.
+        </p>
+      </div>
+      {readme.expectations.map((expectation) => (
+        <div class="expectation">
+          <div class="expectation-head">
+            <span class="expectation-num">{expectation.number}</span>
+            <h3>{expectation.headline}</h3>
+          </div>
+          <div class="keywords">
+            {expectation.keywords.map((keyword) => (
+              <div class="keyword">
+                <h4>{keyword.label}</h4>
+                <p set:html={inlineEmphasis(keyword.detail)} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <section id="how-i-show-up" class="readme-section">
+      <div class="readme-section-head">
+        <p class="label">02</p>
+        <h2>How I show up</h2>
+        <p>
+          How I show up at my best. Not targets—observations. Learned through
+          reflection and feedback.
+        </p>
+      </div>
+      <div class="principles">
+        {readme.principles.map((principle, index) => (
+          <div class="principle">
+            <span class="principle-num">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <h3>{principle.title}</h3>
+            <p set:html={inlineEmphasis(principle.detail)} />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="inspiration" class="readme-section">
+      <div class="readme-section-head">
+        <p class="label">03</p>
+        <h2>What inspires me</h2>
+        <p>
+          Words that shaped how I think. What to seek. How to be. What to
+          remember.
+        </p>
+      </div>
+      {quoteGroups.map((group) => (
+        <div class="quote-group">
+          <h3>{group.title}</h3>
+          <div class="quotes">
+            {readme.quotes[group.key].map((quote) => (
+              <blockquote>
+                <p>{quote.text}</p>
+                <cite>{quote.author}</cite>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <details class="readme-coda">
+      <summary>Coda · Pale Blue Dot</summary>
+      {saganParagraphs.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+      <cite>
+        Carl Sagan, <em>Pale Blue Dot</em>, 1994
+      </cite>
+    </details>
+
+    <p class="colophon">
+      Version {readmeMeta.version}. {home.location}.
+    </p>
+  </main>
+  <Footer />
+</Base>

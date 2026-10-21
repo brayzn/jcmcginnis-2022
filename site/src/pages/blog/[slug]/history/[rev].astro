@@ -1,0 +1,78 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../../../layouts/Base.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
+import Essay from "../../../../components/Essay.astro";
+import {
+  essayPath,
+  readingTime,
+  seeAlsoLinks,
+  versionLinks,
+  type Essay as EssayEntry,
+  type EssayVersion,
+  type SeeAlsoLink,
+} from "../../../../lib/essays";
+
+export async function getStaticPaths() {
+  const [essays, versions] = await Promise.all([
+    getCollection("essays"),
+    getCollection("essayVersions"),
+  ]);
+
+  return versions.map((version) => {
+    const [folder, versionId] = version.id.split("/");
+    const essay = essays.find((entry) => entry.id === folder);
+    if (!essay) {
+      throw new Error(`${version.id}: old body has no essay at ${folder}`);
+    }
+    const metadata = essay.data.versions.find((item) => item.id === versionId);
+    if (!metadata || metadata.current) {
+      throw new Error(`${version.id}: body has no non-current version entry`);
+    }
+    return {
+      params: { slug: folder, rev: versionId },
+      props: { essay, version, seeAlso: seeAlsoLinks(essay, essays) },
+    };
+  });
+}
+
+interface Props {
+  essay: EssayEntry;
+  version: EssayVersion;
+  seeAlso: SeeAlsoLink[];
+}
+
+const { essay, version, seeAlso } = Astro.props;
+const { Content, headings } = await render(version);
+const versions = versionLinks(essay);
+const versionId = version.id.split("/")[1];
+const metadata = versions.find((item) => item.id === versionId)!;
+const title = metadata.title ?? essay.data.title;
+---
+
+<Base
+  title={`${metadata.label} — ${title} — Jesse McGinnis`}
+  description={metadata.description ?? essay.data.description}
+  canonicalPath={essayPath(essay.id)}
+  noindex={true}
+  image={essay.data.image}
+  type="article"
+>
+  <Header active="Writing" />
+  <main id="main">
+    <Essay
+      essay={essay}
+      versions={versions}
+      versionId={versionId}
+      current={false}
+      mode="reading"
+      headings={headings}
+      reading={readingTime(version.body ?? "")}
+      seeAlso={seeAlso}
+    >
+      <Content />
+    </Essay>
+  </main>
+  <Footer />
+</Base>

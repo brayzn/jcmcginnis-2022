@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+#MISE description="Type-check, validate versions, and format-check the Astro site"
+
+npm --prefix site run check
+npm --prefix site run lint

@@ -1,0 +1,105 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import {
+  archiveEntries,
+  archiveThemes,
+  archiveYears,
+  entriesByTheme,
+  entriesByYear,
+  selectedEntries,
+} from "../../lib/archive";
+
+const essays = await getCollection("essays");
+const entries = archiveEntries(essays);
+const selected = selectedEntries(entries);
+const themes = archiveThemes(entries);
+const years = archiveYears(entries);
+const firstYear = years.at(-1);
+const lastYear = years[0];
+---
+
+<Base
+  title="Writing — Jesse McGinnis"
+  description="An index, not a feed. Selected work first, then the full record."
+  canonicalPath="/archive/"
+>
+  <Header active="Writing" />
+  <main class="archive" id="main">
+    <p class="kicker">
+      Writing · {firstYear}–{lastYear}
+    </p>
+    <h1>Writing, by idea and by year.</h1>
+    <p class="deck">
+      An index, not a feed. Selected work first, then the full record.
+    </p>
+
+    <section class="selected-archive">
+      <div class="section-head">
+        <h2>Selected</h2>
+        <span>Three pieces to start</span>
+      </div>
+      <ul class="selected-large">
+        {selected.map((entry) => (
+          <li>
+            <a href={entry.href}>{entry.title}</a>
+            <span>{entry.year}</span>
+            <p>{entry.note}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <div class="index-grid">
+      <section>
+        <h2>By theme</h2>
+        {themes.map((theme) => (
+          <div class="index-group">
+            <h3>{theme}</h3>
+            <ul>
+              {entriesByTheme(entries, theme).map((entry) => (
+                <li>
+                  <span>{entry.year}</span>
+                  <a href={entry.href}>{entry.title}</a>
+                  {entry.historyHref ? (
+                    <a class="revised" href={entry.historyHref}>
+                      revised
+                    </a>
+                  ) : (
+                    <span></span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+      <section>
+        <h2>By year</h2>
+        {years.map((year) => (
+          <div class="index-group">
+            <h3>{year}</h3>
+            <ul>
+              {entriesByYear(entries, year).map((entry) => (
+                <li>
+                  <span>{entry.dateLabel}</span>
+                  <a href={entry.href}>{entry.title}</a>
+                  {entry.historyHref ? (
+                    <a class="revised" href={entry.historyHref}>
+                      revised
+                    </a>
+                  ) : (
+                    <span></span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Base>

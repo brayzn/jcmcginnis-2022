@@ -1,0 +1,179 @@
+tldr:
+  - anchor: what-i-expect
+    label: "What I Expect"
+    headline: "Smart people. Hard problems. No bullshit."
+    summary:
+      "People who push me, challenge me, and make me uncomfortable in the best
+      way."
+  - anchor: how-i-show-up
+    label: "How I Show Up"
+    headline: "Trust first. Expect everything. Best ideas win."
+    summary:
+      "Trust, high expectations, and a hunger for the best answers—however we
+      get there."
+  - anchor: inspiration
+    label: "What Inspires Me"
+    headline: "Words that shaped me."
+    summary: "Wisdom that reminds me of the world's vastness."
+
+expectations:
+  - number: "01"
+    headline: "Will I be surrounded by people who make me uncomfortable?"
+    keywords:
+      - label: "Scary smart"
+        detail:
+          'People who push themselves past "what''s necessary" simply because
+          they wanted to see the other side. People I''m inspired by. People
+          I''ll learn from. Scary is the important word: it should be uneasy to
+          keep up with them.'
+      - label: "Genuine"
+        detail:
+          "People who care not just about what they do, but *how they do it*.
+          People who want to know the humans they work with, and want to *be
+          known* in return. Honesty, kindness, authenticity—not as values on a
+          wall, but as how they live."
+      - label: "Optimistic"
+        detail:
+          "Never toxic positivity—a deeply held belief *in a better tomorrow*.
+          Honest about barriers, willing to do the work. I'm optimistic by
+          nature, and I want to be somewhere the *optimists outnumber the
+          pessimists*."
+      - label: "Expect more"
+        detail:
+          "Push me. Challenge me. Hold me accountable. A culture of excellence,
+          where we're all here to do *our best work*. People excited by the idea
+          that today is the worst we'll ever be at what we do."
+
+  - number: "02"
+    headline: "Will I have the autonomy to build something meaningful?"
+    keywords:
+      - label: "Chart my own path"
+        detail:
+          "*Choose my own adventure*, with guideposts not hard walls. A place
+          that treats people like adults who can make the right decisions.
+          Defaults, not rules. Capabilities, not titles."
+      - label: "See my impact"
+        detail:
+          "I put in my all. I expect to see the impact—and be recognized when I
+          achieve something extraordinary."
+      - label: "Lift others"
+        detail:
+          "I want to help others grow—*mentor*, *coach*, *teach*. Design
+          programs or work 1:1. A place where we're all here to learn, and I get
+          to help make that happen."
+      - label: "Room to grow"
+        detail:
+          "Keep learning. There will be phases of mastery, but there must be
+          phases of stretch too. Stagnation is not an option."
+
+  - number: "03"
+    headline: "Can I win even when I lose?"
+    keywords:
+      - label: "Winning in failure"
+        detail:
+          "A place that *knows failure is a lesson*, not something to avoid.
+          Where I can *fail fast* and *fail forward*. Antifragile, not fragile."
+      - label: "Winning in loss"
+        detail:
+          "Even if the bet loses—the project, the job, the company—I've gained
+          something real. Growth, learning, relationships, skills. A place where
+          everyone *wins*, even in loss."
+      - label: "Worth the hard days"
+        detail:
+          "A place I *believe in*. Where what we're building is worth sticking
+          through the storms for."
+
+principles:
+  - title: "Trust first"
+    detail:
+      "I share openly. I *trust* you can and will do what you say. But fair
+      warning: burn my trust and it's a long road back."
+  - title: "Expect your best"
+    detail:
+      "I want people to see everything they're capable of. My expectations are
+      high—I hold what I know you can do, and I'll actively help you get there."
+  - title: "Best ideas win"
+    detail:
+      "Idea labs are fun—and where the best results come from. So expect me to
+      argue, push, prod, and question. I expect the same from you. This is how
+      we get to the best answers."
+  - title: "Honest, not brutal"
+    detail:
+      "I won't lie, but I might say nothing. I will tell you what I think,
+      clearly and kindly. I expect the same from you."
+  - title: "Don't box me in"
+    detail:
+      "Defaults are powerful; rules are suffocating. Put a hard line in front of
+      me and expect me to interrogate it. The best path forward often means
+      breaking the rules."
+  - title: "Optimistic by nature"
+    detail:
+      "I believe in a better tomorrow and I'll work to make it happen. Always
+      looking for the silver lining—but never ignoring the storm clouds."
+  - title: "Pragmatic by practice"
+    detail:
+      "The world is grey and complex. I will find a path forward, even if it's
+      not the one I wanted. Never let perfect be the enemy of good enough."
+  - title: "Clear is kind"
+    detail: "Direct, concise, precise. But not cold—pith and context matter."
+
+quotes:
+  seek:
+    - text: "Work on something uncomfortably exciting."
+      author: "Larry Page"
+    - text: "Choose things that will make you smarter in 10 or 20 years."
+      author: "Warren Buffett"
+    - text: "Look for smart people and hard problems."
+      author: "Paul Graham"
+    - text:
+        "Not everything that is faced can be changed. But nothing can be changed
+        until it is faced."
+      author: "James Arthur Baldwin"
+
+  be:
+    - text:
+        "We are what we repeatedly do. Excellence, therefore, is not an act, but
+        a habit."
+      author: "Aristotle"
+    - text:
+        "We judge others by their behavior. We judge ourselves by our
+        intentions."
+      author: "Ian Percy"
+    - text:
+        "It is the mark of an educated mind to be able to entertain a thought
+        without accepting it."
+      author: "Aristotle"
+    - text:
+        "You must never be satisfied with losing. You must get angry, terribly
+        angry, about losing. But the mark of the good loser is that he takes his
+        anger out on himself and not his victorious opponents or on his
+        teammates."
+      author: "Richard M. Nixon"
+    - text:
+        "Be soft. Do not let the world make you hard. Do not let pain make you
+        hate. Do not let the bitterness steal your sweetness. Take pride that
+        even though the rest of the world may disagree, you still believe it to
+        be a beautiful place."
+      author: "Kurt Vonnegut"
+
+  remember:
+    - text:
+        "All that is necessary for the triumph of evil is that good men do
+        nothing."
+      author: "Edmund Burke"
+    - text:
+        "It is not power that corrupts but fear. Fear of losing power corrupts
+        those who wield it and fear of the scourge of power corrupts those who
+        are subject to it."
+      author: "Aung San Suu Kyi"
+
+sagan: |
+  Look again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every "superstar," every "supreme leader," every saint and sinner in the history of our species lived there-on a mote of dust suspended in a sunbeam.
+
+  The Earth is a very small stage in a vast cosmic arena. Think of the endless cruelties visited by the inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds.
+
+  Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+
+  The Earth is the only world known so far to harbor life. There is nowhere else, at least in the near future, to which our species could migrate. Visit, yes. Settle, not yet. Like it or not, for the moment the Earth is where we make our stand.
+
+  It has been said that astronomy is a humbling and character-building experience. There is perhaps no better demonstration of the folly of human conceits than this distant image of our tiny world. To me, it underscores our responsibility to deal more kindly with one another, and to preserve and cherish the pale blue dot, the only home we've ever known.
