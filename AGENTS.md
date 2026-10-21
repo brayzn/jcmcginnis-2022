@@ -24,6 +24,9 @@
   taste calls, and edits. Do not let subagents modify prose files. Preserve raw, direct, high-heat
   voice. Run `mise run site:lint` for site prose and `mise run lint -a` for the root Bridgetown app
   before commits.
+- Design should look okay with the content that exists today and remain world-class as the content
+  levels up. Do not overfit layouts to sparse pages, and do not hide structure that future content
+  will need.
 
 ## Learned Workspace Facts
 
@@ -56,3 +59,6 @@
   <https://jcmcginnis.pages.dev/>. DNS is not cut over: `jcmcginnis.com` still serves the Bridgetown
   app from GitHub Pages. Do not change DNS or add custom domains without explicit approval; do not
   delete the Pages project.
+- Home “Recently revised” is hidden until at least one published revision exists; do not show an
+  empty state. About keeps the full career path for now; trim it in a later editorial pass, not in a
+  layout cleanup.

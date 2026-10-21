@@ -67,7 +67,8 @@ warm-stationery and not a dashboard.
 - Main: the letter, the Shopify line, “— J.”, a P.S. to About and _Directed Chaos_.
 - **What I believe now:** three current beliefs, each linked to the essay that earns it. This
   replaces a generic selected-writing list at the top of the page.
-- **Recently revised:** versions, dates, and short change summaries; links into History mode.
+- **Recently revised:** versions, dates, and short change summaries; links into History mode. Hide
+  the section until at least one published revision exists; do not show an empty state.
 - Full index link.
 
 ### Essay
@@ -149,7 +150,8 @@ Everything below is content or implementation, not a design direction:
 - The README’s final content, including whether to add “What you can expect from me,” “How we
   disagree,” and “Where I need help.” The prototype preserves today’s structure rather than
   replacing it.
-- How long About should be, and which career chapters stay.
+- About length: keep the full career path for now; trim it in the editorial pass, not in a layout
+  cleanup.
 - Whether “— J.” appears on About and README or only on the home.
 - The production revision data model and route shape.
 - Final font loading, licensing confirmation, and performance budget.
@@ -159,7 +161,10 @@ Everything below is content or implementation, not a design direction:
 - Preserve the Ash palette and the display/body/label type roles.
 - Preserve reading comfort before adding expression. The essay body is the product.
 - Preserve the revision rail, version panel, Then / Now, and old-version access.
-- Preserve the home’s “position” structure: letter, beliefs, recent changes.
+- Preserve the home’s “position” structure: letter, beliefs, and recent changes when a published
+  revision exists.
+- Design for today’s content and remain world-class as it levels up; do not overfit sparse pages or
+  hide structure that future content will need.
 - Keep Shopify to one proof line on the home; the full story belongs in About.
 - Do not add decorative complexity: no gradients, glass, cards, badges, monograms, scroll reveals,
   or theme toggle.
