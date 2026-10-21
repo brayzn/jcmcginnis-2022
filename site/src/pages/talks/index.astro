@@ -14,7 +14,9 @@ import {
 
 const talks = await getCollection("talks");
 const featured = featuredTalk(talks);
+const listedTalks = talks.filter((talk) => talk.id !== featured.id);
 const years = talkYears(talks);
+const listedYears = talkYears(listedTalks);
 const firstYear = years.at(-1);
 const lastYear = years[0];
 ---
@@ -62,11 +64,11 @@ const lastYear = years[0];
     </section>
 
     <div class="talk-years">
-      {years.map((year) => (
+      {listedYears.map((year) => (
         <section class="talk-group">
           <h2>{year}</h2>
           <ul class="talk-list">
-            {talksByYear(talks, year).map((talk) => (
+            {talksByYear(listedTalks, year).map((talk) => (
               <li>
                 <span class="talk-kind">{talkKind(talk)}</span>
                 <div class="talk-body">

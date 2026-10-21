@@ -368,6 +368,19 @@ body {
   margin-top: 6px;
 }
 
+/* Elsewhere: separators ride with the link that follows them, so a wrap
+   never leaves a trailing dot. */
+.rail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.55em;
+}
+
+.rail-links a + a::before {
+  content: "\00b7";
+  margin-right: 0.55em;
+}
+
 .margin-question {
   display: flex;
   gap: 10px;
@@ -1244,6 +1257,16 @@ a.version-stamp {
   color: var(--accent-text);
 }
 
+/* By theme: a four-digit year needs only a short gutter, and the tag wraps
+   under the title instead of taking a third column. */
+.index-grid > section:first-child li {
+  grid-template-columns: 3.5em minmax(0, 1fr);
+}
+
+.index-grid > section:first-child li .revised {
+  grid-column: 2;
+}
+
 /* ---------- README ---------- */
 
 .readme {
@@ -1829,17 +1852,50 @@ a.version-stamp {
     gap: 40px;
   }
 
+  /* The essay reads in one column before the measure gets too narrow. */
   .essay-grid {
-    grid-template-columns: minmax(0, 1fr) 210px;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .essay-grid::before {
-    left: calc(100% - 210px);
+    display: none;
   }
 
   .essay-margin {
-    padding-left: 20px;
+    position: static;
+    max-width: 640px;
+    padding-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+
+  /* History on a narrow page: the version panel comes before the text. */
+  .essay.history .essay-margin {
+    order: -1;
+    border-top: 0;
+    padding-top: 0;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 24px;
+  }
+
+  .essay.history .history-panel {
+    margin-bottom: 0;
+  }
+
+  .essay.history .body .is-revised {
+    margin-left: 0;
+    padding-left: 14px;
+  }
+
+  /* In one column the margin TOC would land after the article. */
+  .essay .toc-block {
+    display: none;
+  }
+
+  .index-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
   }
 
   .lede {
@@ -1917,51 +1973,11 @@ a.version-stamp {
     margin-bottom: 40px;
   }
 
-  .essay-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .essay-grid::before {
-    display: none;
-  }
-
-  .essay-margin {
-    position: static;
-    max-width: 640px;
-    padding-left: 0;
-    border-top: 1px solid var(--rule);
-    padding-top: 24px;
-  }
-
-  /* History on a phone: the version panel comes before the marked text. */
-  .essay.history .essay-margin {
-    order: -1;
-    border-top: 0;
-    padding-top: 0;
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 24px;
-  }
-
-  .essay.history .history-panel {
-    margin-bottom: 0;
-  }
-
-  .essay.history .body .is-revised {
-    margin-left: 0;
-    padding-left: 14px;
-  }
-
   .then-now-grid,
   .then-now-compact,
   .alongside {
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-
-  .index-grid {
-    grid-template-columns: 1fr;
-    gap: 44px;
   }
 
   .readme-masthead h1 {
@@ -2167,12 +2183,14 @@ a.version-stamp {
     gap: 2px 10px;
   }
 
-  /* By year: full dates stack above the title. */
-  .index-grid > section:last-child li {
+  /* Full dates stack above the title, in the archive and the chronology. */
+  .index-grid > section:last-child li,
+  .blog-years .index-group li {
     grid-template-columns: minmax(0, 1fr) auto;
   }
 
-  .index-grid > section:last-child li > span:first-child {
+  .index-grid > section:last-child li > span:first-child,
+  .blog-years .index-group li > span:first-child {
     grid-column: 1 / -1;
   }
 
