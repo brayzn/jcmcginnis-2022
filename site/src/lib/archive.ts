@@ -1,5 +1,10 @@
 import type { Essay } from "./essays";
-import { essayPath, formatMonthYear, historyPath } from "./essays";
+import {
+  essayPath,
+  formatMonthYear,
+  historyPath,
+  versionStamp,
+} from "./essays";
 import { selectedEssays } from "../data/site";
 
 export type ArchiveEntry = {
@@ -12,6 +17,7 @@ export type ArchiveEntry = {
   year: string;
   themes: string[];
   historyHref: string | null;
+  revisionStamp: string | null;
 };
 
 const byDateDescending = (a: ArchiveEntry, b: ArchiveEntry) =>
@@ -20,7 +26,8 @@ const byDateDescending = (a: ArchiveEntry, b: ArchiveEntry) =>
 export const toArchiveEntry = (essay: Essay): ArchiveEntry => {
   const versions = essay.data.versions;
   const first = versions[0];
-  const revised = versions.length > 1 ? versions.at(-1)!.date : null;
+  const latest = versions.at(-1)!;
+  const revised = versions.length > 1;
 
   return {
     id: essay.id,
@@ -32,6 +39,7 @@ export const toArchiveEntry = (essay: Essay): ArchiveEntry => {
     year: String(first.date.getUTCFullYear()),
     themes: essay.data.categories,
     historyHref: revised ? historyPath(essay.id) : null,
+    revisionStamp: revised ? versionStamp(latest.id, latest.date) : null,
   };
 };
 

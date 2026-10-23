@@ -6,9 +6,10 @@ import "../styles/app.css";
 interface Props {
   title: string;
   description?: string;
-  canonicalPath?: string;
+  canonicalPath?: string | null;
   noindex?: boolean;
   image?: string;
+  imageAlt?: string;
   type?: "website" | "article";
 }
 
@@ -18,13 +19,16 @@ const {
   canonicalPath,
   noindex = false,
   image,
+  imageAlt,
   type = "website",
 } = Astro.props;
 
 const site = Astro.site ?? new URL("https://jcmcginnis.com");
-const canonical = new URL(canonicalPath ?? Astro.url.pathname, site);
+const pageUrl = new URL(canonicalPath ?? Astro.url.pathname, site);
+const canonical = canonicalPath === null ? undefined : pageUrl;
 const feed = new URL("/feed.xml", site);
 const imageUrl = image ? new URL(image, site) : undefined;
+const imageAltText = imageAlt ?? description ?? title;
 
 const person = {
   "@context": "https://schema.org",
@@ -57,7 +61,7 @@ const website = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-    <link rel="canonical" href={canonical} />
+    {canonical && <link rel="canonical" href={canonical} />}
     {noindex && <meta name="robots" content="noindex, follow" />}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -85,9 +89,10 @@ const website = {
     <meta property="og:site_name" content="Jesse McGinnis" />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
-    <meta property="og:url" content={canonical} />
+    <meta property="og:url" content={canonical ?? pageUrl} />
     <meta property="og:locale" content="en_US" />
     {imageUrl && <meta property="og:image" content={imageUrl} />}
+    {imageUrl && <meta property="og:image:alt" content={imageAltText} />}
 
     <meta
       name="twitter:card"
@@ -96,6 +101,7 @@ const website = {
     <meta name="twitter:title" content={title} />
     {description && <meta name="twitter:description" content={description} />}
     {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+    {imageUrl && <meta name="twitter:image:alt" content={imageAltText} />}
 
     <link
       rel="alternate"

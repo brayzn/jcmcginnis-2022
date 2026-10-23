@@ -16,10 +16,21 @@ const monthYear = new Intl.DateTimeFormat("en-US", {
 
 export const formatMonthYear = (date: Date) => monthYear.format(date);
 
+const shortMonthYear = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+export const formatShortMonthYear = (date: Date) => shortMonthYear.format(date);
+
 export const versionLabel = (id: string) => {
   const match = /^rev-(\d+)$/.exec(id);
   return match ? `Rev. ${match[1]}` : id;
 };
+
+export const versionStamp = (id: string, date: Date) =>
+  `${versionLabel(id)} · ${formatShortMonthYear(date)}`;
 
 export const readingTime = (markdown: string) => {
   const words = markdown
@@ -60,16 +71,12 @@ export type SeeAlsoLink = {
   note: string;
 };
 
-const resolveLinks = (
-  essay: Essay,
-  essays: Essay[],
-  field: "seeAlso" | "readAlongside",
-): SeeAlsoLink[] =>
-  (essay.data[field] ?? []).map((item) => {
+export const seeAlsoLinks = (essay: Essay, essays: Essay[]): SeeAlsoLink[] =>
+  (essay.data.seeAlso ?? []).map((item) => {
     const target = essays.find((entry) => entry.id === item.essay);
     if (!target) {
       throw new Error(
-        `${essay.id}: ${field} references an essay that does not exist: "${item.essay}".`,
+        `${essay.id}: seeAlso references an essay that does not exist: "${item.essay}".`,
       );
     }
     return {
@@ -78,14 +85,6 @@ const resolveLinks = (
       note: item.note,
     };
   });
-
-export const seeAlsoLinks = (essay: Essay, essays: Essay[]): SeeAlsoLink[] =>
-  resolveLinks(essay, essays, "seeAlso");
-
-export const readAlongsideLinks = (
-  essay: Essay,
-  essays: Essay[],
-): SeeAlsoLink[] => resolveLinks(essay, essays, "readAlongside");
 
 export type RecentRevision = {
   title: string;
@@ -105,7 +104,7 @@ export const recentRevisions = (essays: Essay[]): RecentRevision[] =>
       return [
         {
           title: essay.data.title,
-          label: `${versionLabel(latest.id)} · ${formatMonthYear(latest.date)}`,
+          label: versionStamp(latest.id, latest.date),
           summary: latest.summary,
           href: historyPath(essay.id),
           date: latest.date,

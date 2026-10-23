@@ -22,7 +22,7 @@ const lastYear = years[0];
 ---
 
 <Base
-  title="Writing — Jesse McGinnis"
+  title="Selected writing — Jesse McGinnis"
   description="An index, not a feed. Selected work first, then the full record."
   canonicalPath="/archive/"
 >
@@ -46,6 +46,15 @@ const lastYear = years[0];
           <li>
             <a href={entry.href}>{entry.title}</a>
             <span>{entry.year}</span>
+            {entry.historyHref && entry.revisionStamp && (
+              <a
+                class="revised selected-stamp"
+                href={entry.historyHref}
+                aria-label={`Revision history for ${entry.title}`}
+              >
+                {entry.revisionStamp}
+              </a>
+            )}
             <p>{entry.note}</p>
           </li>
         ))}
@@ -63,9 +72,13 @@ const lastYear = years[0];
                 <li>
                   <span>{entry.year}</span>
                   <a href={entry.href}>{entry.title}</a>
-                  {entry.historyHref && (
-                    <a class="revised" href={entry.historyHref}>
-                      revised
+                  {entry.historyHref && entry.revisionStamp && (
+                    <a
+                      class="revised"
+                      href={entry.historyHref}
+                      aria-label={`Revision history for ${entry.title}`}
+                    >
+                      {entry.revisionStamp}
                     </a>
                   )}
                 </li>
@@ -84,9 +97,13 @@ const lastYear = years[0];
                 <li>
                   <span>{entry.dateLabel}</span>
                   <a href={entry.href}>{entry.title}</a>
-                  {entry.historyHref && (
-                    <a class="revised" href={entry.historyHref}>
-                      revised
+                  {entry.historyHref && entry.revisionStamp && (
+                    <a
+                      class="revised"
+                      href={entry.historyHref}
+                      aria-label={`Revision history for ${entry.title}`}
+                    >
+                      {entry.revisionStamp}
                     </a>
                   )}
                 </li>

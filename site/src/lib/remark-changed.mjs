@@ -2,7 +2,7 @@ const DIRECTIVE = "changed";
 
 const labelFor = (since) => {
   const match = /^rev-(\d+)$/.exec(since ?? "");
-  return match ? `Rev. ${match[1]}` : since;
+  return match ? `Since Rev. ${match[1]}` : since;
 };
 
 const mark = (node, label) => {
@@ -14,8 +14,22 @@ const mark = (node, label) => {
   node.data.hProperties["data-rev"] = label;
 };
 
+const marker = (label) => {
+  const text = `${label.charAt(0).toLowerCase()}${label.slice(1)}`;
+  return {
+    type: "paragraph",
+    data: {
+      hName: "span",
+      hProperties: { className: ["visually-hidden"] },
+    },
+    children: [{ type: "text", value: `Changed ${text}.` }],
+  };
+};
+
 export default function remarkChanged() {
   return (tree) => {
+    let marked = false;
+
     tree.children = tree.children.flatMap((node) => {
       if (node.type !== "containerDirective" || node.name !== DIRECTIVE) {
         return [node];
@@ -27,7 +41,9 @@ export default function remarkChanged() {
         mark(child, label);
       }
 
-      return node.children;
+      if (marked || !label) return node.children;
+      marked = true;
+      return [marker(label), ...node.children];
     });
   };
 }
