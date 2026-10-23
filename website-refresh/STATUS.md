@@ -1,24 +1,25 @@
 # Website refresh — status
 
-**Last updated:** 2026-10-21.
+**Last updated:** 2026-10-23.
 
 ## Design
 
-**Stage:** baseline merged to `main`; craft pass done.
+**Stage:** implemented in Astro; deployed to Cloudflare Pages; design QA passes A–C complete;
+**SHIP** from both independent reviews; no blockers.
 
-- The Ash direction, prototype, and version model are in `design/website-refresh/`.
-- The design-builder pass fixed label sizes, Rev. 01 change bars, broken anchors, nested `<main>`,
-  oxide text contrast, and font-swap layout shift. It tightened the type scale, history/version UI,
-  Rev. 01 banner, links/focus, and mobile history ordering.
-- Verification: 35 layout checks at 320/390/768/1280/1600, no overflow, one `h1`/`<main>` per view,
-  lowest text contrast 4.96:1, 14 keyboard focus stops visible.
-- **Next:** final refinements after the copy is ready; then implementation of the version model and
-  ERB layouts.
-- **Open copy:** see `design/website-refresh/DIAL-IN-NOTES.md` (home lede/rail duplication, repeated
-  revision summaries, README version repeats, prototype links, unused revision data, 40-people vs
-  25-engineers check).
-- **Residual tests:** Safari/Firefox with `:has()`, a real VoiceOver/NVDA pass on History and Rev.
-  01, and the phone reading-mode hint.
+- The Ash direction, prototype, version model, and open copy questions live in
+  `design/website-refresh/`. The implementation lives in `site/` and is live on
+  <https://jcmcginnis.pages.dev/>; DNS is not cut over.
+- Passes A–C fixed the change-bar label, mobile history entry, talk resource hierarchy, prose links,
+  history DOM order, 404 indexing, revision stamps, archive/blog roles, category and talk IA, the
+  shared 960px shell, About rail, README numbering/quotes, and smart quotes.
+- Verification: production plus a real 3-version history fixture at 320/390/768/1024/1280/1600; no
+  blockers or top should-fix remain. Residual polish only: two straight apostrophes (About deck,
+  Directed Chaos stillThinking), the Rev. 01 version-log “First published” duplicate, and the About
+  facts that conflict (Shopify 2016–2025 vs “eight years”; forty people vs 25 engineers + 2 PMs).
+- **Next:** editorial copy. The design gate is green; the real revision is the next content test.
+- **Open copy:** see `design/website-refresh/DIAL-IN-NOTES.md`; the residual list above is the
+  current state.
 
 ## Editorial
 
@@ -37,10 +38,12 @@
 - Both workstreams are merged to `main`: editorial
   [#36](https://github.com/brayzn/jcmcginnis-2022/pull/36), design + shared index
   [#37](https://github.com/brayzn/jcmcginnis-2022/pull/37).
-- `design/website-refresh/` and `notes/website-refresh/` are outside `src/`; Bridgetown does not
-  build them. The baseline is not wired into the live site.
+- `design/website-refresh/` and `notes/website-refresh/` are outside both app roots (`src/`
+  Bridgetown, `site/` Astro); neither build picks them up. The refresh is implemented in `site/` and
+  deploys to Cloudflare Pages; `jcmcginnis.com` still serves Bridgetown until DNS cutover.
 - The `design/website-refresh` branch can be retired; continue from `main`.
-- Pushing `main` deploys the current site, not the refresh.
+- Pushing `main` updates both the GitHub Pages Bridgetown site and the Cloudflare Pages Astro
+  deployment.
 
 ## Decisions this baseline carries
 
@@ -57,8 +60,9 @@
 
 Pick one:
 
-- **Design:** read `design/website-refresh/README.md` and `DIAL-IN-NOTES.md`, run the prototype, and
-  choose a craft/implementation item that does not depend on unsettled copy.
+- **Design:** the design gate is green. Read `design/website-refresh/README.md` and
+  `DIAL-IN-NOTES.md`; address residual polish only, or move to the editorial rewrite. Do not reopen
+  layout directions that passed QA.
 - **Editorial:** read `notes/website-refresh/OPERATING.md` and `voice-specimen-01.md`, then gather
   the raw material for the confusion movement.
 
