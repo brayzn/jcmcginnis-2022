@@ -1,6 +1,7 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { essayPath } from "../lib/essays";
+import { displayText } from "../lib/text";
 
 export async function GET(context: { site: URL }) {
   const essays = (await getCollection("essays"))
@@ -16,8 +17,8 @@ export async function GET(context: { site: URL }) {
       "I lead product engineering at GrowthLoop. I write about the structures that help people take responsibility—and the ones that quietly take it away.",
     site: context.site,
     items: essays.map((essay) => ({
-      title: essay.data.title,
-      description: essay.data.description,
+      title: displayText(essay.data.title),
+      description: displayText(essay.data.description),
       pubDate: essay.data.versions[0].date,
       link: essayPath(essay.id),
     })),

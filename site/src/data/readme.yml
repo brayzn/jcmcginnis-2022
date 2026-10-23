@@ -17,8 +17,7 @@ tldr:
     summary: "Wisdom that reminds me of the world's vastness."
 
 expectations:
-  - number: "01"
-    headline: "Will I be surrounded by people who make me uncomfortable?"
+  - headline: "Will I be surrounded by people who make me uncomfortable?"
     keywords:
       - label: "Scary smart"
         detail:
@@ -44,8 +43,7 @@ expectations:
           where we're all here to do *our best work*. People excited by the idea
           that today is the worst we'll ever be at what we do."
 
-  - number: "02"
-    headline: "Will I have the autonomy to build something meaningful?"
+  - headline: "Will I have the autonomy to build something meaningful?"
     keywords:
       - label: "Chart my own path"
         detail:
@@ -66,8 +64,7 @@ expectations:
           "Keep learning. There will be phases of mastery, but there must be
           phases of stretch too. Stagnation is not an option."
 
-  - number: "03"
-    headline: "Can I win even when I lose?"
+  - headline: "Can I win even when I lose?"
     keywords:
       - label: "Winning in failure"
         detail:

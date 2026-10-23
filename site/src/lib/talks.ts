@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { displayText } from "./text";
 
 export type Talk = CollectionEntry<"talks">;
 
@@ -12,6 +13,13 @@ export const talkPath = (talk: Talk) =>
 
 export const talkKind = (talk: Talk) =>
   talk.data.type === "workshop" ? "Workshop" : "Talk";
+
+export const talkTitle = (talk: Talk) => displayText(talk.data.title);
+
+export const talkEvent = (talk: Talk) => displayText(talk.data.event);
+
+export const talkDescription = (talk: Talk) =>
+  displayText(talk.data.description);
 
 const byYearDescending = (a: Talk, b: Talk) =>
   b.data.year - a.data.year || a.data.title.localeCompare(b.data.title);

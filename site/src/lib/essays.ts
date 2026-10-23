@@ -1,4 +1,5 @@
 import type { CollectionEntry } from "astro:content";
+import { displayText } from "./text";
 
 export type Essay = CollectionEntry<"essays">;
 export type EssayVersion = CollectionEntry<"essayVersions">;
@@ -80,9 +81,9 @@ export const seeAlsoLinks = (essay: Essay, essays: Essay[]): SeeAlsoLink[] =>
       );
     }
     return {
-      title: target.data.title,
+      title: displayText(target.data.title),
       href: essayPath(target.id),
-      note: item.note,
+      note: displayText(item.note),
     };
   });
 

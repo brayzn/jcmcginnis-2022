@@ -6,6 +6,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -91,6 +92,13 @@ body {
   padding: 40px 52px 32px;
 }
 
+/* One centered content shell shared by the header, every page, and the footer.
+   The page padding stays outside it. Low specificity so component widths win. */
+:where(.page) > :where(:not(.skip-link)) {
+  max-width: var(--shell);
+  margin-inline: auto;
+}
+
 /* ---------- Ash ---------- */
 
 .proto[data-skin="ash"] {
@@ -108,6 +116,7 @@ body {
   --label-tracking: 0.07em;
   --strong-rule: 2px;
   --name-weight: 600;
+  --shell: 960px;
 }
 
 /* ---------- Links and focus ---------- */
@@ -377,7 +386,7 @@ body {
   margin-bottom: 8px;
 }
 
-.rail-date {
+.rail-role {
   font-family: var(--display);
   font-size: 23px;
   line-height: 1.2;
@@ -395,10 +404,6 @@ body {
   font-size: 12px;
   line-height: 1.6;
   color: var(--muted);
-}
-
-.rail-text + .rail-meta {
-  margin-top: 6px;
 }
 
 /* Elsewhere: separators ride with the link that follows them, so a wrap
@@ -739,6 +744,10 @@ body {
   margin-bottom: 30px;
 }
 
+.more-writing a {
+  color: var(--muted);
+}
+
 .toc {
   display: flex;
   flex-direction: column;
@@ -1002,14 +1011,6 @@ a.version-stamp {
   display: none;
 }
 
-.revision-details summary::before {
-  content: "+\00a0";
-}
-
-.revision-details[open] summary::before {
-  content: "\2013\00a0";
-}
-
 .then-now-compact {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1035,7 +1036,7 @@ a.version-stamp {
 }
 
 .essay-foot {
-  margin-top: 64px;
+  margin-top: 40px;
   border-top: var(--strong-rule) solid var(--rule);
   padding-top: 18px;
 }
@@ -1044,9 +1045,7 @@ a.version-stamp {
   display: flex;
   justify-content: space-between;
   gap: 4px 16px;
-  border-top: 1px solid var(--rule);
-  margin: 48px 0 0;
-  padding-top: 10px;
+  margin: 0;
   font-family: var(--label-font);
   font-size: 10px;
   letter-spacing: var(--label-tracking);
@@ -1061,10 +1060,23 @@ a.version-stamp {
 }
 
 .about-grid {
+  --rail: 196px;
+  position: relative;
   display: grid;
-  grid-template-columns: 196px minmax(0, 1fr);
+  grid-template-columns: var(--rail) minmax(0, 1fr);
   gap: 64px;
   align-items: start;
+}
+
+/* A full-height column rule, not the rail's own short border. */
+.about-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--rail);
+  width: 1px;
+  background: var(--rule);
 }
 
 .about-rail {
@@ -1073,7 +1085,6 @@ a.version-stamp {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  border-right: 1px solid var(--rule);
   padding: 6px 24px 4px 0;
 }
 
@@ -1092,10 +1103,19 @@ a.version-stamp {
   font-size: 21px;
   line-height: 1.2;
   color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 25%, transparent);
+}
+
+.about-era:hover .about-company,
+.about-era:focus-visible .about-company,
+.about-era[aria-current="true"] .about-company {
+  color: var(--accent-text);
+  text-decoration-color: var(--accent);
 }
 
 .about-main {
-  max-width: 680px;
+  max-width: 700px;
 }
 
 .about-main .deck {
@@ -1175,7 +1195,6 @@ a.version-stamp {
 
 .archive {
   padding: 52px 0 56px;
-  max-width: 900px;
 }
 
 .archive .deck {
@@ -1395,19 +1414,6 @@ a.version-stamp {
   text-underline-offset: 0.2em;
 }
 
-.tldr-arrow {
-  font-family: var(--label-font);
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: auto;
-  transition: transform 0.15s ease;
-}
-
-.tldr-item:hover .tldr-arrow {
-  transform: translateY(2px);
-  color: var(--accent-text);
-}
-
 .readme-section {
   margin-top: 72px;
   border-top: var(--strong-rule) solid var(--rule);
@@ -1539,12 +1545,12 @@ a.version-stamp {
 }
 
 .quotes {
-  column-count: 2;
-  column-gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 40px;
 }
 
 .quotes blockquote {
-  break-inside: avoid;
   border-top: 1px solid var(--rule);
   padding: 14px 0 16px;
   margin: 0 0 12px;
@@ -1619,10 +1625,6 @@ a.version-stamp {
   margin-top: 10px;
 }
 
-.readme > .colophon {
-  margin-left: 56px;
-}
-
 /* ---------- Blog index and categories ---------- */
 
 .blog-years {
@@ -1693,7 +1695,6 @@ a.version-stamp {
 
 .talks {
   padding: 52px 0 56px;
-  max-width: 900px;
 }
 
 .talks .deck {
@@ -1870,6 +1871,10 @@ a.version-stamp {
     gap: 40px;
   }
 
+  .about-grid {
+    --rail: 164px;
+  }
+
   /* The essay reads in one column before the measure gets too narrow. */
   .essay-grid {
     grid-template-columns: 1fr;
@@ -1971,12 +1976,15 @@ a.version-stamp {
     gap: 32px;
   }
 
+  .about-grid::before {
+    display: none;
+  }
+
   .about-rail {
     position: static;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 16px 32px;
-    border-right: 0;
     border-bottom: 1px solid var(--rule);
     padding: 0 0 18px;
   }
@@ -2022,10 +2030,6 @@ a.version-stamp {
     order: 1;
   }
 
-  .tldr-arrow {
-    display: none;
-  }
-
   .tldr-item + .tldr-item {
     padding-left: 0;
   }
@@ -2039,8 +2043,7 @@ a.version-stamp {
     padding-left: 0;
   }
 
-  .readme-coda,
-  .readme > .colophon {
+  .readme-coda {
     margin-left: 0;
   }
 }
@@ -2071,6 +2074,12 @@ a.version-stamp {
   .archive h1 {
     font-size: 38px;
     line-height: 1.04;
+  }
+
+  .essay-head h1.long-title {
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   .deck {
@@ -2271,7 +2280,7 @@ a.version-stamp {
   }
 
   .quotes {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
 

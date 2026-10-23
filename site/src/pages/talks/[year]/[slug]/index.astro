@@ -4,10 +4,13 @@ import Base from "../../../../layouts/Base.astro";
 import Header from "../../../../components/Header.astro";
 import Footer from "../../../../components/Footer.astro";
 import {
+  talkDescription,
+  talkEvent,
   talkKind,
   talkPath,
   talkResources,
   talkSlug,
+  talkTitle,
   type Talk,
 } from "../../../../lib/talks";
 
@@ -29,8 +32,8 @@ const resources = talkResources(talk);
 ---
 
 <Base
-  title={`${talk.data.title} — Jesse McGinnis`}
-  description={talk.data.description}
+  title={`${talkTitle(talk)} — Jesse McGinnis`}
+  description={talkDescription(talk)}
   canonicalPath={talkPath(talk)}
 >
   <Header active="Speaking" />
@@ -38,9 +41,9 @@ const resources = talkResources(talk);
     <p class="kicker">
       Speaking / {talkKind(talk)} · {talk.data.year}
     </p>
-    <h1 class="page-title">{talk.data.title}</h1>
-    <p class="deck">{talk.data.description}</p>
-    <p class="meta">{talk.data.event}</p>
+    <h1 class="page-title">{talkTitle(talk)}</h1>
+    <p class="deck">{talkDescription(talk)}</p>
+    <p class="meta">{talkEvent(talk)}</p>
 
     {resources.length > 0 && (
       <p class="talk-links">
@@ -49,7 +52,7 @@ const resources = talkResources(talk);
             {index > 0 && " · "}
             <a
               href={link.href}
-              aria-label={`${link.label}: ${talk.data.title}`}
+              aria-label={`${link.label}: ${talkTitle(talk)}`}
             >
               {link.label}
             </a>

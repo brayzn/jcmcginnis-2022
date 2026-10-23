@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { unified } from "@astrojs/markdown-remark";
 import remarkDirective from "remark-directive";
+import remarkSmartypants from "remark-smartypants";
 import remarkChanged from "./src/lib/remark-changed.mjs";
 import { checkVersions, essayLastModified } from "./scripts/check-versions.mjs";
 
@@ -40,7 +41,7 @@ export default defineConfig({
   ],
   markdown: {
     processor: unified({
-      remarkPlugins: [remarkDirective, remarkChanged],
+      remarkPlugins: [remarkDirective, remarkChanged, remarkSmartypants],
     }),
   },
 });

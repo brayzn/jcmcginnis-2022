@@ -53,12 +53,11 @@ const elsewhere = [
     <aside class="home-rail">
       <div class="rail-block">
         <p class="label">Current position</p>
-        <p class="rail-date">{home.position}</p>
+        <p class="rail-role">{home.position}</p>
       </div>
       <div class="rail-block">
         <p class="label">Now</p>
         <p class="rail-text">{home.now}</p>
-        <p class="rail-meta">{home.location}</p>
       </div>
       <div class="rail-block">
         <p class="label">Currently</p>
@@ -123,7 +122,7 @@ const elsewhere = [
         <section class="recent-changes">
           <div class="section-head">
             <h2>Recently revised</h2>
-            <a href="/archive/">Full index →</a>
+            <a href="/archive/">All writing →</a>
           </div>
           <ul class="change-list">
             {revisions.map((revision) => (
