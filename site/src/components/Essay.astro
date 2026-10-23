@@ -90,7 +90,7 @@ const status = (item: VersionLink) =>
       <div class="version-banner" role="note">
         <p class="version-banner-title">
           <strong>You're reading {version.label}.</strong> Published{" "}
-          {formatMonthYear(version.date)}.
+          <span class="nowrap">{formatMonthYear(version.date)}</span>.
         </p>
         <p class="version-banner-links">
           <a href={`/blog/${essay.id}/`}>Read the current version →</a>
@@ -160,16 +160,17 @@ const status = (item: VersionLink) =>
           <ul class="version-list">
             {versions.map((item) => {
               const here = item.id === versionId;
-              const stamp = `${item.label} · ${formatMonthYear(item.date)}`;
               return (
                 <li class={here ? "is-here" : ""}>
                   {here ? (
                     <span class="version-stamp" aria-current="true">
-                      {stamp}
+                      {item.label} ·{" "}
+                      <span class="nowrap">{formatMonthYear(item.date)}</span>
                     </span>
                   ) : (
                     <a class="version-stamp" href={item.href}>
-                      {stamp} →
+                      {item.label} ·{" "}
+                      <span class="nowrap">{formatMonthYear(item.date)}</span> →
                     </a>
                   )}
                   <p>{status(item)}</p>
@@ -195,16 +196,18 @@ const status = (item: VersionLink) =>
             <ul class="version-list">
               {versions.map((item) => {
                 const here = item.id === versionId;
-                const stamp = `${item.label} · ${formatMonthYear(item.date)}`;
                 return (
                   <li class={here ? "is-here" : ""}>
                     {here ? (
                       <span class="version-stamp" aria-current="true">
-                        {stamp}
+                        {item.label} ·{" "}
+                        <span class="nowrap">{formatMonthYear(item.date)}</span>
                       </span>
                     ) : (
                       <a class="version-stamp" href={item.href}>
-                        {stamp} →
+                        {item.label} ·{" "}
+                        <span class="nowrap">{formatMonthYear(item.date)}</span>{" "}
+                        →
                       </a>
                     )}
                     <p>{status(item)}</p>
@@ -236,13 +239,15 @@ const status = (item: VersionLink) =>
       <div class="then-now-grid">
         <div class="then">
           <p class="label">
-            {previousVersion.label} · {formatMonthYear(previousVersion.date)}
+            {previousVersion.label} ·{" "}
+            <span class="nowrap">{formatMonthYear(previousVersion.date)}</span>
           </p>
           <p>{thenNow.then}</p>
         </div>
         <div class="now">
           <p class="label">
-            {currentVersion.label} · {formatMonthYear(currentVersion.date)}
+            {currentVersion.label} ·{" "}
+            <span class="nowrap">{formatMonthYear(currentVersion.date)}</span>
           </p>
           <p>{thenNow.now}</p>
         </div>
@@ -263,7 +268,8 @@ const status = (item: VersionLink) =>
             <li class={here ? "is-here" : ""}>
               <div class="version-log-head">
                 <a href={item.href} aria-current={here ? "true" : undefined}>
-                  {item.label} · {formatMonthYear(item.date)}
+                  {item.label} ·{" "}
+                  <span class="nowrap">{formatMonthYear(item.date)}</span>
                 </a>
                 <span class={item.current ? "is-current" : ""}>
                   {status(item)}

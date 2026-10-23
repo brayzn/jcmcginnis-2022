@@ -4,33 +4,17 @@ import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { archiveEntries, archiveYears, entriesByYear } from "../../lib/archive";
-import { categories, categoryPath } from "../../lib/categories";
-import { essayPath, historyPath, versionStamp } from "../../lib/essays";
 
 const essays = await getCollection("essays");
 const entries = archiveEntries(essays);
 const years = archiveYears(entries);
-const themes = categories(essays);
 const firstYear = years.at(-1);
 const lastYear = years[0];
-
-const featured =
-  [...essays]
-    .filter((essay) => essay.data.featured)
-    .sort(
-      (a, b) =>
-        b.data.versions[0].date.getTime() - a.data.versions[0].date.getTime(),
-    )[0] ?? essays[0];
-const featuredVersion = featured.data.versions.at(-1)!;
-const featuredRevision =
-  featured.data.versions.length > 1
-    ? versionStamp(featuredVersion.id, featuredVersion.date)
-    : null;
 ---
 
 <Base
-  title="All writing — Jesse McGinnis"
-  description="Essays on high-trust teams, engineering leadership, and a decade of lessons at scale."
+  title="All writing, newest first — Jesse McGinnis"
+  description="Every essay in the order it was published, newest first."
   canonicalPath="/blog/"
 >
   <Header active="Writing" />
@@ -38,39 +22,11 @@ const featuredRevision =
     <p class="kicker">
       Writing · {firstYear}–{lastYear}
     </p>
-    <h1>Writing.</h1>
+    <h1>All writing, newest first.</h1>
     <p class="deck">
-      High-trust teams. Engineering leadership. A decade of lessons at scale.
+      Every essay in the order it was published. The selected index lives in the
+      archive.
     </p>
-
-    <section class="selected-archive">
-      <div class="section-head">
-        <h2>Featured</h2>
-        <span>Start here</span>
-      </div>
-      <ul class="selected-large">
-        <li>
-          <a href={essayPath(featured.id)}>{featured.data.title}</a>
-          <span>{featured.data.versions[0].date.getUTCFullYear()}</span>
-          {featuredRevision && (
-            <a
-              class="revised selected-stamp"
-              href={historyPath(featured.id)}
-              aria-label={`Revision history for ${featured.data.title}`}
-            >
-              {featuredRevision}
-            </a>
-          )}
-          <p>{featured.data.description}</p>
-        </li>
-      </ul>
-    </section>
-
-    <nav class="category-links" aria-label="Categories">
-      {themes.map((theme) => (
-        <a href={categoryPath(theme.slug)}>{theme.name}</a>
-      ))}
-    </nav>
 
     <section class="blog-years">
       {years.map((year) => (

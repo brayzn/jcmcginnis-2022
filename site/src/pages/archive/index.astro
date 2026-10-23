@@ -11,6 +11,7 @@ import {
   entriesByYear,
   selectedEntries,
 } from "../../lib/archive";
+import { categoryPath, categorySlug } from "../../lib/categories";
 
 const essays = await getCollection("essays");
 const entries = archiveEntries(essays);
@@ -66,7 +67,9 @@ const lastYear = years[0];
         <h2>By theme</h2>
         {themes.map((theme) => (
           <div class="index-group">
-            <h3>{theme}</h3>
+            <h3>
+              <a href={categoryPath(categorySlug(theme))}>{theme}</a>
+            </h3>
             <ul>
               {entriesByTheme(entries, theme).map((entry) => (
                 <li>
@@ -115,7 +118,7 @@ const lastYear = years[0];
     </div>
 
     <p class="index-link">
-      <a href="/blog/">Full chronology →</a>
+      <a href="/blog/">Newest first →</a>
     </p>
   </main>
   <Footer />

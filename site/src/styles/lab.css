@@ -143,6 +143,17 @@ body {
   color: var(--accent-text);
 }
 
+/* Talk titles are primary links: underline at rest, accent on hover. */
+.talk-list .talk-body a {
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.talk-list .talk-body a:hover,
+.talk-list .talk-body a:focus-visible {
+  text-decoration-color: var(--accent);
+}
+
 .ps a:hover,
 .belief-meta a:hover,
 .rail-meta a:hover,
@@ -1203,6 +1214,7 @@ a.version-stamp {
   font-family: var(--label-font);
   font-size: 12px;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .selected-large > li > .selected-stamp {
@@ -1213,7 +1225,8 @@ a.version-stamp {
 }
 
 .selected-large p {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  max-width: 38em;
   font-size: 16px;
   line-height: 1.5;
   color: var(--muted);
@@ -1247,6 +1260,15 @@ a.version-stamp {
   text-transform: uppercase;
   color: var(--accent-text);
   margin: 0 0 4px;
+}
+
+.index-group h3 a {
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.index-group h3 a:hover {
+  text-decoration-color: currentColor;
 }
 
 .index-group ul {
@@ -1603,29 +1625,6 @@ a.version-stamp {
 
 /* ---------- Blog index and categories ---------- */
 
-.category-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-  margin-top: 40px;
-  border-top: 1px solid var(--rule);
-  padding-top: 14px;
-  font-family: var(--label-font);
-  font-size: 11px;
-  letter-spacing: var(--label-tracking);
-  text-transform: uppercase;
-}
-
-.category-links a {
-  color: var(--accent-text);
-  text-decoration-line: underline;
-  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
-}
-
-.category-links a:hover {
-  text-decoration-color: currentColor;
-}
-
 .blog-years {
   margin-top: 48px;
 }
@@ -1688,7 +1687,6 @@ a.version-stamp {
 
 .category-essays {
   margin-top: 44px;
-  border-top: 1px solid var(--rule);
 }
 
 /* ---------- Talks ---------- */
@@ -1720,7 +1718,8 @@ a.version-stamp {
 }
 
 .talk-resources a,
-.selected-large p.talk-resources a {
+.selected-large p.talk-resources a,
+.talk-links a {
   font-family: var(--label-font);
   font-size: 11px;
   letter-spacing: var(--label-tracking);
@@ -1731,7 +1730,8 @@ a.version-stamp {
 }
 
 .talk-resources a:hover,
-.selected-large p.talk-resources a:hover {
+.selected-large p.talk-resources a:hover,
+.talk-links a:hover {
   text-decoration-color: currentColor;
 }
 
@@ -1810,7 +1810,7 @@ a.version-stamp {
   gap: 6px 20px;
   margin-top: 20px;
   font-family: var(--label-font);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
 }
@@ -1917,6 +1917,12 @@ a.version-stamp {
 @container page (max-width: 760px) {
   .page {
     padding: 28px 32px 24px;
+  }
+
+  .nav a,
+  .footer a {
+    display: inline-block;
+    padding-block: 4px;
   }
 
   .home-grid {
@@ -2185,6 +2191,25 @@ a.version-stamp {
 
   .selected-large > li > a:first-of-type {
     font-size: 22px;
+  }
+
+  /* Category rows stack the date above the title so long titles never collide. */
+  .category-essays li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-essays li > span {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  .category-essays li > a:first-of-type {
+    grid-row: 2;
+  }
+
+  .category-essays li > p {
+    grid-row: 3;
   }
 
   .index-group li {

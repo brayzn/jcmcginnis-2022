@@ -19,6 +19,13 @@ const { active } = Astro.props;
       Writing
     </a>
     <a
+      class={active === "Speaking" ? "active" : ""}
+      href="/talks/"
+      aria-current={active === "Speaking" ? "page" : undefined}
+    >
+      Speaking
+    </a>
+    <a
       class={active === "README" ? "active" : ""}
       href="/readme/"
       aria-current={active === "README" ? "page" : undefined}
