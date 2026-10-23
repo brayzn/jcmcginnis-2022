@@ -3,7 +3,6 @@ import Base from "../../layouts/Base.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { careerPath } from "../../lib/career";
-import { home } from "../../data/site";
 ---
 
 <Base
@@ -56,10 +55,50 @@ import { home } from "../../data/site";
 
         <p class="signoff">— J.</p>
         <p class="colophon">
-          {home.location}. <a href="/">Back to the front page →</a>
+          <a href="/">Back to the front page →</a>
         </p>
       </div>
     </div>
   </main>
   <Footer />
+  <script>
+    const rail = document.querySelector(".about-rail");
+    const sections = Array.from(
+      document.querySelectorAll(".about-section"),
+    ).filter((section) => section.id) as HTMLElement[];
+
+    if (rail && sections.length && "IntersectionObserver" in window) {
+      const links = new Map<string, HTMLAnchorElement>();
+      rail.querySelectorAll<HTMLAnchorElement>(".about-era").forEach((link) => {
+        const id = link.getAttribute("href")?.slice(1);
+        if (id) links.set(id, link);
+      });
+
+      const visible = new Set<string>();
+      let active: string | null = null;
+
+      const mark = (id: string | undefined) => {
+        if (!id || id === active) return;
+        active = id;
+        links.forEach((link, key) => {
+          if (key === id) link.setAttribute("aria-current", "true");
+          else link.removeAttribute("aria-current");
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) visible.add(entry.target.id);
+            else visible.delete(entry.target.id);
+          }
+          const current = sections.find((section) => visible.has(section.id));
+          mark(current?.id);
+        },
+        { rootMargin: "-120px 0px -60% 0px" },
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    }
+  </script>
 </Base>

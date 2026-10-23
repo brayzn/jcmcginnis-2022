@@ -9,7 +9,6 @@ import {
   readmeMeta,
   saganParagraphs,
 } from "../../lib/readme";
-import { home } from "../../data/site";
 ---
 
 <Base
@@ -32,9 +31,6 @@ import { home } from "../../data/site";
         <a class="tldr-item" href={`#${item.anchor}`}>
           <span class="tldr-label">{item.label}</span>
           <strong>{item.headline}</strong>
-          <span class="tldr-arrow" aria-hidden="true">
-            ↓
-          </span>
         </a>
       ))}
     </nav>
@@ -48,10 +44,10 @@ import { home } from "../../data/site";
           myself.
         </p>
       </div>
-      {readme.expectations.map((expectation) => (
+      {readme.expectations.map((expectation, index) => (
         <div class="expectation">
           <div class="expectation-head">
-            <span class="expectation-num">{expectation.number}</span>
+            <span class="expectation-num">{`1.${index + 1}`}</span>
             <h3>{expectation.headline}</h3>
           </div>
           <div class="keywords">
@@ -98,8 +94,11 @@ import { home } from "../../data/site";
         </p>
       </div>
       {quoteGroups.map((group) => (
-        <div class="quote-group">
-          <h3>{group.title}</h3>
+        <section
+          class="quote-group"
+          aria-labelledby={`quote-group-${group.key}`}
+        >
+          <h3 id={`quote-group-${group.key}`}>{group.title}</h3>
           <div class="quotes">
             {readme.quotes[group.key].map((quote) => (
               <blockquote>
@@ -108,7 +107,7 @@ import { home } from "../../data/site";
               </blockquote>
             ))}
           </div>
-        </div>
+        </section>
       ))}
     </section>
 
@@ -121,10 +120,6 @@ import { home } from "../../data/site";
         Carl Sagan, <em>Pale Blue Dot</em>, 1994
       </cite>
     </details>
-
-    <p class="colophon">
-      Version {readmeMeta.version}. {home.location}.
-    </p>
   </main>
   <Footer />
 </Base>

@@ -5,6 +5,7 @@ import type {
   VersionLink,
 } from "../lib/essays";
 import { formatMonthYear, versionStamp } from "../lib/essays";
+import { displayText } from "../lib/text";
 
 interface Props {
   essay: EssayEntry;
@@ -40,8 +41,9 @@ const thenNow = currentVersion.thenNow;
 const history = mode === "history" && current;
 const toc = headings.filter((heading) => heading.depth === 2);
 
-const title = version.title ?? data.title;
-const description = version.description ?? data.description;
+const title = displayText(version.title ?? data.title);
+const description = displayText(version.description ?? data.description);
+const longTitle = title.length > 50;
 const kickerCategories = data.categories
   .filter((category) => category.toLowerCase() !== "writing")
   .slice(0, 2);
@@ -62,7 +64,7 @@ const status = (item: VersionLink) =>
 >
   <header class="essay-head">
     <p class="kicker">{kicker}</p>
-    <h1>{title}</h1>
+    <h1 class={longTitle ? "long-title" : undefined}>{title}</h1>
     <p class="deck">{description}</p>
     <p class="meta">
       {current ? (
@@ -144,6 +146,13 @@ const status = (item: VersionLink) =>
                   </li>
                 ))}
               </ul>
+            </div>
+          )}
+          {seeAlso.length === 0 && (
+            <div class="margin-block more-writing">
+              <a class="rail-link" href="/archive/">
+                More writing →
+              </a>
             </div>
           )}
           {stillThinking && (
@@ -282,7 +291,7 @@ const status = (item: VersionLink) =>
       </ul>
       {!history && thenNow && previousVersion && (
         <details class="revision-details">
-          <summary>Then and now</summary>
+          <summary>Show then / now</summary>
           <div class="then-now-compact">
             <div class="then">
               <p class="label">Then</p>

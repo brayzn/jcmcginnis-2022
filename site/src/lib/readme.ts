@@ -1,5 +1,6 @@
 import { parse } from "yaml";
 import source from "../data/readme.yml?raw";
+import { smartQuotes } from "./text";
 
 type TldrItem = {
   anchor: string;
@@ -14,7 +15,6 @@ type Keyword = {
 };
 
 type Expectation = {
-  number: string;
   headline: string;
   keywords: Keyword[];
 };
@@ -39,7 +39,44 @@ export type Readme = {
   sagan: string;
 };
 
-export const readme = parse(source) as Readme;
+const smart = (value: string) => smartQuotes(value);
+
+const smartQuote = (quote: Quote): Quote => ({
+  ...quote,
+  text: smart(quote.text),
+  author: smart(quote.author),
+});
+
+const parsed = parse(source) as Readme;
+
+export const readme: Readme = {
+  tldr: parsed.tldr.map((item) => ({
+    ...item,
+    label: smart(item.label),
+    headline: smart(item.headline),
+    summary: smart(item.summary),
+  })),
+  expectations: parsed.expectations.map((expectation) => ({
+    ...expectation,
+    headline: smart(expectation.headline),
+    keywords: expectation.keywords.map((keyword) => ({
+      ...keyword,
+      label: smart(keyword.label),
+      detail: smart(keyword.detail),
+    })),
+  })),
+  principles: parsed.principles.map((principle) => ({
+    ...principle,
+    title: smart(principle.title),
+    detail: smart(principle.detail),
+  })),
+  quotes: {
+    seek: parsed.quotes.seek.map(smartQuote),
+    be: parsed.quotes.be.map(smartQuote),
+    remember: parsed.quotes.remember.map(smartQuote),
+  },
+  sagan: parsed.sagan,
+};
 
 export const readmeMeta = {
   title: "README.md",
@@ -64,9 +101,9 @@ const escapeHtml = (text: string) =>
 
 // The YAML marks emphasis with *asterisks*; render them as <em>.
 export const inlineEmphasis = (text: string) =>
-  escapeHtml(text).replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  escapeHtml(smartQuotes(text)).replace(/\*([^*]+)\*/g, "<em>$1</em>");
 
 export const saganParagraphs = readme.sagan
   .split(/\n\s*\n/)
-  .map((paragraph) => paragraph.trim())
+  .map((paragraph) => smartQuotes(paragraph.trim()))
   .filter(Boolean);

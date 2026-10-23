@@ -1,6 +1,7 @@
 import { parse } from "yaml";
 import { z } from "astro/zod";
 import careerSource from "../data/career.yml?raw";
+import { smartQuotes } from "./text";
 
 const years = z.string().regex(/^\d{4}–(?:\d{4}|present)$/);
 const marker = z.string().trim().min(1);
@@ -42,7 +43,9 @@ const paragraphs = (blocks: readonly string[]): string[] =>
   blocks.flatMap((block) =>
     block
       .split(/\n[ \t]*\n/)
-      .map((paragraph) => paragraph.replace(/[ \t]*\n[ \t]*/g, " ").trim())
+      .map((paragraph) =>
+        smartQuotes(paragraph.replace(/[ \t]*\n[ \t]*/g, " ").trim()),
+      )
       .filter(Boolean),
   );
 

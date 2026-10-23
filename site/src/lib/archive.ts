@@ -6,6 +6,7 @@ import {
   versionStamp,
 } from "./essays";
 import { selectedEssays } from "../data/site";
+import { displayText } from "./text";
 
 export type ArchiveEntry = {
   id: string;
@@ -31,8 +32,8 @@ export const toArchiveEntry = (essay: Essay): ArchiveEntry => {
 
   return {
     id: essay.id,
-    title: essay.data.title,
-    note: essay.data.description,
+    title: displayText(essay.data.title),
+    note: displayText(essay.data.description),
     href: essayPath(essay.id),
     date: first.date,
     dateLabel: formatMonthYear(first.date),

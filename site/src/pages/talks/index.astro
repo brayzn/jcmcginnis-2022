@@ -5,9 +5,11 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import {
   featuredTalk,
+  talkEvent,
   talkKind,
   talkPath,
   talkResources,
+  talkTitle,
   talkYears,
   talksByYear,
 } from "../../lib/talks";
@@ -33,7 +35,7 @@ const lastYear = years[0];
     </p>
     <h1 class="page-title">Talks & workshops.</h1>
     <p class="deck">
-      A decade of building teams. No frameworks for frameworks' sake. Just what
+      A decade of building teams. No frameworks for frameworks’ sake. Just what
       works.
     </p>
 
@@ -44,11 +46,11 @@ const lastYear = years[0];
       </div>
       <ul class="selected-large">
         <li>
-          <a href={talkPath(featured)}>{featured.data.title}</a>
+          <a href={talkPath(featured)}>{talkTitle(featured)}</a>
           <span>
             {featured.data.year} · {talkKind(featured)}
           </span>
-          <p>{featured.data.event}</p>
+          <p>{talkEvent(featured)}</p>
           {talkResources(featured).length > 0 && (
             <p class="talk-resources">
               {talkResources(featured).map((link, index) => (
@@ -56,7 +58,7 @@ const lastYear = years[0];
                   {index > 0 && " · "}
                   <a
                     href={link.href}
-                    aria-label={`${link.label}: ${featured.data.title}`}
+                    aria-label={`${link.label}: ${talkTitle(featured)}`}
                   >
                     {link.label}
                   </a>
@@ -77,8 +79,8 @@ const lastYear = years[0];
               <li>
                 <span class="talk-kind">{talkKind(talk)}</span>
                 <div class="talk-body">
-                  <a href={talkPath(talk)}>{talk.data.title}</a>
-                  <p>{talk.data.event}</p>
+                  <a href={talkPath(talk)}>{talkTitle(talk)}</a>
+                  <p>{talkEvent(talk)}</p>
                 </div>
                 <span class="talk-resources">
                   {talkResources(talk).length > 0
@@ -87,7 +89,7 @@ const lastYear = years[0];
                           {index > 0 && " · "}
                           <a
                             href={link.href}
-                            aria-label={`${link.label}: ${talk.data.title}`}
+                            aria-label={`${link.label}: ${talkTitle(talk)}`}
                           >
                             {link.label}
                           </a>
