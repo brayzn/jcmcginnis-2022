@@ -1,8 +1,10 @@
 # Website refresh — the Ash direction
 
-**Status:** design direction locked; craft pass complete; copy provisional; prototype only.
-**Date:** October 2026. **Owner:** Jesse McGinnis. **Not live:** this folder is outside both app
-roots (`src/` Bridgetown, `site/` Astro) and is not part of either build or deploy.
+**Status:** design direction locked; implemented in Astro; design QA passes A–C complete with a SHIP
+verdict from both independent reviews; copy provisional; live on Cloudflare Pages at
+<https://jcmcginnis.pages.dev/> with DNS not cut over. **Date:** October 2026. **Owner:** Jesse
+McGinnis. **Not live:** this folder is outside both app roots (`src/` Bridgetown, `site/` Astro) and
+is not part of either build or deploy. The implementation is in `site/`.
 
 This package is the handoff for the next design or implementation jam. It contains the chosen
 direction, the prototype, the decisions behind it, and the parts that are still open. Do not treat
@@ -199,7 +201,8 @@ competing directions.
 
 ## Next useful step
 
-The craft pass is complete; `DIAL-IN-NOTES.md` records what changed, the verification, and the
-specific copy problems to resolve. Next: settle the copy questions listed there and in this README,
-then do the implementation pass — version data model, Astro layouts, CSS, and content. Commit the
-design package; do not wire it live until the copy and revision model are ready.
+The implementation pass is complete and the design gate is green. The remaining work is editorial:
+settle the copy questions in `DIAL-IN-NOTES.md` and this README, then make the first real revision
+on the new version model. Residual polish is limited to two straight apostrophes, the Rev. 01
+version-log “First published” duplication, and the About facts that conflict with the essay (Shopify
+dates and headcount); those are editorial/content fixes, not new layout directions.
