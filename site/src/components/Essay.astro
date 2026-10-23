@@ -4,7 +4,7 @@ import type {
   SeeAlsoLink,
   VersionLink,
 } from "../lib/essays";
-import { formatMonthYear } from "../lib/essays";
+import { formatMonthYear, versionStamp } from "../lib/essays";
 
 interface Props {
   essay: EssayEntry;
@@ -15,7 +15,6 @@ interface Props {
   headings: { depth: number; slug: string; text: string }[];
   reading: string;
   seeAlso?: SeeAlsoLink[];
-  readAlongside?: SeeAlsoLink[];
 }
 
 const {
@@ -27,7 +26,6 @@ const {
   headings,
   reading,
   seeAlso = [],
-  readAlongside = [],
 } = Astro.props;
 
 const stillThinking = essay.data.stillThinking;
@@ -57,13 +55,6 @@ const status = (item: VersionLink) =>
     : item.id === versions[0].id
       ? "First published"
       : "Superseded";
-const meta = current
-  ? `First published ${formatMonthYear(versions[0].date)}${
-      versions.length > 1
-        ? ` · Revised ${formatMonthYear(currentVersion.date)}`
-        : ""
-    } · ${reading}`
-  : `Published ${formatMonthYear(version.date)} · ${reading}`;
 ---
 
 <article
@@ -73,7 +64,28 @@ const meta = current
     <p class="kicker">{kicker}</p>
     <h1>{title}</h1>
     <p class="deck">{description}</p>
-    <p class="meta">{meta}</p>
+    <p class="meta">
+      {current ? (
+        <>
+          First published{" "}
+          <span class="nowrap">{formatMonthYear(versions[0].date)}</span>
+          {versions.length > 1 && (
+            <>
+              {" · "}
+              <a href={`/blog/${essay.id}/history/`}>
+                Revised{" "}
+                <span class="nowrap">
+                  {formatMonthYear(currentVersion.date)}
+                </span>
+              </a>
+            </>
+          )}
+          {` · ${reading}`}
+        </>
+      ) : (
+        reading
+      )}
+    </p>
     {!current && (
       <div class="version-banner" role="note">
         <p class="version-banner-title">
@@ -92,21 +104,21 @@ const meta = current
     <div class="body">
       <slot />
     </div>
-    <aside class="essay-margin">
+    <aside
+      class="essay-margin"
+      aria-label={history || !current ? "Version history" : undefined}
+    >
       {current && !history && (
         <>
           {hasHistory && (
             <div class="revision-rail">
               <p class="label">History</p>
               <p class="rail-stamp">
-                {currentVersion.label} · {formatMonthYear(currentVersion.date)}
+                {versionStamp(currentVersion.id, currentVersion.date)}
               </p>
               <a class="rail-link" href={`/blog/${essay.id}/history/`}>
                 See history →
               </a>
-              <p class="rail-first">
-                First published {formatMonthYear(versions[0].date)}.
-              </p>
             </div>
           )}
           {toc.length > 0 && (
@@ -144,7 +156,7 @@ const meta = current
       )}
       {history && (
         <div class="history-panel">
-          <p class="label">Versions</p>
+          <h2 class="label">Versions</h2>
           <ul class="version-list">
             {versions.map((item) => {
               const here = item.id === versionId;
@@ -167,7 +179,7 @@ const meta = current
           </ul>
           {previousVersion && (
             <>
-              <p class="label">What changed</p>
+              <h2 class="label">What changed</h2>
               <p class="history-summary">{currentVersion.summary}</p>
             </>
           )}
@@ -179,7 +191,7 @@ const meta = current
       {!current && (
         <>
           <div class="history-panel">
-            <p class="label">Versions</p>
+            <h2 class="label">Versions</h2>
             <ul class="version-list">
               {versions.map((item) => {
                 const here = item.id === versionId;
@@ -200,9 +212,6 @@ const meta = current
                 );
               })}
             </ul>
-            <a class="rail-link" href={`/blog/${essay.id}/history/`}>
-              See what changed →
-            </a>
           </div>
           {toc.length > 0 && (
             <div class="margin-block toc-block">
@@ -260,7 +269,7 @@ const meta = current
                   {status(item)}
                 </span>
               </div>
-              <p>{item.summary}</p>
+              {!(history && item.current) && <p>{item.summary}</p>}
             </li>
           );
         })}
@@ -285,24 +294,13 @@ const meta = current
   )}
 
   <footer class="essay-foot">
-    {readAlongside.length > 0 && (
-      <>
-        <h2 class="label">Read alongside</h2>
-        <div class="alongside">
-          {readAlongside.map((item) => (
-            <a href={item.href}>
-              {item.title}
-              <span>{item.note}</span>
-            </a>
-          ))}
-        </div>
-      </>
-    )}
     <p class="folio">
       <span>Jesse McGinnis</span>
       <span>{title}</span>
       <span>
-        {version.label} · {formatMonthYear(version.date).split(" ").pop()}
+        {versions.length === 1
+          ? `First published ${version.date.getUTCFullYear()}`
+          : versionStamp(version.id, version.date)}
       </span>
     </p>
   </footer>

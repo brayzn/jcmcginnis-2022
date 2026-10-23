@@ -75,13 +75,13 @@ Don't discount how important care and trust is at this stage. While you're nervo
 transition, your new team is doubly so. Focus on building deep and caring relationships. Focus on
 being human with your humans. Once again, more opportunity to build trust.
 
-Set up 1:1's with everyone in your new team. _Everyone_. Spend time sharing history. Spend time
+Set up 1\:1's with everyone in your new team. _Everyone_. Spend time sharing history. Spend time
 sharing ambition. Spend time sharing concerns. Spend time being human, together. But also, dig a
 little. Ask what can be better. Ask what should stay the same. Ask what challenges they're facing.
 And begin helping.
 
 I also love setting up intentional time to go deep. Think of playing
-[The Ungame](https://en.wikipedia.org/wiki/The_Ungame)](https://en.wikipedia.org/wiki/The_Ungame) or
+[The Ungame](https://en.wikipedia.org/wiki/The_Ungame) or
 [36 Questions That Lead to Love](https://www.nytimes.com/2015/01/09/style/no-37-big-wedding-or-small.html)
 (which I know sounds strange, but these are excellent). Focused time to move past small talk will
 accelerate trust and empathy on a whole other level.

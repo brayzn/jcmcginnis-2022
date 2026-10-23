@@ -288,6 +288,7 @@ export function checkRoutes() {
     const ogUrl = metaByProperty(html, "og:url")?.content;
     const robots = metaByName(html, "robots")?.content;
     const isHistory = /^\/blog\/[^/]+\/history\//.test(route);
+    const isNotFound = route === "/404.html";
     const expectedCanonical = isHistory
       ? `${site}/blog/${route.split("/")[2]}/`
       : `${site}${route}`;
@@ -295,7 +296,7 @@ export function checkRoutes() {
     if (!title) problems.push(`${route}: missing title`);
     if (!description) problems.push(`${route}: missing description`);
     if (!canonical) {
-      problems.push(`${route}: missing canonical`);
+      if (!isNotFound) problems.push(`${route}: missing canonical`);
     } else if (canonical !== expectedCanonical) {
       problems.push(
         `${route}: canonical is ${canonical}, expected ${expectedCanonical}`,
@@ -312,7 +313,11 @@ export function checkRoutes() {
       problems.push(`${route}: og:url does not match canonical`);
     }
 
-    if (isHistory) {
+    if (isNotFound) {
+      if (!robots || !/\bnoindex\b/.test(robots)) {
+        problems.push(`${route}: 404 page must be noindex`);
+      }
+    } else if (isHistory) {
       if (
         !robots ||
         !/\bnoindex\b/.test(robots) ||

@@ -54,7 +54,12 @@ const lastYear = years[0];
               {talkResources(featured).map((link, index) => (
                 <>
                   {index > 0 && " · "}
-                  <a href={link.href}>{link.label}</a>
+                  <a
+                    href={link.href}
+                    aria-label={`${link.label}: ${featured.data.title}`}
+                  >
+                    {link.label}
+                  </a>
                 </>
               ))}
             </p>
@@ -73,9 +78,6 @@ const lastYear = years[0];
                 <span class="talk-kind">{talkKind(talk)}</span>
                 <div class="talk-body">
                   <a href={talkPath(talk)}>{talk.data.title}</a>
-                  {talk.data.featured && (
-                    <span class="talk-badge">Featured</span>
-                  )}
                   <p>{talk.data.event}</p>
                 </div>
                 <span class="talk-resources">
@@ -83,7 +85,12 @@ const lastYear = years[0];
                     ? talkResources(talk).map((link, index) => (
                         <>
                           {index > 0 && " · "}
-                          <a href={link.href}>{link.label}</a>
+                          <a
+                            href={link.href}
+                            aria-label={`${link.label}: ${talk.data.title}`}
+                          >
+                            {link.label}
+                          </a>
                         </>
                       ))
                     : ""}

@@ -65,18 +65,10 @@
   line-height: 1.35;
 }
 
-.alongside .pending {
-  display: block;
-  font-family: var(--display);
-  font-size: 22px;
-  line-height: 1.25;
-  color: var(--ink);
-}
-
 .see .see-title {
   display: block;
-  font-family: var(--label-font);
-  font-size: 12px;
-  line-height: 1.5;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.35;
   color: var(--ink);
 }

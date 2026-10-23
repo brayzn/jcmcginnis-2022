@@ -49,7 +49,12 @@ const resources = talkResources(talk);
         {resources.map((link, index) => (
           <>
             {index > 0 && " · "}
-            <a href={link.href}>{link.label}</a>
+            <a
+              href={link.href}
+              aria-label={`${link.label}: ${talk.data.title}`}
+            >
+              {link.label}
+            </a>
           </>
         ))}
       </p>

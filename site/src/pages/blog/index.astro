@@ -5,7 +5,7 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { archiveEntries, archiveYears, entriesByYear } from "../../lib/archive";
 import { categories, categoryPath } from "../../lib/categories";
-import { essayPath } from "../../lib/essays";
+import { essayPath, historyPath, versionStamp } from "../../lib/essays";
 
 const essays = await getCollection("essays");
 const entries = archiveEntries(essays);
@@ -21,10 +21,15 @@ const featured =
       (a, b) =>
         b.data.versions[0].date.getTime() - a.data.versions[0].date.getTime(),
     )[0] ?? essays[0];
+const featuredVersion = featured.data.versions.at(-1)!;
+const featuredRevision =
+  featured.data.versions.length > 1
+    ? versionStamp(featuredVersion.id, featuredVersion.date)
+    : null;
 ---
 
 <Base
-  title="Writing — Jesse McGinnis"
+  title="All writing — Jesse McGinnis"
   description="Essays on high-trust teams, engineering leadership, and a decade of lessons at scale."
   canonicalPath="/blog/"
 >
@@ -47,6 +52,15 @@ const featured =
         <li>
           <a href={essayPath(featured.id)}>{featured.data.title}</a>
           <span>{featured.data.versions[0].date.getUTCFullYear()}</span>
+          {featuredRevision && (
+            <a
+              class="revised selected-stamp"
+              href={historyPath(featured.id)}
+              aria-label={`Revision history for ${featured.data.title}`}
+            >
+              {featuredRevision}
+            </a>
+          )}
           <p>{featured.data.description}</p>
         </li>
       </ul>
@@ -67,9 +81,13 @@ const featured =
               <li>
                 <span>{entry.dateLabel}</span>
                 <a href={entry.href}>{entry.title}</a>
-                {entry.historyHref && (
-                  <a class="revised" href={entry.historyHref}>
-                    revised
+                {entry.historyHref && entry.revisionStamp && (
+                  <a
+                    class="revised"
+                    href={entry.historyHref}
+                    aria-label={`Revision history for ${entry.title}`}
+                  >
+                    {entry.revisionStamp}
                   </a>
                 )}
               </li>
