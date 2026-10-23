@@ -33,16 +33,14 @@ const resources = talkResources(talk);
   description={talk.data.description}
   canonicalPath={talkPath(talk)}
 >
-  <Header />
+  <Header active="Speaking" />
   <main class="talk-detail" id="main">
     <p class="kicker">
       Speaking / {talkKind(talk)} · {talk.data.year}
     </p>
     <h1 class="page-title">{talk.data.title}</h1>
     <p class="deck">{talk.data.description}</p>
-    <p class="meta">
-      {talk.data.event} · {talk.data.year} · {talkKind(talk)}
-    </p>
+    <p class="meta">{talk.data.event}</p>
 
     {resources.length > 0 && (
       <p class="talk-links">

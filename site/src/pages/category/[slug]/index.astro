@@ -35,22 +35,27 @@ const essayWord = count === 1 ? "essay" : "essays";
 >
   <Header active="Writing" />
   <main class="archive" id="main">
-    <p class="kicker">Writing · Category</p>
+    <p class="kicker">Writing / {category.name}</p>
     <h1>{category.name}</h1>
     <p class="deck">{`${count} ${essayWord} on ${category.name.toLowerCase()}.`}</p>
 
-    <ul class="selected-large category-essays">
-      {entries.map((entry) => (
-        <li>
-          <a href={entry.href}>{entry.title}</a>
-          <span>{entry.dateLabel}</span>
-          <p>{entry.note}</p>
-        </li>
-      ))}
-    </ul>
+    <section class="category-essays" aria-labelledby="category-essays-title">
+      <div class="section-head">
+        <h2 id="category-essays-title">Essays</h2>
+      </div>
+      <ul class="selected-large">
+        {entries.map((entry) => (
+          <li>
+            <a href={entry.href}>{entry.title}</a>
+            <span>{entry.dateLabel}</span>
+            <p>{entry.note}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <p class="colophon">
-      <a href="/blog/">All writing →</a>
+      <a href="/archive/">All writing →</a>
     </p>
   </main>
   <Footer />
