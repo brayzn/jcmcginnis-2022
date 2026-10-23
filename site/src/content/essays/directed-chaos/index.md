@@ -1,12 +1,15 @@
 ---
 title: Directed Chaos
 description: Structure becomes a cast if you're not careful.
-categories: ["Leadership"]
+categories:
+  - Leadership
 featured: true
 feed: true
 image: /assets/img/directed-chaos.jpg
-pull_quote: "Ownership isn't a belief you argue someone into. It's a weight you let them feel."
-stillThinking: Does removing a central meeting work the same way in a remote-first org? I don't have a clean answer yet.
+pull_quote: Ownership isn't a belief you argue someone into. It's a weight you
+  let them feel.
+stillThinking: Does removing a central meeting work the same way in a
+  remote-first org? I don't have a clean answer yet.
 seeAlso:
   - essay: org-changelog
     note: Because both ask what a structure helps an organization remember.
@@ -16,27 +19,40 @@ versions:
   - id: rev-01
     date: 2026-01-01
     summary: First published.
+    current: false
+  - id: rev-02
+    date: 2026-10-23
+    summary: Replaced the thesis-first opening with the sprint-planning scene. The
+      scene now carries the judgment; the rest of the essay is unchanged in this
+      pass.
     current: true
+    thenNow:
+      then: World-class teams metabolize chaos. Calm teams break.
+      now: "My second day at GrowthLoop, I sat in on sprint planning. I remember
+        thinking: oh good, they do this, this is a good sign. Then I saw the
+        format."
+      note: Detail before thesis. The scene carries the judgment that the old opening
+        asserted.
 ---
 
-World-class teams metabolize chaos. Calm teams break.
+<!-- prettier-ignore -->
+:::changed{since="rev-01"}
+My second day at GrowthLoop, I sat in on _sprint planning_. I remember thinking: oh good, they do
+this, this is a good sign. Then I saw the format. Every engineer. One meeting. Thirty fucking
+minutes.
 
-Most leaders chase calm. They file down surprises, tune meetings, and polish checklists. They hunt
-surprises like a hospital infection team. Calm passes for competence because it looks like control.
-It keeps leaders out of blame.
+The PM read through tickets. Not a discussion — a read-through. He explained decisions that had
+already been made somewhere else, in a meeting I wasn't in, and maybe you weren't either. After each
+one: “Is that okay?” In front of everyone. What were you going to say — no? With him ‘running the
+ship’?
 
-Structure decides where ownership lands. Casts centralize it. Good structure distributes it.
+My blood was boiling by the end. I decided pretty fast the meeting had to go. Is engineering just a
+fucking factory? That's a death bell for a company that wants to make decisions.
 
-So companies build casts: meetings that decide for you, roles that absorb risk, rituals that launder
-uncertainty into status updates. The failure mode has a name: **exporting responsibility upward.**
-Decisions centralize. Ownership diffuses. Everyone looks aligned while nobody owns the outcome.
-
-It feels like good management—absorbing chaos so others can focus. But taking responsibility _for_
-people isn't the same as developing people who can take responsibility. The former creates calm. The
-latter creates capability. Only one survives contact with reality.
-
-There's another way: **directed chaos**—direct the storms instead of absorbing them. You're not
-manufacturing problems. You're removing the structures that hide them.
+The worst part: he was trying to be helpful. He was doing what he thought a good PM does — keep
+everyone aligned, keep the tickets moving, make sure everyone was okay with it. And every time he
+asked “Is that okay?” he was teaching the room to say yes.
+:::
 
 ## The pattern
 
