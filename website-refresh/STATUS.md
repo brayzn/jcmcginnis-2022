@@ -14,9 +14,10 @@
   history DOM order, 404 indexing, revision stamps, archive/blog roles, category and talk IA, the
   shared 960px shell, About rail, README numbering/quotes, and smart quotes.
 - Verification: production plus a real 3-version history fixture at 320/390/768/1024/1280/1600; no
-  blockers or top should-fix remain. Residual polish only: two straight apostrophes (About deck,
-  Directed Chaos stillThinking), the Rev. 01 version-log “First published” duplicate, and the About
-  facts that conflict (Shopify 2016–2025 vs “eight years”; forty people vs 25 engineers + 2 PMs).
+  blockers or top should-fix remain. Residual polish was the About deck, Directed Chaos
+  stillThinking, and the Rev. 01 version-log duplicate; those are now fixed. The only remaining
+  content issue is the About facts that conflict (Shopify 2016–2025 vs “eight years”; forty people
+  vs 25 engineers + 2 PMs), which is editorial.
 - **Next:** editorial copy. The design gate is green; the real revision is the next content test.
 - **Open copy:** see `design/website-refresh/DIAL-IN-NOTES.md`; the residual list above is the
   current state.

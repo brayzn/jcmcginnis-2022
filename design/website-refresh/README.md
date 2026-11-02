@@ -203,6 +203,6 @@ competing directions.
 
 The implementation pass is complete and the design gate is green. The remaining work is editorial:
 settle the copy questions in `DIAL-IN-NOTES.md` and this README, then make the first real revision
-on the new version model. Residual polish is limited to two straight apostrophes, the Rev. 01
-version-log “First published” duplication, and the About facts that conflict with the essay (Shopify
-dates and headcount); those are editorial/content fixes, not new layout directions.
+on the new version model. Residual polish (About deck and Directed Chaos stillThinking quotes, the
+Rev. 01 version-log duplicate) is fixed. The only remaining content issue is the About facts that
+conflict with the essay (Shopify dates and headcount), which is editorial.
