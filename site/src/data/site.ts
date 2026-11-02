@@ -37,9 +37,7 @@ export type HomeLink =
 
 export const home = {
   position: "VP Product Engineering, GrowthLoop",
-  now: smartQuotes(
-    "Writing about ownership, trust, and the structures that help people take responsibility.",
-  ),
+  now: smartQuotes("Writing the Directed Chaos revision."),
   currently: smartQuotes(
     "How do you distribute ownership without losing coherence?",
   ),
