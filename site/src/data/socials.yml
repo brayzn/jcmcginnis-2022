@@ -1,9 +1,9 @@
 # Social media links for Jesse McGinnis
-# Used by _social_links.erb and _footer.erb
+# Used by the Astro footer and home rail.
 
 - name: X (Twitter)
   handle: "@brayznly"
-  url: https://twitter.com/brayznly
+  url: https://x.com/brayznly
   icon: x
 
 - name: LinkedIn
