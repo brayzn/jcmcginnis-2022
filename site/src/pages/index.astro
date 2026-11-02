@@ -3,9 +3,10 @@ import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import LinkRow from "../components/LinkRow.astro";
 import { beliefs, home } from "../data/site";
-import { essayPath, formatMonthYear, recentRevisions } from "../lib/essays";
-import { socialUrl } from "../lib/socials";
+import { essayPath, recentRevisions, versionStamp } from "../lib/essays";
+import { elsewhereLinks } from "../lib/site-links";
 
 const essays = await getCollection("essays");
 const essaysById = new Map(essays.map((essay) => [essay.id, essay]));
@@ -27,7 +28,7 @@ const beliefEntries = beliefs.slice(0, 3).map((belief) => {
     href: essayPath(essay.id),
     note:
       essay.data.versions.length > 1
-        ? `Revised ${formatMonthYear(current.date)}`
+        ? versionStamp(current.id, current.date)
         : "Essay",
   };
 });
@@ -39,12 +40,6 @@ const psParts = home.ps.map((part) =>
     ? { ...part, href: essayPath(requireEssay(part.essay).id) }
     : part,
 );
-
-const elsewhere = [
-  { label: "Email", href: socialUrl("Email") },
-  { label: "LinkedIn", href: socialUrl("LinkedIn") },
-  { label: "RSS", href: "/feed.xml" },
-];
 ---
 
 <Base title="Jesse McGinnis" description={home.lede} canonicalPath="/">
@@ -68,10 +63,8 @@ const elsewhere = [
       </div>
       <div class="rail-block">
         <p class="label">Elsewhere</p>
-        <p class="rail-meta rail-links">
-          {elsewhere.map((link) => (
-            <a href={link.href}>{link.label}</a>
-          ))}
+        <p class="rail-meta">
+          <LinkRow links={elsewhereLinks} />
         </p>
       </div>
     </aside>

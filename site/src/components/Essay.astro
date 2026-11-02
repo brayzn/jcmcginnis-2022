@@ -156,8 +156,9 @@ const summaryRepeatsStatus = (item: VersionLink) =>
           )}
           {seeAlso.length === 0 && (
             <div class="margin-block more-writing">
+              <p class="label">More</p>
               <a class="rail-link" href="/archive/">
-                More writing →
+                All writing →
               </a>
             </div>
           )}
@@ -299,7 +300,7 @@ const summaryRepeatsStatus = (item: VersionLink) =>
       </ul>
       {!history && thenNow && previousVersion && (
         <details class="revision-details">
-          <summary>Show then / now</summary>
+          <summary>Show Then / Now</summary>
           <div class="then-now-compact">
             <div class="then">
               <p class="label">Then</p>

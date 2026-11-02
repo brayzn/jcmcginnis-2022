@@ -406,17 +406,22 @@ body {
   color: var(--muted);
 }
 
-/* Elsewhere: separators ride with the link that follows them, so a wrap
-   never leaves a trailing dot. */
-.rail-links {
+/* Elsewhere/footer links: separators are siblings, never inside the link. */
+.link-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0 0.55em;
+  align-items: baseline;
 }
 
-.rail-links a + a::before {
-  content: "\00b7";
-  margin-right: 0.55em;
+.link-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55em;
+}
+
+.link-sep {
+  color: var(--muted);
 }
 
 .margin-question {
