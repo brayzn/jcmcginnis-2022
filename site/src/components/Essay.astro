@@ -30,6 +30,9 @@ const {
 } = Astro.props;
 
 const stillThinking = essay.data.stillThinking;
+const stillThinkingText = stillThinking
+  ? displayText(stillThinking)
+  : undefined;
 
 const data = essay.data;
 const version =
@@ -57,6 +60,9 @@ const status = (item: VersionLink) =>
     : item.id === versions[0].id
       ? "First published"
       : "Superseded";
+const summaryRepeatsStatus = (item: VersionLink) =>
+  item.summary.trim().replace(/\.$/, "").toLowerCase() ===
+  status(item).toLowerCase();
 ---
 
 <article
@@ -155,10 +161,10 @@ const status = (item: VersionLink) =>
               </a>
             </div>
           )}
-          {stillThinking && (
+          {stillThinkingText && (
             <div class="margin-block">
               <p class="label">Still thinking</p>
-              <p class="margin-prose">{stillThinking}</p>
+              <p class="margin-prose">{stillThinkingText}</p>
             </div>
           )}
         </>
@@ -284,7 +290,9 @@ const status = (item: VersionLink) =>
                   {status(item)}
                 </span>
               </div>
-              {!(history && item.current) && <p>{item.summary}</p>}
+              {!(history && item.current) && !summaryRepeatsStatus(item) && (
+                <p>{item.summary}</p>
+              )}
             </li>
           );
         })}
